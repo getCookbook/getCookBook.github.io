@@ -1,11 +1,12 @@
 {
   "_View Recipe": "Voir la Recette",
   "_Ingredients": "Ingrédients",
-  "_No Recipes found": "Aucune rectte trouvée",
+  "_No Recipes found": "Aucune recette trouvée",
   "_Try a different search.": "Tenter une différente recherche.",
   "_No Recipes created": "Aucune recette créée.",
   "_Get started by creating a new recipe": "Il faut commencer par créer une nouvelle recette.",
   "_settings": "Réglages",
+  "_Sign out": "Se déconnecter",
   "_Invalid link": "Lien Invalide",
   "_Sorry that link is no longer valid": "Désolé, ce lien n'est plus valide.",
   "_Send a new magic link": "Envoyer un nouveau lien magique",
@@ -47,9 +48,9 @@
   "_Share Recipe": "Partager",
   "_Copy Recipe to clipboard": "Copier la recette dans le presse-papier",
   "_Recipe copied to clipboard": "Recette copiée dans le presse-papier.",
+  "_Ingredients copied to clipboard": "Ingredients copiées dans le presse-papier.",
   "_Share pdf": "Partage pdf",
   "_Download pdf": "Télécharger le pdf",
-  "_Ingredients copied to clipboard": "Ingredients copiées dans le presse-papier.",
   "_Logout": "Se déconnecter",
   "_Help": "Aide",
   "_Install Desktop App": "Installer App",
@@ -67,10 +68,6 @@
   "_made simple": "rendu simple",
   "_for everybody": "pour tout le monde",
   "_Cooking your best recipes will be never easier": "Cuisiner votre meilleures recettes ne sera jamais aussi simple.",
-  "_Why a magic link": "Pourquoi un lien magique ?",
-  "_We sent an email": "Un email a été envoyé à <strong>{{email}}</strong>. Vous allez y trouver un lien magique pour s'authentifier instantanément.",
-  "_We sent an email.pwa": "Un email a été envoyé à <strong>{{email}}</strong>. Copiez le lien magique dans le formulaire ci-dessous.",
-  "_This link will expire 24 hours.": "Ce lien magique expirera dans 24 heures.",
   "shoppingList": {
     "Create shopping list": "Créer une liste de courses",
     "Close shopping list": "Fermer la liste de courses",
@@ -79,21 +76,6 @@
     "Share shopping list": "Partager la liste de courses",
     "Shopping list": "Liste de courses"
   },
-  "faq": {
-    "shortTitle": "FAQ",
-    "title": "Foire Aux Questions"
-  },
-  "_Beta": "Beta",
-  "_Alpha": "Alpha",
-  "_Back to landing page": "Retourner à la page d'accueil",
-  "_Back to recipes": "Retourner aux recettes",
-  "_Back to recipe": "Retourner à la recette",
-  "_Edit Recipe": "Modifier la recette",
-  "_Open Menu": "Ouvrir menu",
-  "_Search in recipes": "Rechercher dans les recettes",
-  "_Search": "Rechercher",
-  "_Sign out": "Se déconnecter",
-  "copyright": "&copy; 2022 CookBook, Inc. All rights reserved.",
   "editor": {
     "Add ingredients there": "Ajouter les ingrédients ici, une ligne par ingrédient",
     "Add steps there": "Ajouter les étapes ici, une ligne par étapes",
@@ -101,11 +83,19 @@
     "_Saving in progress...": "Sauvegarde en cours...",
     "_No need to save manually. Everything is saved in really time.": "Pas besoin de sauvarder manuellement. Tout est déjà sauvegardé en temps réel."
   },
+  "_Beta": "Beta",
+  "_Alpha": "Alpha",
+  "_Edit Recipe": "Modifier la recette",
+  "_Back to landing page": "Retourner à la page d'accueil",
+  "_Back to recipes": "Retourner aux recettes",
+  "_Back to recipe": "Retourner à la recette",
+  "_Search in recipes": "Rechercher dans les recettes",
+  "_Search": "Rechercher",
+  "_Open Menu": "Ouvrir menu",
+  "copyright": "&copy; 2022 CookBook, Inc. All rights reserved.",
   "notifications": {
     "Close": "Fermer"
   },
-  "_Link sent by email": "Lien envoyé par email",
-  "_Login with magic link": "Se connecter avec le lien magique",
   "_Ok Got it": "Oui j'ai compris !",
   "_CookBook is in alpha": "CookBook est actuellement en version Alpha. Cela signifie qu'il contient quelques bugs and n'est pas prêt à être utilisé par tout le monde. Un accès à cette version vous a été donné afin d'aider à finaliser CookBook.",
   "_Please do not sent it to anyone else without the authorization of the author of CookBook": "S'il vous plait, n'envoyez pas le lien à quelqu'un d'autre sans autorisation de l'auteur de CookBook.",
@@ -126,10 +116,10 @@
       "International system": "International system (ml, kg, etc.)"
     },
     "ingredient template": "Template for ingredients in shopping list",
-    "Show advanced": "Show advanced settings",
-    "Hide advanced": "Hide advanced settings",
-    "Export": "Export",
-    "Download all your recipes": "Download all recipes"
+    "Show advanced": "Afficher paramètres avancés",
+    "Hide advanced": "Cacher paramètres avancés",
+    "Export": "Exporter",
+    "Download all your recipes": "Télécharger toutes les recettes"
   },
   "import": {
     "Import from a recipe catalog": "Importer depuis un site internet",
@@ -183,7 +173,7 @@
   "_Some categories are not used": "CookBook a {{categoriesCount}} autres catégories que vous n'utilisez pas:",
   "_They could help you to find your recipes even easier": "Elles pourraient vous aider à trouver vos recettes plus facilement.",
   "_Show the recipes without categories": "Voir les {{recipesCount}} recettes sans catégories",
-  "_Recipes without categories": "Recettes sans catégories",
   "_Add some suggested keywords to your recipes": "Ajoutez certains mot-clés suggérés à vos recettes.",
+  "_Recipes without categories": "Recettes sans catégories",
   "_Show all recipes": "Voir toutes les recettes"
 }
