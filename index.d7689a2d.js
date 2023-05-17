@@ -30553,7 +30553,7 @@ module.exports.useMagicLink = $0089cf7f657cdc51$var$useMagicLink;
 
 var $c00a438d80f7d22b$exports = {};
 
-(parcelRequire("hY5GV")).register(JSON.parse('{"8zuhm":"index.ba2309da.js","32jrd":"web-vitals.e5c9a779.js"}'));
+(parcelRequire("hY5GV")).register(JSON.parse('{"8zuhm":"index.d7689a2d.js","32jrd":"web-vitals.e5c9a779.js"}'));
 
 /* eslint-disable @typescript-eslint/no-unused-vars */ var $2cf73df7d9c51a60$exports = {};
 "use strict";
@@ -46267,11 +46267,9 @@ Object.defineProperty($21524f58be072846$exports, "useMagicLink", {
 
 
 
-
-var $5rLiH = parcelRequire("5rLiH");
 const $3b6fbf3a770ed634$var$AuthProvider = ({ children: children  })=>{
     const navigate = (0, $68801c12d489f8c9$export$9770f232ac06a008)();
-    console.log("process.env.REACT_APP_CLERK_PUBLISHABLE_KEY", $5rLiH.env);
+    console.log("process.env.REACT_APP_CLERK_PUBLISHABLE_KEY", "REACT_APP_CLERK_PUBLISHABLE_KEY=pk_test_ZmxlZXQtY3ViLTk0LmNsZXJrLmFjY291bnRzLmRldiQ", "https://us-central1-cookbook-beta-46bc5.cloudfunctions.net/api");
     return /*#__PURE__*/ (0, $2cf73df7d9c51a60$exports.jsx)((0, $21524f58be072846$exports.ClerkProvider), {
         publishableKey: "REACT_APP_CLERK_PUBLISHABLE_KEY=pk_test_ZmxlZXQtY3ViLTk0LmNsZXJrLmFjY291bnRzLmRldiQ" ?? "",
         navigate: (to)=>navigate(to),
@@ -46308,4 +46306,4 @@ $9698b29ba1b9a049$var$root.render(/*#__PURE__*/ (0, $2cf73df7d9c51a60$exports.js
 $6a1f9c7ed74d76c1$export$6503ec6e8aabbaf();
 
 
-//# sourceMappingURL=index.ba2309da.js.map
+//# sourceMappingURL=index.d7689a2d.js.map
