@@ -26440,9 +26440,4120 @@ module.exports = exports;
 
 });
 
+parcelRequire.register("3aDr2", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.__internal__setErrorThrowerOptions = module.exports.ClerkProvider = void 0;
+
+var $fkI9L = parcelRequire("fkI9L");
+Object.defineProperty(module.exports, "ClerkProvider", {
+    enumerable: true,
+    get: function() {
+        return $fkI9L.ClerkProvider;
+    }
+});
+Object.defineProperty(module.exports, "__internal__setErrorThrowerOptions", {
+    enumerable: true,
+    get: function() {
+        return $fkI9L.__internal__setErrorThrowerOptions;
+    }
+});
+
+});
+parcelRequire.register("fkI9L", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.__internal__setErrorThrowerOptions = module.exports.ClerkProvider = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+var $5gnYd = parcelRequire("5gnYd");
+
+const $b29af9d61cd9f3e0$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+var $1TPlq = parcelRequire("1TPlq");
+
+var $ebXSF = parcelRequire("ebXSF");
+Object.defineProperty(module.exports, "__internal__setErrorThrowerOptions", {
+    enumerable: true,
+    get: function() {
+        return $ebXSF.__internal__setErrorThrowerOptions;
+    }
+});
+
+var $34XaI = parcelRequire("34XaI");
+
+var $2WAF2 = parcelRequire("2WAF2");
+(0, $ebXSF.__internal__setErrorThrowerOptions)({
+    packageName: "@clerk/clerk-react"
+});
+function $b29af9d61cd9f3e0$var$ClerkProviderBase(props) {
+    const { initialState: initialState , children: children  } = props, restIsomorphicClerkOptions = $ajUHN.__rest(props, [
+        "initialState",
+        "children"
+    ]);
+    const { frontendApi: frontendApi = "" , publishableKey: publishableKey = "" , Clerk: userInitialisedClerk  } = restIsomorphicClerkOptions;
+    if (!userInitialisedClerk) {
+        if (!publishableKey && !frontendApi) $ebXSF.errorThrower.throwMissingPublishableKeyError();
+        else if (publishableKey && !(0, $5gnYd.isPublishableKey)(publishableKey)) $ebXSF.errorThrower.throwInvalidPublishableKeyError({
+            key: publishableKey
+        });
+        else if (!publishableKey && frontendApi && !(0, $5gnYd.isLegacyFrontendApiKey)(frontendApi)) $ebXSF.errorThrower.throwInvalidFrontendApiError({
+            key: frontendApi
+        });
+    }
+    return $b29af9d61cd9f3e0$var$react_1.default.createElement($2WAF2.StructureContext.Provider, {
+        value: $2WAF2.StructureContextStates.noGuarantees
+    }, $b29af9d61cd9f3e0$var$react_1.default.createElement($34XaI.ClerkContextProvider, {
+        initialState: initialState,
+        isomorphicClerkOptions: restIsomorphicClerkOptions
+    }, children));
+}
+const $b29af9d61cd9f3e0$var$ClerkProvider = (0, $ebXSF.withMaxAllowedInstancesGuard)($b29af9d61cd9f3e0$var$ClerkProviderBase, "ClerkProvider", $1TPlq.multipleClerkProvidersError);
+module.exports.ClerkProvider = $b29af9d61cd9f3e0$var$ClerkProvider;
+$b29af9d61cd9f3e0$var$ClerkProvider.displayName = "ClerkProvider";
+
+});
+parcelRequire.register("ajUHN", function(module, exports) {
+
+$parcel$export(module.exports, "__rest", function () { return $7837aa3c621879de$export$3c9a16f847548506; });
+$parcel$export(module.exports, "__exportStar", function () { return $7837aa3c621879de$export$f33643c0debef087; });
+$parcel$export(module.exports, "__importDefault", function () { return $7837aa3c621879de$export$da59b14a69baef04; });
+$parcel$export(module.exports, "__classPrivateFieldGet", function () { return $7837aa3c621879de$export$d5dcaf168c640c35; });
+$parcel$export(module.exports, "__classPrivateFieldSet", function () { return $7837aa3c621879de$export$d40a35129aaff81f; });
+/******************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */ /* global Reflect, Promise */ var $7837aa3c621879de$var$extendStatics = function(d, b) {
+    $7837aa3c621879de$var$extendStatics = Object.setPrototypeOf || ({
+        __proto__: []
+    }) instanceof Array && function(d, b) {
+        d.__proto__ = b;
+    } || function(d, b) {
+        for(var p in b)if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+    };
+    return $7837aa3c621879de$var$extendStatics(d, b);
+};
+function $7837aa3c621879de$export$a8ba968b8961cb8a(d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+    $7837aa3c621879de$var$extendStatics(d, b);
+    function __() {
+        this.constructor = d;
+    }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+var $7837aa3c621879de$export$18ce0697a983be9b = function() {
+    $7837aa3c621879de$export$18ce0697a983be9b = Object.assign || function __assign(t) {
+        for(var s, i = 1, n = arguments.length; i < n; i++){
+            s = arguments[i];
+            for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return $7837aa3c621879de$export$18ce0697a983be9b.apply(this, arguments);
+};
+function $7837aa3c621879de$export$3c9a16f847548506(s, e) {
+    var t = {};
+    for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function") {
+        for(var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++)if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+    }
+    return t;
+}
+function $7837aa3c621879de$export$29e00dfd3077644b(decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for(var i = decorators.length - 1; i >= 0; i--)if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+function $7837aa3c621879de$export$d5ad3fd78186038f(paramIndex, decorator) {
+    return function(target, key) {
+        decorator(target, key, paramIndex);
+    };
+}
+function $7837aa3c621879de$export$f1db080c865becb9(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+function $7837aa3c621879de$export$1050f835b63b671e(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+function $7837aa3c621879de$export$67ebef60e6f28a6(thisArg, body) {
+    var _ = {
+        label: 0,
+        sent: function() {
+            if (t[0] & 1) throw t[1];
+            return t[1];
+        },
+        trys: [],
+        ops: []
+    }, f, y, t, g;
+    return g = {
+        next: verb(0),
+        "throw": verb(1),
+        "return": verb(2)
+    }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
+        return this;
+    }), g;
+    function verb(n) {
+        return function(v) {
+            return step([
+                n,
+                v
+            ]);
+        };
+    }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while(g && (g = 0, op[0] && (_ = 0)), _)try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [
+                op[0] & 2,
+                t.value
+            ];
+            switch(op[0]){
+                case 0:
+                case 1:
+                    t = op;
+                    break;
+                case 4:
+                    _.label++;
+                    return {
+                        value: op[1],
+                        done: false
+                    };
+                case 5:
+                    _.label++;
+                    y = op[1];
+                    op = [
+                        0
+                    ];
+                    continue;
+                case 7:
+                    op = _.ops.pop();
+                    _.trys.pop();
+                    continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                        _ = 0;
+                        continue;
+                    }
+                    if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                        _.label = op[1];
+                        break;
+                    }
+                    if (op[0] === 6 && _.label < t[1]) {
+                        _.label = t[1];
+                        t = op;
+                        break;
+                    }
+                    if (t && _.label < t[2]) {
+                        _.label = t[2];
+                        _.ops.push(op);
+                        break;
+                    }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop();
+                    continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) {
+            op = [
+                6,
+                e
+            ];
+            y = 0;
+        } finally{
+            f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
+        return {
+            value: op[0] ? op[1] : void 0,
+            done: true
+        };
+    }
+}
+var $7837aa3c621879de$export$45d3717a4c69092e = Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
+        enumerable: true,
+        get: function() {
+            return m[k];
+        }
+    };
+    Object.defineProperty(o, k2, desc);
+} : function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+};
+function $7837aa3c621879de$export$f33643c0debef087(m, o) {
+    for(var p in m)if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) $7837aa3c621879de$export$45d3717a4c69092e(o, m, p);
+}
+function $7837aa3c621879de$export$19a8beecd37a4c45(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function() {
+            if (o && i >= o.length) o = void 0;
+            return {
+                value: o && o[i++],
+                done: !o
+            };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+}
+function $7837aa3c621879de$export$8d051b38c9118094(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while((n === void 0 || n-- > 0) && !(r = i.next()).done)ar.push(r.value);
+    } catch (error) {
+        e = {
+            error: error
+        };
+    } finally{
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        } finally{
+            if (e) throw e.error;
+        }
+    }
+    return ar;
+}
+function $7837aa3c621879de$export$afc72e2116322959() {
+    for(var ar = [], i = 0; i < arguments.length; i++)ar = ar.concat($7837aa3c621879de$export$8d051b38c9118094(arguments[i]));
+    return ar;
+}
+function $7837aa3c621879de$export$6388937ca91ccae8() {
+    for(var s = 0, i = 0, il = arguments.length; i < il; i++)s += arguments[i].length;
+    for(var r = Array(s), k = 0, i = 0; i < il; i++)for(var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)r[k] = a[j];
+    return r;
+}
+function $7837aa3c621879de$export$1216008129fb82ed(to, from, pack) {
+    if (pack || arguments.length === 2) {
+        for(var i = 0, l = from.length, ar; i < l; i++)if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+}
+function $7837aa3c621879de$export$10c90e4f7922046c(v) {
+    return this instanceof $7837aa3c621879de$export$10c90e4f7922046c ? (this.v = v, this) : new $7837aa3c621879de$export$10c90e4f7922046c(v);
+}
+function $7837aa3c621879de$export$e427f37a30a4de9b(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
+        return this;
+    }, i;
+    function verb(n) {
+        if (g[n]) i[n] = function(v) {
+            return new Promise(function(a, b) {
+                q.push([
+                    n,
+                    v,
+                    a,
+                    b
+                ]) > 1 || resume(n, v);
+            });
+        };
+    }
+    function resume(n, v) {
+        try {
+            step(g[n](v));
+        } catch (e) {
+            settle(q[0][3], e);
+        }
+    }
+    function step(r) {
+        r.value instanceof $7837aa3c621879de$export$10c90e4f7922046c ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
+    }
+    function fulfill(value) {
+        resume("next", value);
+    }
+    function reject(value) {
+        resume("throw", value);
+    }
+    function settle(f, v) {
+        if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]);
+    }
+}
+function $7837aa3c621879de$export$bbd80228419bb833(o) {
+    var i, p;
+    return i = {}, verb("next"), verb("throw", function(e) {
+        throw e;
+    }), verb("return"), i[Symbol.iterator] = function() {
+        return this;
+    }, i;
+    function verb(n, f) {
+        i[n] = o[n] ? function(v) {
+            return (p = !p) ? {
+                value: $7837aa3c621879de$export$10c90e4f7922046c(o[n](v)),
+                done: n === "return"
+            } : f ? f(v) : v;
+        } : f;
+    }
+}
+function $7837aa3c621879de$export$e3b29a3d6162315f(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof $7837aa3c621879de$export$19a8beecd37a4c45 === "function" ? $7837aa3c621879de$export$19a8beecd37a4c45(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
+        return this;
+    }, i);
+    function verb(n) {
+        i[n] = o[n] && function(v) {
+            return new Promise(function(resolve, reject) {
+                v = o[n](v), settle(resolve, reject, v.done, v.value);
+            });
+        };
+    }
+    function settle(resolve, reject, d, v) {
+        Promise.resolve(v).then(function(v) {
+            resolve({
+                value: v,
+                done: d
+            });
+        }, reject);
+    }
+}
+function $7837aa3c621879de$export$4fb47efe1390b86f(cooked, raw) {
+    if (Object.defineProperty) Object.defineProperty(cooked, "raw", {
+        value: raw
+    });
+    else cooked.raw = raw;
+    return cooked;
+}
+var $7837aa3c621879de$var$__setModuleDefault = Object.create ? function(o, v) {
+    Object.defineProperty(o, "default", {
+        enumerable: true,
+        value: v
+    });
+} : function(o, v) {
+    o["default"] = v;
+};
+function $7837aa3c621879de$export$c21735bcef00d192(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) {
+        for(var k in mod)if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) $7837aa3c621879de$export$45d3717a4c69092e(result, mod, k);
+    }
+    $7837aa3c621879de$var$__setModuleDefault(result, mod);
+    return result;
+}
+function $7837aa3c621879de$export$da59b14a69baef04(mod) {
+    return mod && mod.__esModule ? mod : {
+        default: mod
+    };
+}
+function $7837aa3c621879de$export$d5dcaf168c640c35(receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+}
+function $7837aa3c621879de$export$d40a35129aaff81f(receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
+}
+function $7837aa3c621879de$export$81fdc39f203e4e04(state, receiver) {
+    if (receiver === null || typeof receiver !== "object" && typeof receiver !== "function") throw new TypeError("Cannot use 'in' operator on non-object");
+    return typeof state === "function" ? receiver === state : state.has(receiver);
+}
+
+});
+
+parcelRequire.register("5gnYd", function(module, exports) {
+
+$parcel$export(module.exports, "buildErrorThrower", function () { return $3d510a5be12ccce7$export$d6149cfe10ecbed3; });
+$parcel$export(module.exports, "parsePublishableKey", function () { return $3d510a5be12ccce7$export$e714dbd47ccca8af; });
+$parcel$export(module.exports, "isPublishableKey", function () { return $3d510a5be12ccce7$export$e7b0b0686142f5e8; });
+$parcel$export(module.exports, "isLegacyFrontendApiKey", function () { return $3d510a5be12ccce7$export$64ce68e329c0c00a; });
+$parcel$export(module.exports, "createDevOrStagingUrlCache", function () { return $3d510a5be12ccce7$export$31072de0539b233; });
+$parcel$export(module.exports, "handleValueOrFn", function () { return $3d510a5be12ccce7$export$af80d780caaebdea; });
+$parcel$export(module.exports, "isValidProxyUrl", function () { return $3d510a5be12ccce7$export$e2743abb42a775d; });
+$parcel$export(module.exports, "proxyUrlToAbsoluteURL", function () { return $3d510a5be12ccce7$export$b5f197fdba327544; });
+$parcel$export(module.exports, "inClientSide", function () { return $3d510a5be12ccce7$export$8176888a712f743c; });
+$parcel$export(module.exports, "addClerkPrefix", function () { return $3d510a5be12ccce7$export$34d7ddd66a763253; });
+$parcel$export(module.exports, "createContextAndHook", function () { return $3d510a5be12ccce7$export$b4f021037e6d7d3f; });
+$parcel$export(module.exports, "ClerkInstanceContext", function () { return $3d510a5be12ccce7$export$8aa96e0f8b054cda; });
+$parcel$export(module.exports, "useClerkInstanceContext", function () { return $3d510a5be12ccce7$export$5ebbb6ccfffc7393; });
+$parcel$export(module.exports, "UserContext", function () { return $3d510a5be12ccce7$export$38ee920e59704589; });
+$parcel$export(module.exports, "useUserContext", function () { return $3d510a5be12ccce7$export$87c54b525b914dab; });
+$parcel$export(module.exports, "ClientContext", function () { return $3d510a5be12ccce7$export$56e68f8f57ecfde4; });
+$parcel$export(module.exports, "useClientContext", function () { return $3d510a5be12ccce7$export$6627e187bf6ba3fd; });
+$parcel$export(module.exports, "SessionContext", function () { return $3d510a5be12ccce7$export$3285420c698bc605; });
+$parcel$export(module.exports, "useSessionContext", function () { return $3d510a5be12ccce7$export$a3931362f3958630; });
+$parcel$export(module.exports, "OrganizationContext", function () { return $3d510a5be12ccce7$export$14ec650242c84392; });
+$parcel$export(module.exports, "useOrganizationContext", function () { return $3d510a5be12ccce7$export$7305fb39264bef77; });
+$parcel$export(module.exports, "useOrganization", function () { return $3d510a5be12ccce7$export$ae85931d305e13b1; });
+$parcel$export(module.exports, "useOrganizationList", function () { return $3d510a5be12ccce7$export$70272151be64739d; });
+$parcel$export(module.exports, "useOrganizations", function () { return $3d510a5be12ccce7$export$5fc38fde58f5cf66; });
+
+var $acgj4 = parcelRequire("acgj4");
+
+var $1J5bN = parcelRequire("1J5bN");
+
+var $hJ1gd = parcelRequire("hJ1gd");
+
+var $hJ1gd = parcelRequire("hJ1gd");
+
+var $hJ1gd = parcelRequire("hJ1gd");
+var $3d510a5be12ccce7$var$St = Object.freeze({
+    InvalidFrontendApiErrorMessage: "The frontendApi passed to Clerk is invalid. You can get your Frontend API key at https://dashboard.clerk.com/last-active?path=api-keys. (key={{key}})",
+    InvalidProxyUrlErrorMessage: "The proxyUrl passed to Clerk is invalid. The expected value for proxyUrl is an absolute URL or a relative path with a leading '/'. (key={{url}})",
+    InvalidPublishableKeyErrorMessage: "The publishableKey passed to Clerk is invalid. You can get your Publishable key at https://dashboard.clerk.com/last-active?path=api-keys. (key={{key}})",
+    MissingPublishableKeyErrorMessage: "Missing publishableKey. You can get your key at https://dashboard.clerk.com/last-active?path=api-keys."
+});
+function $3d510a5be12ccce7$export$d6149cfe10ecbed3({ packageName: e , customMessages: r  }) {
+    let t = e, n = {
+        ...$3d510a5be12ccce7$var$St,
+        ...r
+    };
+    function o(i, a) {
+        if (!a) return `${t}: ${i}`;
+        let u = i, f = i.matchAll(/{{([a-zA-Z0-9-_]+)}}/g);
+        for (let s of f){
+            let l = (a[s[1]] || "").toString();
+            u = u.replace(`{{${s[1]}}}`, l);
+        }
+        return `${t}: ${u}`;
+    }
+    return {
+        setPackageName ({ packageName: i  }) {
+            return typeof i == "string" && (t = i), this;
+        },
+        setMessages ({ customMessages: i  }) {
+            return Object.assign(n, i || {}), this;
+        },
+        throwInvalidPublishableKeyError (i) {
+            throw new Error(o(n.InvalidPublishableKeyErrorMessage, i));
+        },
+        throwInvalidFrontendApiError (i) {
+            throw new Error(o(n.InvalidFrontendApiErrorMessage, i));
+        },
+        throwInvalidProxyUrl (i) {
+            throw new Error(o(n.InvalidProxyUrlErrorMessage, i));
+        },
+        throwMissingPublishableKeyError () {
+            throw new Error(o(n.MissingPublishableKeyErrorMessage));
+        }
+    };
+}
+var $3d510a5be12ccce7$export$65cb8af9798db83d = (e)=>{
+    if (e.length == 0) return "";
+    if (e.length == 1) return e[0];
+    let r = e.slice(0, -1).join(", ");
+    return r += `, or ${e.slice(-1)}`, r;
+};
+function $3d510a5be12ccce7$export$620a268685f0ac45() {
+    return typeof window < "u";
+}
+function $3d510a5be12ccce7$export$c17cdb790e99cd44(e) {
+    return new RegExp([
+        /bot/,
+        /spider/,
+        /crawl/,
+        /APIs-Google/,
+        /AdsBot/,
+        /Googlebot/,
+        /mediapartners/,
+        /Google Favicon/,
+        /FeedFetcher/,
+        /Google-Read-Aloud/,
+        /DuplexWeb-Google/,
+        /googleweblight/,
+        /bing/,
+        /yandex/,
+        /baidu/,
+        /duckduck/,
+        /yahoo/,
+        /ecosia/,
+        /ia_archiver/,
+        /facebook/,
+        /instagram/,
+        /pinterest/,
+        /reddit/,
+        /slack/,
+        /twitter/,
+        /whatsapp/,
+        /youtube/,
+        /semrush/
+    ].map((t)=>t.source).join("|"), "i").test(e);
+}
+function $3d510a5be12ccce7$export$aa41b89db26550c5() {
+    let e = window?.navigator;
+    if (!$3d510a5be12ccce7$export$620a268685f0ac45() || !e) return !1;
+    let r = $3d510a5be12ccce7$export$c17cdb790e99cd44(e?.userAgent), t = e?.webdriver, n = e?.onLine, o = e?.connection?.rtt !== 0 && e?.connection?.downlink !== 0;
+    return !r && !t && o && n;
+}
+var $3d510a5be12ccce7$var$Mt = /^#?([A-F0-9]{6}|[A-F0-9]{3})$/i, $3d510a5be12ccce7$var$Dt = /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/i, $3d510a5be12ccce7$var$Pt = /^rgba\((\d+),\s*(\d+),\s*(\d+)(,\s*\d+(\.\d+)?)\)$/i, $3d510a5be12ccce7$var$At = /^hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)$/i, $3d510a5be12ccce7$var$Ut = /^hsla\((\d+),\s*([\d.]+)%,\s*([\d.]+)%(,\s*\d+(\.\d+)?)*\)$/i, $3d510a5be12ccce7$export$d65a36119baa393e = (e)=>!!e.match($3d510a5be12ccce7$var$Mt), $3d510a5be12ccce7$export$219fded437b850e2 = (e)=>!!(e.match($3d510a5be12ccce7$var$Dt) || e.match($3d510a5be12ccce7$var$Pt)), $3d510a5be12ccce7$export$2122b77a09d043a3 = (e)=>!!e.match($3d510a5be12ccce7$var$At) || !!e.match($3d510a5be12ccce7$var$Ut), $3d510a5be12ccce7$export$9b9bf1db1bd6d350 = (e)=>typeof e != "string" && "r" in e, $3d510a5be12ccce7$export$c2b843a3f636a08c = (e)=>typeof e != "string" && "h" in e, $3d510a5be12ccce7$export$b5066e04f2f87723 = (e)=>e === "transparent", $3d510a5be12ccce7$export$7c6623716c246f1 = (e)=>typeof e != "string" && e.a != null && e.a < 1;
+var $3d510a5be12ccce7$var$_t = /[hsla()]/g, $3d510a5be12ccce7$var$Ft = /[rgba()]/g, $3d510a5be12ccce7$export$2ddd6e970c7527b7 = (e)=>e === "transparent" ? {
+        h: 0,
+        s: 0,
+        l: 0,
+        a: 0
+    } : $3d510a5be12ccce7$export$d65a36119baa393e(e) ? $3d510a5be12ccce7$var$Nt(e) : $3d510a5be12ccce7$export$2122b77a09d043a3(e) ? $3d510a5be12ccce7$var$qe(e) : $3d510a5be12ccce7$export$219fded437b850e2(e) ? $3d510a5be12ccce7$var$Xe(e) : null, $3d510a5be12ccce7$export$6375abddade00d53 = (e)=>(e = e.trim(), $3d510a5be12ccce7$export$d65a36119baa393e(e) ? e.startsWith("#") ? e : `#${e}` : $3d510a5be12ccce7$export$219fded437b850e2(e) ? $3d510a5be12ccce7$var$Ye(e) : $3d510a5be12ccce7$export$2122b77a09d043a3(e) ? $3d510a5be12ccce7$var$qe(e) : $3d510a5be12ccce7$export$b5066e04f2f87723(e) ? e : ""), $3d510a5be12ccce7$export$fd9b4b6e61e89f57 = (e)=>typeof e == "string" && ($3d510a5be12ccce7$export$d65a36119baa393e(e) || $3d510a5be12ccce7$export$b5066e04f2f87723(e)) ? e : $3d510a5be12ccce7$export$9b9bf1db1bd6d350(e) ? $3d510a5be12ccce7$var$$t(e) : $3d510a5be12ccce7$export$c2b843a3f636a08c(e) ? $3d510a5be12ccce7$var$Ht(e) : "", $3d510a5be12ccce7$export$d8d8fd9aec3aff47 = (e)=>{
+    e = e.replace("#", "");
+    let r = parseInt(e.substring(0, 2), 16), t = parseInt(e.substring(2, 4), 16), n = parseInt(e.substring(4, 6), 16);
+    return {
+        r: r,
+        g: t,
+        b: n
+    };
+}, $3d510a5be12ccce7$var$$t = (e)=>{
+    let { a: r , b: t , g: n , r: o  } = e;
+    return e.a === 0 ? "transparent" : e.a != null ? `rgba(${o},${n},${t},${r})` : `rgb(${o},${n},${t})`;
+}, $3d510a5be12ccce7$var$Ht = (e)=>{
+    let { h: r , s: t , l: n , a: o  } = e, i = Math.round(t * 100), a = Math.round(n * 100);
+    return e.a === 0 ? "transparent" : e.a != null ? `hsla(${r},${i}%,${a}%,${o})` : `hsl(${r},${i}%,${a}%)`;
+}, $3d510a5be12ccce7$var$Nt = (e)=>{
+    let r = $3d510a5be12ccce7$export$fd9b4b6e61e89f57($3d510a5be12ccce7$export$d8d8fd9aec3aff47(e));
+    return $3d510a5be12ccce7$var$Xe(r);
+}, $3d510a5be12ccce7$var$Xe = (e)=>{
+    let r = $3d510a5be12ccce7$var$Ye(e), t = r.r / 255, n = r.g / 255, o = r.b / 255, i = Math.max(t, n, o), a = Math.min(t, n, o), u, f, s = (i + a) / 2;
+    if (i == a) u = f = 0;
+    else {
+        let c = i - a;
+        switch(f = s >= .5 ? c / (2 - (i + a)) : c / (i + a), i){
+            case t:
+                u = (n - o) / c * 60;
+                break;
+            case n:
+                u = ((o - t) / c + 2) * 60;
+                break;
+            default:
+                u = ((t - n) / c + 4) * 60;
+                break;
+        }
+    }
+    let l = {
+        h: Math.round(u),
+        s: f,
+        l: s
+    }, p = r.a;
+    return p != null && (l.a = p), l;
+}, $3d510a5be12ccce7$var$Ye = (e)=>{
+    let [r, t, n, o] = e.replace($3d510a5be12ccce7$var$Ft, "").split(",").map((i)=>Number.parseFloat(i));
+    return {
+        r: r,
+        g: t,
+        b: n,
+        a: o
+    };
+}, $3d510a5be12ccce7$var$qe = (e)=>{
+    let [r, t, n, o] = e.replace($3d510a5be12ccce7$var$_t, "").split(",").map((i)=>Number.parseFloat(i));
+    return {
+        h: r,
+        s: t / 100,
+        l: n / 100,
+        a: o
+    };
+};
+function $3d510a5be12ccce7$var$ae(e) {
+    for(var r = 1; r < arguments.length; r++){
+        var t = arguments[r];
+        for(var n in t)e[n] = t[n];
+    }
+    return e;
+}
+var $3d510a5be12ccce7$var$Gt = {
+    read: function(e) {
+        return e[0] === '"' && (e = e.slice(1, -1)), e.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent);
+    },
+    write: function(e) {
+        return encodeURIComponent(e).replace(/%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g, decodeURIComponent);
+    }
+};
+function $3d510a5be12ccce7$var$ye(e, r) {
+    function t(o, i, a) {
+        if (!(typeof document > "u")) {
+            a = $3d510a5be12ccce7$var$ae({}, r, a), typeof a.expires == "number" && (a.expires = new Date(Date.now() + a.expires * 864e5)), a.expires && (a.expires = a.expires.toUTCString()), o = encodeURIComponent(o).replace(/%(2[346B]|5E|60|7C)/g, decodeURIComponent).replace(/[()]/g, escape);
+            var u = "";
+            for(var f in a)a[f] && (u += "; " + f, a[f] !== !0 && (u += "=" + a[f].split(";")[0]));
+            return document.cookie = o + "=" + e.write(i, o) + u;
+        }
+    }
+    function n(o) {
+        if (!(typeof document > "u" || arguments.length && !o)) {
+            for(var i = document.cookie ? document.cookie.split("; ") : [], a = {}, u = 0; u < i.length; u++){
+                var f = i[u].split("="), s = f.slice(1).join("=");
+                try {
+                    var l = decodeURIComponent(f[0]);
+                    if (a[l] = e.read(s, l), o === l) break;
+                } catch  {}
+            }
+            return o ? a[o] : a;
+        }
+    }
+    return Object.create({
+        set: t,
+        get: n,
+        remove: function(o, i) {
+            t(o, "", $3d510a5be12ccce7$var$ae({}, i, {
+                expires: -1
+            }));
+        },
+        withAttributes: function(o) {
+            return $3d510a5be12ccce7$var$ye(this.converter, $3d510a5be12ccce7$var$ae({}, this.attributes, o));
+        },
+        withConverter: function(o) {
+            return $3d510a5be12ccce7$var$ye($3d510a5be12ccce7$var$ae({}, this.converter, o), this.attributes);
+        }
+    }, {
+        attributes: {
+            value: Object.freeze(r)
+        },
+        converter: {
+            value: Object.freeze(e)
+        }
+    });
+}
+var $3d510a5be12ccce7$var$Kt = $3d510a5be12ccce7$var$ye($3d510a5be12ccce7$var$Gt, {
+    path: "/"
+}), $3d510a5be12ccce7$var$se = $3d510a5be12ccce7$var$Kt;
+function $3d510a5be12ccce7$export$492cdf8e65f2099e(e) {
+    return {
+        get () {
+            return $3d510a5be12ccce7$var$se.get(e);
+        },
+        set (r, t = {}) {
+            return $3d510a5be12ccce7$var$se.set(e, r, t);
+        },
+        remove (r) {
+            $3d510a5be12ccce7$var$se.remove(e, r);
+        }
+    };
+}
+var $3d510a5be12ccce7$export$87a845ded7190bfc = ()=>{
+    let e = (0, $acgj4.c), r = (0, $acgj4.c);
+    return {
+        promise: new Promise((n, o)=>{
+            e = n, r = o;
+        }),
+        resolve: e,
+        reject: r
+    };
+};
+function $3d510a5be12ccce7$export$95edd8e74ffdc7e7(e) {
+    return e ? e.toLocaleString("en-US", {
+        hour: "2-digit",
+        minute: "numeric",
+        hour12: !0
+    }) : "";
+}
+function $3d510a5be12ccce7$export$4a02e9c37dab4871(e, r, { absolute: t = !0  } = {}) {
+    if (!e || !r) return 0;
+    let n = Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()), o = Date.UTC(r.getFullYear(), r.getMonth(), r.getDate()), i = Math.floor((o - n) / 864e5);
+    return t ? Math.abs(i) : i;
+}
+function $3d510a5be12ccce7$export$fcc71269590ba0a8(e) {
+    try {
+        return new Date(e || new Date);
+    } catch  {
+        return new Date;
+    }
+}
+function $3d510a5be12ccce7$export$8fbbfd65594f46a0(e) {
+    let { date: r , relativeTo: t  } = e;
+    if (!r || !t) return null;
+    let n = $3d510a5be12ccce7$export$fcc71269590ba0a8(r), o = $3d510a5be12ccce7$export$fcc71269590ba0a8(t), i = $3d510a5be12ccce7$export$4a02e9c37dab4871(o, n, {
+        absolute: !1
+    });
+    return i < -6 ? {
+        relativeDateCase: "other",
+        date: n
+    } : i < -1 ? {
+        relativeDateCase: "previous6Days",
+        date: n
+    } : i === -1 ? {
+        relativeDateCase: "lastDay",
+        date: n
+    } : i === 0 ? {
+        relativeDateCase: "sameDay",
+        date: n
+    } : i === 1 ? {
+        relativeDateCase: "nextDay",
+        date: n
+    } : i < 7 ? {
+        relativeDateCase: "next6Days",
+        date: n
+    } : {
+        relativeDateCase: "other",
+        date: n
+    };
+}
+function $3d510a5be12ccce7$export$3d83eec43f4ea476(e, r) {
+    let t = $3d510a5be12ccce7$export$fcc71269590ba0a8(e);
+    return t.setFullYear(t.getFullYear() + r), t;
+}
+function $3d510a5be12ccce7$export$55152de1f925fd05(e) {
+    let r = e?.status;
+    return e?.errors?.[0]?.code === "authentication_invalid" && r === 401;
+}
+function $3d510a5be12ccce7$export$476aa014e2fd89d5(e) {
+    return (`${e.message}${e.name}` || "").toLowerCase().replace(/\s+/g, "").includes("networkerror");
+}
+function $3d510a5be12ccce7$export$aa2c7ad2063c8ec6(e) {
+    return new Promise((r, t)=>{
+        let n = new FileReader;
+        n.addEventListener("load", function() {
+            let o = JSON.parse(n.result);
+            r(o);
+        }), n.addEventListener("error", t), n.readAsText(e);
+    });
+}
+var $3d510a5be12ccce7$export$c1e1b7be43d0d063 = (e)=>typeof atob < "u" && typeof atob == "function" ? atob(e) : typeof $parcel$global < "u" && $parcel$global.Buffer ? new $parcel$global.Buffer(e, "base64").toString() : e;
+var $3d510a5be12ccce7$var$Re = "pk_live_", $3d510a5be12ccce7$var$Je = "pk_test_", $3d510a5be12ccce7$var$jt = /^(([a-z]+)-){2}([0-9]{1,2})\.clerk\.accounts([a-z.]*)(dev|com)$/i;
+function $3d510a5be12ccce7$export$dbd57dddc2edde62(e) {
+    return `${$3d510a5be12ccce7$var$jt.test(e) ? $3d510a5be12ccce7$var$Je : $3d510a5be12ccce7$var$Re}${btoa(`${e}$`)}`;
+}
+function $3d510a5be12ccce7$export$e714dbd47ccca8af(e) {
+    if (e = e || "", !$3d510a5be12ccce7$export$e7b0b0686142f5e8(e)) return null;
+    let r = e.startsWith($3d510a5be12ccce7$var$Re) ? "production" : "development", t = $3d510a5be12ccce7$export$c1e1b7be43d0d063(e.split("_")[2]);
+    return t.endsWith("$") ? (t = t.slice(0, -1), {
+        instanceType: r,
+        frontendApi: t
+    }) : null;
+}
+function $3d510a5be12ccce7$export$e7b0b0686142f5e8(e) {
+    e = e || "";
+    let r = e.startsWith($3d510a5be12ccce7$var$Re) || e.startsWith($3d510a5be12ccce7$var$Je), t = $3d510a5be12ccce7$export$c1e1b7be43d0d063(e.split("_")[2] || "").endsWith("$");
+    return r && t;
+}
+function $3d510a5be12ccce7$export$64ce68e329c0c00a(e) {
+    return e = e || "", e.startsWith("clerk.");
+}
+function $3d510a5be12ccce7$export$31072de0539b233() {
+    let e = [
+        ".lcl.dev",
+        ".stg.dev",
+        ".lclstage.dev",
+        ".stgstage.dev",
+        ".dev.lclclerk.com",
+        ".stg.lclclerk.com",
+        ".accounts.lclclerk.com",
+        "accountsstage.dev",
+        "accounts.dev"
+    ], r = new Map;
+    return {
+        isDevOrStagingUrl: (t)=>{
+            if (!t) return !1;
+            let n = typeof t == "string" ? t : t.hostname, o = r.get(n);
+            return o === void 0 && (o = e.some((i)=>n.endsWith(i)), r.set(n, o)), o;
+        }
+    };
+}
+function $3d510a5be12ccce7$export$4c012cc1e603e93() {
+    if (!window.matchMedia) return !1;
+    let e = window.matchMedia("only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen  and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx)");
+    return e && e.matches || window.devicePixelRatio > 1;
+}
+var $3d510a5be12ccce7$var$Yt = "__lsbc__", $3d510a5be12ccce7$export$e30d1d60d460c8ce = class {
+    constructor(r){
+        this.eventTarget = window;
+        this.postMessage = (r)=>{
+            try {
+                localStorage.setItem(this.channelKey, JSON.stringify(r)), localStorage.removeItem(this.channelKey);
+            } catch  {}
+        };
+        this.addEventListener = (r, t)=>{
+            this.eventTarget.addEventListener(this.prefixEventName(r), (n)=>{
+                t(n);
+            });
+        };
+        this.setupLocalStorageListener = ()=>{
+            let r = (t)=>{
+                if (!(t.key !== this.channelKey || !t.newValue)) try {
+                    let n = JSON.parse(t.newValue || ""), o = new MessageEvent(this.prefixEventName("message"), {
+                        data: n
+                    });
+                    this.eventTarget.dispatchEvent(o);
+                } catch  {}
+            };
+            window.addEventListener("storage", r);
+        };
+        this.channelKey = $3d510a5be12ccce7$var$Yt + r, this.setupLocalStorageListener();
+    }
+    prefixEventName(r) {
+        return this.channelKey + r;
+    }
+};
+var $3d510a5be12ccce7$var$qt = Object.freeze({
+    "image/png": "png",
+    "image/jpeg": "jpg",
+    "image/gif": "gif",
+    "image/webp": "webp",
+    "image/x-icon": "ico",
+    "image/vnd.microsoft.icon": "ico"
+}), $3d510a5be12ccce7$export$1b45514b112dd749 = (e)=>$3d510a5be12ccce7$var$qt[e];
+function $3d510a5be12ccce7$export$af80d780caaebdea(e, r, t) {
+    if (typeof e == "function") return e(r);
+    if (typeof e < "u") return e;
+    if (typeof t < "u") return t;
+}
+var $3d510a5be12ccce7$var$Jt = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+function $3d510a5be12ccce7$export$402d6c4b260c768(e) {
+    return $3d510a5be12ccce7$var$Jt.test(e || "");
+}
+function $3d510a5be12ccce7$export$29d0dd1cc36cee26(e) {
+    let r = e || "";
+    return r.charAt(0).toUpperCase() + r.slice(1);
+}
+function $3d510a5be12ccce7$export$b70dcce1c70696bf(e) {
+    return e ? e.replace(/([-_][a-z])/g, (r)=>r.toUpperCase().replace(/-|_/, "")) : "";
+}
+function $3d510a5be12ccce7$export$e12f55f9c91df96a(e) {
+    return e ? e.replace(/[A-Z]/g, (r)=>`_${r.toLowerCase()}`) : "";
+}
+var $3d510a5be12ccce7$var$tt = (e)=>{
+    let r = (t)=>{
+        if (!t) return t;
+        if (Array.isArray(t)) return t.map((i)=>typeof i == "object" || Array.isArray(i) ? r(i) : i);
+        let n = {
+            ...t
+        }, o = Object.keys(n);
+        for (let i of o){
+            let a = e(i.toString());
+            a !== i && (n[a] = n[i], delete n[i]), typeof n[a] == "object" && (n[a] = r(n[a]));
+        }
+        return n;
+    };
+    return r;
+}, $3d510a5be12ccce7$export$962fa8d541f74d2b = $3d510a5be12ccce7$var$tt($3d510a5be12ccce7$export$e12f55f9c91df96a), $3d510a5be12ccce7$export$b0c2d4a93e16a70b = $3d510a5be12ccce7$var$tt($3d510a5be12ccce7$export$b70dcce1c70696bf);
+var $3d510a5be12ccce7$var$Te = `const respond=r=>{self.postMessage(r)},workerToTabIds={};self.addEventListener("message",r=>{const e=r.data;switch(e.type){case"setTimeout":workerToTabIds[e.id]=setTimeout(()=>{respond({id:e.id})},e.ms);break;case"clearTimeout":workerToTabIds[e.id]&&(clearTimeout(workerToTabIds[e.id]),delete workerToTabIds[e.id]);break;case"setInterval":workerToTabIds[e.id]=setInterval(()=>{respond({id:e.id})},e.ms);break;case"clearInterval":workerToTabIds[e.id]&&(clearInterval(workerToTabIds[e.id]),delete workerToTabIds[e.id]);break}});
+`;
+var $3d510a5be12ccce7$var$rt = (e, r = {})=>{
+    if (typeof Worker > "u") return null;
+    try {
+        let t = new Blob([
+            e
+        ], {
+            type: "application/javascript; charset=utf-8"
+        }), n = globalThis.URL.createObjectURL(t);
+        return new Worker(n, r);
+    } catch  {
+        return console.warn("Clerk: Cannot create worker from blob. Consider adding worker-src blob:; to your CSP"), null;
+    }
+}, $3d510a5be12ccce7$var$Qt = ()=>{
+    let e = globalThis.setTimeout.bind(globalThis), r = globalThis.setInterval.bind(globalThis), t = globalThis.clearTimeout.bind(globalThis), n = globalThis.clearInterval.bind(globalThis);
+    return {
+        setTimeout: e,
+        setInterval: r,
+        clearTimeout: t,
+        clearInterval: n,
+        cleanup: (0, $acgj4.c)
+    };
+}, $3d510a5be12ccce7$export$aaca7980e2aa3e57 = ()=>{
+    let e = 0, r = ()=>e++, t = new Map, n = (c, m)=>c?.postMessage(m), o = (c)=>{
+        t.get(c.data.id)?.();
+    }, i = $3d510a5be12ccce7$var$rt($3d510a5be12ccce7$var$Te, {
+        name: "clerk-timers"
+    });
+    if (i?.addEventListener("message", o), !i) return $3d510a5be12ccce7$var$Qt();
+    let a = ()=>{
+        i || (i = $3d510a5be12ccce7$var$rt($3d510a5be12ccce7$var$Te, {
+            name: "clerk-timers"
+        }), i?.addEventListener("message", o));
+    };
+    return {
+        setTimeout: (c, m)=>{
+            a();
+            let C = r();
+            return t.set(C, c), n(i, {
+                type: "setTimeout",
+                id: C,
+                ms: m
+            }), C;
+        },
+        setInterval: (c, m)=>{
+            a();
+            let C = r();
+            return t.set(C, c), n(i, {
+                type: "setInterval",
+                id: C,
+                ms: m
+            }), C;
+        },
+        clearTimeout: (c)=>{
+            a(), t.delete(c), n(i, {
+                type: "clearTimeout",
+                id: c
+            });
+        },
+        clearInterval: (c)=>{
+            a(), t.delete(c), n(i, {
+                type: "clearInterval",
+                id: c
+            });
+        },
+        cleanup: ()=>{
+            i && (i.terminate(), i = null, t.clear());
+        }
+    };
+};
+function $3d510a5be12ccce7$export$d7350d97c7b41caa({ delayInMs: e  } = {
+    delayInMs: 1e3
+}) {
+    let r = $3d510a5be12ccce7$export$aaca7980e2aa3e57(), t, n = !1, o = ()=>{
+        t && (r.clearTimeout(t), r.cleanup()), n = !0;
+    }, i = async (a)=>{
+        n = !1, await a(o), !n && (t = r.setTimeout(()=>{
+            i(a);
+        }, e));
+    };
+    return {
+        run: i,
+        stop: o
+    };
+}
+function $3d510a5be12ccce7$export$e2743abb42a775d(e) {
+    return e ? $3d510a5be12ccce7$export$10e521722f10e8f7(e) || $3d510a5be12ccce7$export$b9e876062c8906fe(e) : !0;
+}
+function $3d510a5be12ccce7$export$10e521722f10e8f7(e) {
+    return /^http(s)?:\/\//.test(e || "");
+}
+function $3d510a5be12ccce7$export$b9e876062c8906fe(e) {
+    return e.startsWith("/");
+}
+function $3d510a5be12ccce7$export$b5f197fdba327544(e) {
+    return e ? $3d510a5be12ccce7$export$b9e876062c8906fe(e) ? new URL(e, window.location.origin).toString() : e : "";
+}
+function $3d510a5be12ccce7$export$14619c0eed01a470({ request: e , relativePath: r  }) {
+    let { headers: t , url: n  } = e, o = new URL(n), i = t.get("X-Forwarded-Host") ?? t.get("host") ?? t.host ?? o.host, a = (t.get("X-Forwarded-Proto") ?? t["X-Forwarded-Proto"])?.split(",")[0] ?? o.protocol;
+    return a = a.replace(/[:/]/, ""), new URL(r || o.pathname, `${a}://${i}`);
+}
+var $3d510a5be12ccce7$export$8176888a712f743c = ()=>typeof window < "u";
+function $3d510a5be12ccce7$export$9a9a4ec1b3864074(e = "") {
+    return e.startsWith("?") && (e = e.slice(1)), new URLSearchParams(e);
+}
+function $3d510a5be12ccce7$export$c5f13991f66aa26a(e = "") {
+    return (e || "").replace(/^.+:\/\//, "");
+}
+function $3d510a5be12ccce7$export$34d7ddd66a763253(e) {
+    if (!e) return "";
+    let r;
+    if (e.match(/^(clerk\.)+\w*$/)) r = /(clerk\.)*(?=clerk\.)/;
+    else {
+        if (e.match(/\.clerk.accounts/)) return e;
+        r = /^(clerk\.)*/gi;
+    }
+    return `clerk.${e.replace(r, "")}`;
+}
+var $3d510a5be12ccce7$var$tr = {
+    maxRetries: 10,
+    firstDelay: 125,
+    maxDelay: 0,
+    timeMultiple: 2,
+    shouldRetry: ()=>!0
+}, $3d510a5be12ccce7$var$rr = async (e)=>new Promise((r)=>setTimeout(r, e)), $3d510a5be12ccce7$var$nr = (e)=>{
+    let r = 0, t = ()=>{
+        let n = e.firstDelay, o = e.timeMultiple, i = n * Math.pow(o, r);
+        return Math.min(e.maxDelay || i, i);
+    };
+    return async ()=>{
+        await $3d510a5be12ccce7$var$rr(t()), r++;
+    };
+}, $3d510a5be12ccce7$export$66fdaba09a8b6da = async (e, r = {})=>{
+    let t = 0, { maxRetries: n , shouldRetry: o , firstDelay: i , maxDelay: a , timeMultiple: u  } = {
+        ...$3d510a5be12ccce7$var$tr,
+        ...r
+    }, f = ()=>t === n, s = $3d510a5be12ccce7$var$nr({
+        firstDelay: i,
+        maxDelay: a,
+        timeMultiple: u
+    });
+    for(; !f();)try {
+        return await e();
+    } catch (l) {
+        if (t++, !o(l, t) || f()) throw l;
+        await s();
+    }
+    throw new Error("Something went wrong");
+};
+var $3d510a5be12ccce7$export$9f1ac3e4ddeb29bb = {
+    toRegexp: (e)=>{
+        try {
+            return (0, (/*@__PURE__*/$parcel$interopDefault($1J5bN)))(e);
+        } catch (r) {
+            throw new Error(`Invalid pattern: ${e}.
+Consult the documentation of glob-to-regexp here: https://www.npmjs.com/package/glob-to-regexp.
+${r.message}`);
+        }
+    }
+};
+function $3d510a5be12ccce7$export$9f6298504fcd4ed(e, r) {
+    if (!e) throw typeof r == "string" ? new Error(r) : new Error(`${r.displayName} not found`);
+}
+var $3d510a5be12ccce7$export$b4f021037e6d7d3f = (e, r)=>{
+    let { assertCtxFn: t = $3d510a5be12ccce7$export$9f6298504fcd4ed  } = r || {}, n = (0, (/*@__PURE__*/$parcel$interopDefault($hJ1gd))).createContext(void 0);
+    return n.displayName = e, [
+        n,
+        ()=>{
+            let a = (0, (/*@__PURE__*/$parcel$interopDefault($hJ1gd))).useContext(n);
+            return t(a, `${e} not found`), a.value;
+        },
+        ()=>{
+            let a = (0, (/*@__PURE__*/$parcel$interopDefault($hJ1gd))).useContext(n);
+            return a ? a.value : {};
+        }
+    ];
+};
+function $3d510a5be12ccce7$var$ct(e, r, t, n) {
+    function o(i) {
+        return i instanceof t ? i : new t(function(a) {
+            a(i);
+        });
+    }
+    return new (t || (t = Promise))(function(i, a) {
+        function u(l) {
+            try {
+                s(n.next(l));
+            } catch (p) {
+                a(p);
+            }
+        }
+        function f(l) {
+            try {
+                s(n.throw(l));
+            } catch (p) {
+                a(p);
+            }
+        }
+        function s(l) {
+            l.done ? i(l.value) : o(l.value).then(u, f);
+        }
+        s((n = n.apply(e, r || [])).next());
+    });
+}
+function $3d510a5be12ccce7$var$dt(e, r) {
+    var t = {
+        label: 0,
+        sent: function() {
+            if (i[0] & 1) throw i[1];
+            return i[1];
+        },
+        trys: [],
+        ops: []
+    }, n, o, i, a;
+    return a = {
+        next: u(0),
+        throw: u(1),
+        return: u(2)
+    }, typeof Symbol == "function" && (a[Symbol.iterator] = function() {
+        return this;
+    }), a;
+    function u(s) {
+        return function(l) {
+            return f([
+                s,
+                l
+            ]);
+        };
+    }
+    function f(s) {
+        if (n) throw new TypeError("Generator is already executing.");
+        for(; t;)try {
+            if (n = 1, o && (i = s[0] & 2 ? o.return : s[0] ? o.throw || ((i = o.return) && i.call(o), 0) : o.next) && !(i = i.call(o, s[1])).done) return i;
+            switch(o = 0, i && (s = [
+                s[0] & 2,
+                i.value
+            ]), s[0]){
+                case 0:
+                case 1:
+                    i = s;
+                    break;
+                case 4:
+                    return t.label++, {
+                        value: s[1],
+                        done: !1
+                    };
+                case 5:
+                    t.label++, o = s[1], s = [
+                        0
+                    ];
+                    continue;
+                case 7:
+                    s = t.ops.pop(), t.trys.pop();
+                    continue;
+                default:
+                    if (i = t.trys, !(i = i.length > 0 && i[i.length - 1]) && (s[0] === 6 || s[0] === 2)) {
+                        t = 0;
+                        continue;
+                    }
+                    if (s[0] === 3 && (!i || s[1] > i[0] && s[1] < i[3])) {
+                        t.label = s[1];
+                        break;
+                    }
+                    if (s[0] === 6 && t.label < i[1]) {
+                        t.label = i[1], i = s;
+                        break;
+                    }
+                    if (i && t.label < i[2]) {
+                        t.label = i[2], t.ops.push(s);
+                        break;
+                    }
+                    i[2] && t.ops.pop(), t.trys.pop();
+                    continue;
+            }
+            s = r.call(e, t);
+        } catch (l) {
+            s = [
+                6,
+                l
+            ], o = 0;
+        } finally{
+            n = i = 0;
+        }
+        if (s[0] & 5) throw s[1];
+        return {
+            value: s[0] ? s[1] : void 0,
+            done: !0
+        };
+    }
+}
+var $3d510a5be12ccce7$var$I = function() {}, $3d510a5be12ccce7$var$h = $3d510a5be12ccce7$var$I(), $3d510a5be12ccce7$var$Q = Object, $3d510a5be12ccce7$var$y = function(e) {
+    return e === $3d510a5be12ccce7$var$h;
+}, $3d510a5be12ccce7$var$A = function(e) {
+    return typeof e == "function";
+}, $3d510a5be12ccce7$var$M = function(e, r) {
+    return $3d510a5be12ccce7$var$Q.assign({}, e, r);
+}, $3d510a5be12ccce7$var$Pe = "undefined", $3d510a5be12ccce7$var$Ae = function() {
+    return typeof window != $3d510a5be12ccce7$var$Pe;
+}, $3d510a5be12ccce7$var$cr = function() {
+    return typeof document != $3d510a5be12ccce7$var$Pe;
+}, $3d510a5be12ccce7$var$dr = function() {
+    return $3d510a5be12ccce7$var$Ae() && typeof window.requestAnimationFrame != $3d510a5be12ccce7$var$Pe;
+}, $3d510a5be12ccce7$var$ue = new WeakMap, $3d510a5be12ccce7$var$fr = 0, $3d510a5be12ccce7$var$re = function(e) {
+    var r = typeof e, t = e && e.constructor, n = t == Date, o, i;
+    if ($3d510a5be12ccce7$var$Q(e) === e && !n && t != RegExp) {
+        if (o = $3d510a5be12ccce7$var$ue.get(e), o) return o;
+        if (o = ++$3d510a5be12ccce7$var$fr + "~", $3d510a5be12ccce7$var$ue.set(e, o), t == Array) {
+            for(o = "@", i = 0; i < e.length; i++)o += $3d510a5be12ccce7$var$re(e[i]) + ",";
+            $3d510a5be12ccce7$var$ue.set(e, o);
+        }
+        if (t == $3d510a5be12ccce7$var$Q) {
+            o = "#";
+            for(var a = $3d510a5be12ccce7$var$Q.keys(e).sort(); !$3d510a5be12ccce7$var$y(i = a.pop());)$3d510a5be12ccce7$var$y(e[i]) || (o += i + ":" + $3d510a5be12ccce7$var$re(e[i]) + ",");
+            $3d510a5be12ccce7$var$ue.set(e, o);
+        }
+    } else o = n ? e.toJSON() : r == "symbol" ? e.toString() : r == "string" ? JSON.stringify(e) : "" + e;
+    return o;
+}, $3d510a5be12ccce7$var$Ie = !0, $3d510a5be12ccce7$var$pr = function() {
+    return $3d510a5be12ccce7$var$Ie;
+}, $3d510a5be12ccce7$var$ft = $3d510a5be12ccce7$var$Ae(), $3d510a5be12ccce7$var$Ue = $3d510a5be12ccce7$var$cr(), $3d510a5be12ccce7$var$Le = $3d510a5be12ccce7$var$ft && window.addEventListener ? window.addEventListener.bind(window) : $3d510a5be12ccce7$var$I, $3d510a5be12ccce7$var$gr = $3d510a5be12ccce7$var$Ue ? document.addEventListener.bind(document) : $3d510a5be12ccce7$var$I, $3d510a5be12ccce7$var$ze = $3d510a5be12ccce7$var$ft && window.removeEventListener ? window.removeEventListener.bind(window) : $3d510a5be12ccce7$var$I, $3d510a5be12ccce7$var$mr = $3d510a5be12ccce7$var$Ue ? document.removeEventListener.bind(document) : $3d510a5be12ccce7$var$I, $3d510a5be12ccce7$var$vr = function() {
+    var e = $3d510a5be12ccce7$var$Ue && document.visibilityState;
+    return $3d510a5be12ccce7$var$y(e) || e !== "hidden";
+}, $3d510a5be12ccce7$var$hr = function(e) {
+    return $3d510a5be12ccce7$var$gr("visibilitychange", e), $3d510a5be12ccce7$var$Le("focus", e), function() {
+        $3d510a5be12ccce7$var$mr("visibilitychange", e), $3d510a5be12ccce7$var$ze("focus", e);
+    };
+}, $3d510a5be12ccce7$var$br = function(e) {
+    var r = function() {
+        $3d510a5be12ccce7$var$Ie = !0, e();
+    }, t = function() {
+        $3d510a5be12ccce7$var$Ie = !1;
+    };
+    return $3d510a5be12ccce7$var$Le("online", r), $3d510a5be12ccce7$var$Le("offline", t), function() {
+        $3d510a5be12ccce7$var$ze("online", r), $3d510a5be12ccce7$var$ze("offline", t);
+    };
+}, $3d510a5be12ccce7$var$yr = {
+    isOnline: $3d510a5be12ccce7$var$pr,
+    isVisible: $3d510a5be12ccce7$var$vr
+}, $3d510a5be12ccce7$var$Cr = {
+    initFocus: $3d510a5be12ccce7$var$hr,
+    initReconnect: $3d510a5be12ccce7$var$br
+}, $3d510a5be12ccce7$var$le = !$3d510a5be12ccce7$var$Ae() || "Deno" in window, $3d510a5be12ccce7$var$xr = function(e) {
+    return $3d510a5be12ccce7$var$dr() ? window.requestAnimationFrame(e) : setTimeout(e, 1);
+}, $3d510a5be12ccce7$var$ee = $3d510a5be12ccce7$var$le ? (0, $hJ1gd.useEffect) : (0, $hJ1gd.useLayoutEffect), $3d510a5be12ccce7$var$Ee = typeof navigator < "u" && navigator.connection, $3d510a5be12ccce7$var$ot = !$3d510a5be12ccce7$var$le && $3d510a5be12ccce7$var$Ee && ([
+    "slow-2g",
+    "2g"
+].includes($3d510a5be12ccce7$var$Ee.effectiveType) || $3d510a5be12ccce7$var$Ee.saveData), $3d510a5be12ccce7$var$pt = function(e) {
+    if ($3d510a5be12ccce7$var$A(e)) try {
+        e = e();
+    } catch  {
+        e = "";
+    }
+    var r = [].concat(e);
+    e = typeof e == "string" ? e : (Array.isArray(e) ? e.length : e) ? $3d510a5be12ccce7$var$re(e) : "";
+    var t = e ? "$swr$" + e : "";
+    return [
+        e,
+        r,
+        t
+    ];
+}, $3d510a5be12ccce7$var$H = new WeakMap, $3d510a5be12ccce7$var$gt = 0, $3d510a5be12ccce7$var$mt = 1, $3d510a5be12ccce7$var$vt = 2, $3d510a5be12ccce7$var$te = function(e, r, t, n, o, i, a) {
+    a === void 0 && (a = !0);
+    var u = $3d510a5be12ccce7$var$H.get(e), f = u[0], s = u[1], l = u[3], p = f[r], c = s[r];
+    if (a && c) for(var m = 0; m < c.length; ++m)c[m](t, n, o);
+    return i && (delete l[r], p && p[0]) ? p[0]($3d510a5be12ccce7$var$vt).then(function() {
+        return e.get(r);
+    }) : e.get(r);
+}, $3d510a5be12ccce7$var$Rr = 0, $3d510a5be12ccce7$var$Me = function() {
+    return ++$3d510a5be12ccce7$var$Rr;
+}, $3d510a5be12ccce7$var$ht = function() {
+    for(var e = [], r = 0; r < arguments.length; r++)e[r] = arguments[r];
+    return $3d510a5be12ccce7$var$ct(void 0, void 0, void 0, function() {
+        var t, n, o, i, a, u, f, s, l, p, c, m, C, x, g, d, B, U, L, E, _;
+        return $3d510a5be12ccce7$var$dt(this, function(D) {
+            switch(D.label){
+                case 0:
+                    if (t = e[0], n = e[1], o = e[2], i = e[3], a = typeof i == "boolean" ? {
+                        revalidate: i
+                    } : i || {}, u = $3d510a5be12ccce7$var$y(a.populateCache) ? !0 : a.populateCache, f = a.revalidate !== !1, s = a.rollbackOnError !== !1, l = a.optimisticData, p = $3d510a5be12ccce7$var$pt(n), c = p[0], m = p[2], !c) return [
+                        2
+                    ];
+                    if (C = $3d510a5be12ccce7$var$H.get(t), x = C[2], e.length < 3) return [
+                        2,
+                        $3d510a5be12ccce7$var$te(t, c, t.get(c), $3d510a5be12ccce7$var$h, $3d510a5be12ccce7$var$h, f, !0)
+                    ];
+                    if (g = o, B = $3d510a5be12ccce7$var$Me(), x[c] = [
+                        B,
+                        0
+                    ], U = !$3d510a5be12ccce7$var$y(l), L = t.get(c), U && (E = $3d510a5be12ccce7$var$A(l) ? l(L) : l, t.set(c, E), $3d510a5be12ccce7$var$te(t, c, E)), $3d510a5be12ccce7$var$A(g)) try {
+                        g = g(t.get(c));
+                    } catch (F) {
+                        d = F;
+                    }
+                    return g && $3d510a5be12ccce7$var$A(g.then) ? [
+                        4,
+                        g.catch(function(F) {
+                            d = F;
+                        })
+                    ] : [
+                        3,
+                        2
+                    ];
+                case 1:
+                    if (g = D.sent(), B !== x[c][0]) {
+                        if (d) throw d;
+                        return [
+                            2,
+                            g
+                        ];
+                    } else d && U && s && (u = !0, g = L, t.set(c, L));
+                    D.label = 2;
+                case 2:
+                    return u && (d || ($3d510a5be12ccce7$var$A(u) && (g = u(g, L)), t.set(c, g)), t.set(m, $3d510a5be12ccce7$var$M(t.get(m), {
+                        error: d
+                    }))), x[c][1] = $3d510a5be12ccce7$var$Me(), [
+                        4,
+                        $3d510a5be12ccce7$var$te(t, c, g, d, $3d510a5be12ccce7$var$h, f, !!u)
+                    ];
+                case 3:
+                    if (_ = D.sent(), d) throw d;
+                    return [
+                        2,
+                        u ? _ : g
+                    ];
+            }
+        });
+    });
+}, $3d510a5be12ccce7$var$at = function(e, r) {
+    for(var t in e)e[t][0] && e[t][0](r);
+}, $3d510a5be12ccce7$var$bt = function(e, r) {
+    if (!$3d510a5be12ccce7$var$H.has(e)) {
+        var t = $3d510a5be12ccce7$var$M($3d510a5be12ccce7$var$Cr, r), n = {}, o = $3d510a5be12ccce7$var$ht.bind($3d510a5be12ccce7$var$h, e), i = $3d510a5be12ccce7$var$I;
+        if ($3d510a5be12ccce7$var$H.set(e, [
+            n,
+            {},
+            {},
+            {},
+            o
+        ]), !$3d510a5be12ccce7$var$le) {
+            var a = t.initFocus(setTimeout.bind($3d510a5be12ccce7$var$h, $3d510a5be12ccce7$var$at.bind($3d510a5be12ccce7$var$h, n, $3d510a5be12ccce7$var$gt))), u = t.initReconnect(setTimeout.bind($3d510a5be12ccce7$var$h, $3d510a5be12ccce7$var$at.bind($3d510a5be12ccce7$var$h, n, $3d510a5be12ccce7$var$mt)));
+            i = function() {
+                a && a(), u && u(), $3d510a5be12ccce7$var$H.delete(e);
+            };
+        }
+        return [
+            e,
+            o,
+            i
+        ];
+    }
+    return [
+        e,
+        $3d510a5be12ccce7$var$H.get(e)[4]
+    ];
+}, $3d510a5be12ccce7$var$Tr = function(e, r, t, n, o) {
+    var i = t.errorRetryCount, a = o.retryCount, u = ~~((Math.random() + .5) * (1 << (a < 8 ? a : 8))) * t.errorRetryInterval;
+    !$3d510a5be12ccce7$var$y(i) && a > i || setTimeout(n, u, o);
+}, $3d510a5be12ccce7$var$yt = $3d510a5be12ccce7$var$bt(new Map), $3d510a5be12ccce7$var$Ct = $3d510a5be12ccce7$var$yt[0], $3d510a5be12ccce7$var$wr = $3d510a5be12ccce7$var$yt[1], $3d510a5be12ccce7$var$xt = $3d510a5be12ccce7$var$M({
+    onLoadingSlow: $3d510a5be12ccce7$var$I,
+    onSuccess: $3d510a5be12ccce7$var$I,
+    onError: $3d510a5be12ccce7$var$I,
+    onErrorRetry: $3d510a5be12ccce7$var$Tr,
+    onDiscarded: $3d510a5be12ccce7$var$I,
+    revalidateOnFocus: !0,
+    revalidateOnReconnect: !0,
+    revalidateIfStale: !0,
+    shouldRetryOnError: !0,
+    errorRetryInterval: $3d510a5be12ccce7$var$ot ? 1e4 : 5e3,
+    focusThrottleInterval: 5000,
+    dedupingInterval: 2000,
+    loadingTimeout: $3d510a5be12ccce7$var$ot ? 5e3 : 3e3,
+    compare: function(e, r) {
+        return $3d510a5be12ccce7$var$re(e) == $3d510a5be12ccce7$var$re(r);
+    },
+    isPaused: function() {
+        return !1;
+    },
+    cache: $3d510a5be12ccce7$var$Ct,
+    mutate: $3d510a5be12ccce7$var$wr,
+    fallback: {}
+}, $3d510a5be12ccce7$var$yr), $3d510a5be12ccce7$var$Rt = function(e, r) {
+    var t = $3d510a5be12ccce7$var$M(e, r);
+    if (r) {
+        var n = e.use, o = e.fallback, i = r.use, a = r.fallback;
+        n && i && (t.use = n.concat(i)), o && a && (t.fallback = $3d510a5be12ccce7$var$M(o, a));
+    }
+    return t;
+}, $3d510a5be12ccce7$var$De = (0, $hJ1gd.createContext)({}), $3d510a5be12ccce7$var$Or = function(e) {
+    var r = e.value, t = $3d510a5be12ccce7$var$Rt((0, $hJ1gd.useContext)($3d510a5be12ccce7$var$De), r), n = r && r.provider, o = (0, $hJ1gd.useState)(function() {
+        return n ? $3d510a5be12ccce7$var$bt(n(t.cache || $3d510a5be12ccce7$var$Ct), r) : $3d510a5be12ccce7$var$h;
+    })[0];
+    return o && (t.cache = o[0], t.mutate = o[1]), $3d510a5be12ccce7$var$ee(function() {
+        return o ? o[2] : $3d510a5be12ccce7$var$h;
+    }, []), (0, $hJ1gd.createElement)($3d510a5be12ccce7$var$De.Provider, $3d510a5be12ccce7$var$M(e, {
+        value: t
+    }));
+}, $3d510a5be12ccce7$var$Er = function(e, r) {
+    var t = (0, $hJ1gd.useState)({})[1], n = (0, $hJ1gd.useRef)(e), o = (0, $hJ1gd.useRef)({
+        data: !1,
+        error: !1,
+        isValidating: !1
+    }), i = (0, $hJ1gd.useCallback)(function(a) {
+        var u = !1, f = n.current;
+        for(var s in a){
+            var l = s;
+            f[l] !== a[l] && (f[l] = a[l], o.current[l] && (u = !0));
+        }
+        u && !r.current && t({});
+    }, []);
+    return $3d510a5be12ccce7$var$ee(function() {
+        n.current = e;
+    }), [
+        n,
+        o.current,
+        i
+    ];
+}, $3d510a5be12ccce7$var$kr = function(e) {
+    return $3d510a5be12ccce7$var$A(e[1]) ? [
+        e[0],
+        e[1],
+        e[2] || {}
+    ] : [
+        e[0],
+        null,
+        (e[1] === null ? e[2] : e[1]) || {}
+    ];
+}, $3d510a5be12ccce7$var$Sr = function() {
+    return $3d510a5be12ccce7$var$M($3d510a5be12ccce7$var$xt, (0, $hJ1gd.useContext)($3d510a5be12ccce7$var$De));
+}, $3d510a5be12ccce7$var$Ir = function(e) {
+    return function() {
+        for(var t = [], n = 0; n < arguments.length; n++)t[n] = arguments[n];
+        var o = $3d510a5be12ccce7$var$Sr(), i = $3d510a5be12ccce7$var$kr(t), a = i[0], u = i[1], f = i[2], s = $3d510a5be12ccce7$var$Rt(o, f), l = e, p = s.use;
+        if (p) for(var c = p.length; c-- > 0;)l = p[c](l);
+        return l(a, u || s.fetcher, s);
+    };
+}, $3d510a5be12ccce7$var$st = function(e, r, t) {
+    var n = r[e] || (r[e] = []);
+    return n.push(t), function() {
+        var o = n.indexOf(t);
+        o >= 0 && (n[o] = n[n.length - 1], n.pop());
+    };
+}, $3d510a5be12ccce7$var$ke = {
+    dedupe: !0
+}, $3d510a5be12ccce7$var$Lr = function(e, r, t) {
+    var n = t.cache, o = t.compare, i = t.fallbackData, a = t.suspense, u = t.revalidateOnMount, f = t.refreshInterval, s = t.refreshWhenHidden, l = t.refreshWhenOffline, p = $3d510a5be12ccce7$var$H.get(n), c = p[0], m = p[1], C = p[2], x = p[3], g = $3d510a5be12ccce7$var$pt(e), d = g[0], B = g[1], U = g[2], L = (0, $hJ1gd.useRef)(!1), E = (0, $hJ1gd.useRef)(!1), _ = (0, $hJ1gd.useRef)(d), D = (0, $hJ1gd.useRef)(r), F = (0, $hJ1gd.useRef)(t), v = function() {
+        return F.current;
+    }, ce = function() {
+        return v().isVisible() && v().isOnline();
+    }, ne = function(w) {
+        return n.set(U, $3d510a5be12ccce7$var$M(n.get(U), w));
+    }, $e = n.get(d), Ot = $3d510a5be12ccce7$var$y(i) ? t.fallback[d] : i, z = $3d510a5be12ccce7$var$y($e) ? Ot : $e, He = n.get(U) || {}, j = He.error, Ne = !L.current, Ge = function() {
+        return Ne && !$3d510a5be12ccce7$var$y(u) ? u : v().isPaused() ? !1 : a ? $3d510a5be12ccce7$var$y(z) ? !1 : t.revalidateIfStale : $3d510a5be12ccce7$var$y(z) || t.revalidateIfStale;
+    }, Et = function() {
+        return !d || !r ? !1 : He.isValidating ? !0 : Ne && Ge();
+    }, de = Et(), fe = $3d510a5be12ccce7$var$Er({
+        data: z,
+        error: j,
+        isValidating: de
+    }, E), G = fe[0], pe = fe[1], ie = fe[2], W = (0, $hJ1gd.useCallback)(function(w) {
+        return $3d510a5be12ccce7$var$ct(void 0, void 0, void 0, function() {
+            var R, T, O, X, Y, k, b, P, S, ge, q, K, me;
+            return $3d510a5be12ccce7$var$dt(this, function(J) {
+                switch(J.label){
+                    case 0:
+                        if (R = D.current, !d || !R || E.current || v().isPaused()) return [
+                            2,
+                            !1
+                        ];
+                        X = !0, Y = w || {}, k = !x[d] || !Y.dedupe, b = function() {
+                            return !E.current && d === _.current && L.current;
+                        }, P = function() {
+                            var Ke = x[d];
+                            Ke && Ke[1] === O && delete x[d];
+                        }, S = {
+                            isValidating: !1
+                        }, ge = function() {
+                            ne({
+                                isValidating: !1
+                            }), b() && ie(S);
+                        }, ne({
+                            isValidating: !0
+                        }), ie({
+                            isValidating: !0
+                        }), J.label = 1;
+                    case 1:
+                        return J.trys.push([
+                            1,
+                            3,
+                            ,
+                            4
+                        ]), k && ($3d510a5be12ccce7$var$te(n, d, G.current.data, G.current.error, !0), t.loadingTimeout && !n.get(d) && setTimeout(function() {
+                            X && b() && v().onLoadingSlow(d, t);
+                        }, t.loadingTimeout), x[d] = [
+                            R.apply(void 0, B),
+                            $3d510a5be12ccce7$var$Me()
+                        ]), me = x[d], T = me[0], O = me[1], [
+                            4,
+                            T
+                        ];
+                    case 2:
+                        return T = J.sent(), k && setTimeout(P, t.dedupingInterval), !x[d] || x[d][1] !== O ? (k && b() && v().onDiscarded(d), [
+                            2,
+                            !1
+                        ]) : (ne({
+                            error: $3d510a5be12ccce7$var$h
+                        }), S.error = $3d510a5be12ccce7$var$h, q = C[d], !$3d510a5be12ccce7$var$y(q) && (O <= q[0] || O <= q[1] || q[1] === 0) ? (ge(), k && b() && v().onDiscarded(d), [
+                            2,
+                            !1
+                        ]) : (o(G.current.data, T) ? S.data = G.current.data : S.data = T, o(n.get(d), T) || n.set(d, T), k && b() && v().onSuccess(T, d, t), [
+                            3,
+                            4
+                        ]));
+                    case 3:
+                        return K = J.sent(), P(), v().isPaused() || (ne({
+                            error: K
+                        }), S.error = K, k && b() && (v().onError(K, d, t), (typeof t.shouldRetryOnError == "boolean" && t.shouldRetryOnError || $3d510a5be12ccce7$var$A(t.shouldRetryOnError) && t.shouldRetryOnError(K)) && ce() && v().onErrorRetry(K, d, t, W, {
+                            retryCount: (Y.retryCount || 0) + 1,
+                            dedupe: !0
+                        }))), [
+                            3,
+                            4
+                        ];
+                    case 4:
+                        return X = !1, ge(), b() && k && $3d510a5be12ccce7$var$te(n, d, S.data, S.error, !1), [
+                            2,
+                            !0
+                        ];
+                }
+            });
+        });
+    }, [
+        d
+    ]), kt = (0, $hJ1gd.useCallback)($3d510a5be12ccce7$var$ht.bind($3d510a5be12ccce7$var$h, n, function() {
+        return _.current;
+    }), []);
+    if ($3d510a5be12ccce7$var$ee(function() {
+        D.current = r, F.current = t;
+    }), $3d510a5be12ccce7$var$ee(function() {
+        if (d) {
+            var w = d !== _.current, R = W.bind($3d510a5be12ccce7$var$h, $3d510a5be12ccce7$var$ke), T = function(b, P, S) {
+                ie($3d510a5be12ccce7$var$M({
+                    error: P,
+                    isValidating: S
+                }, o(G.current.data, b) ? $3d510a5be12ccce7$var$h : {
+                    data: b
+                }));
+            }, O = 0, X = function(b) {
+                if (b == $3d510a5be12ccce7$var$gt) {
+                    var P = Date.now();
+                    v().revalidateOnFocus && P > O && ce() && (O = P + v().focusThrottleInterval, R());
+                } else if (b == $3d510a5be12ccce7$var$mt) v().revalidateOnReconnect && ce() && R();
+                else if (b == $3d510a5be12ccce7$var$vt) return W();
+            }, Y = $3d510a5be12ccce7$var$st(d, m, T), k = $3d510a5be12ccce7$var$st(d, c, X);
+            return E.current = !1, _.current = d, L.current = !0, w && ie({
+                data: z,
+                error: j,
+                isValidating: de
+            }), Ge() && ($3d510a5be12ccce7$var$y(z) || $3d510a5be12ccce7$var$le ? R() : $3d510a5be12ccce7$var$xr(R)), function() {
+                E.current = !0, Y(), k();
+            };
+        }
+    }, [
+        d,
+        W
+    ]), $3d510a5be12ccce7$var$ee(function() {
+        var w;
+        function R() {
+            var O = $3d510a5be12ccce7$var$A(f) ? f(z) : f;
+            O && w !== -1 && (w = setTimeout(T, O));
+        }
+        function T() {
+            !G.current.error && (s || v().isVisible()) && (l || v().isOnline()) ? W($3d510a5be12ccce7$var$ke).then(R) : R();
+        }
+        return R(), function() {
+            w && (clearTimeout(w), w = -1);
+        };
+    }, [
+        f,
+        s,
+        l,
+        W
+    ]), (0, $hJ1gd.useDebugValue)(z), a && $3d510a5be12ccce7$var$y(z) && d) throw D.current = r, F.current = t, E.current = !1, $3d510a5be12ccce7$var$y(j) ? W($3d510a5be12ccce7$var$ke) : j;
+    return {
+        mutate: kt,
+        get data () {
+            return pe.data = !0, z;
+        },
+        get error () {
+            return pe.error = !0, j;
+        },
+        get isValidating () {
+            return pe.isValidating = !0, de;
+        }
+    };
+}, $3d510a5be12ccce7$var$di = $3d510a5be12ccce7$var$Q.defineProperty($3d510a5be12ccce7$var$Or, "default", {
+    value: $3d510a5be12ccce7$var$xt
+});
+var $3d510a5be12ccce7$var$_e = $3d510a5be12ccce7$var$Ir($3d510a5be12ccce7$var$Lr);
+var [$3d510a5be12ccce7$export$8aa96e0f8b054cda, $3d510a5be12ccce7$export$5ebbb6ccfffc7393] = $3d510a5be12ccce7$export$b4f021037e6d7d3f("ClerkInstanceContext"), [$3d510a5be12ccce7$export$38ee920e59704589, $3d510a5be12ccce7$export$87c54b525b914dab] = $3d510a5be12ccce7$export$b4f021037e6d7d3f("UserContext"), [$3d510a5be12ccce7$export$56e68f8f57ecfde4, $3d510a5be12ccce7$export$6627e187bf6ba3fd] = $3d510a5be12ccce7$export$b4f021037e6d7d3f("ClientContext"), [$3d510a5be12ccce7$export$3285420c698bc605, $3d510a5be12ccce7$export$a3931362f3958630] = $3d510a5be12ccce7$export$b4f021037e6d7d3f("SessionContext"), [$3d510a5be12ccce7$export$14ec650242c84392, $3d510a5be12ccce7$export$7305fb39264bef77] = $3d510a5be12ccce7$export$b4f021037e6d7d3f("OrganizationContext");
+var $3d510a5be12ccce7$export$ae85931d305e13b1 = (e)=>{
+    let { invitationList: r , membershipList: t  } = e || {}, { organization: n , lastOrganizationMember: o , lastOrganizationInvitation: i  } = $3d510a5be12ccce7$export$7305fb39264bef77(), a = $3d510a5be12ccce7$export$a3931362f3958630(), u = $3d510a5be12ccce7$export$5ebbb6ccfffc7393(), f = u.loaded && a && n, s = u.loaded ? ()=>u.organization?.getPendingInvitations(r) : ()=>[], l = u.loaded ? ()=>u.organization?.getMemberships(t) : ()=>[], { data: p , isValidating: c , mutate: m  } = $3d510a5be12ccce7$var$_e(f && r ? $3d510a5be12ccce7$var$Tt("invites", n, i, r) : null, s), { data: C , isValidating: x , mutate: g  } = $3d510a5be12ccce7$var$_e(f && t ? $3d510a5be12ccce7$var$Tt("memberships", n, o, t) : null, l);
+    return n === void 0 ? {
+        isLoaded: !1,
+        organization: void 0,
+        invitationList: void 0,
+        membershipList: void 0,
+        membership: void 0
+    } : n === null ? {
+        isLoaded: !0,
+        organization: null,
+        invitationList: null,
+        membershipList: null,
+        membership: null
+    } : !u.loaded && n ? {
+        isLoaded: !0,
+        organization: n,
+        invitationList: void 0,
+        membershipList: void 0,
+        membership: void 0
+    } : {
+        isLoaded: !x && !c,
+        organization: n,
+        membershipList: C,
+        membership: $3d510a5be12ccce7$var$Fr(a.user.organizationMemberships, n.id),
+        invitationList: p,
+        unstable__mutate: ()=>{
+            g(), m();
+        }
+    };
+};
+function $3d510a5be12ccce7$var$Fr(e, r) {
+    return e.find((t)=>t.organization.id === r);
+}
+function $3d510a5be12ccce7$var$Tt(e, r, t, n) {
+    return [
+        e,
+        r.id,
+        t?.id,
+        t?.updatedAt,
+        n.offset,
+        n.limit
+    ].filter(Boolean).join("-");
+}
+var $3d510a5be12ccce7$export$70272151be64739d = ()=>{
+    let e = $3d510a5be12ccce7$export$5ebbb6ccfffc7393(), r = $3d510a5be12ccce7$export$87c54b525b914dab();
+    return !e.loaded || !r ? {
+        isLoaded: !1,
+        organizationList: void 0,
+        createOrganization: void 0,
+        setActive: void 0
+    } : {
+        isLoaded: !0,
+        organizationList: $3d510a5be12ccce7$var$Vr(r.organizationMemberships),
+        setActive: e.setActive,
+        createOrganization: e.createOrganization
+    };
+};
+function $3d510a5be12ccce7$var$Vr(e) {
+    return e.map((r)=>({
+            membership: r,
+            organization: r.organization
+        }));
+}
+var $3d510a5be12ccce7$export$5fc38fde58f5cf66 = ()=>{
+    let e = $3d510a5be12ccce7$export$5ebbb6ccfffc7393();
+    return e.loaded ? {
+        isLoaded: !0,
+        createOrganization: e.createOrganization,
+        getOrganizationMemberships: e.getOrganizationMemberships,
+        getOrganization: e.getOrganization
+    } : {
+        isLoaded: !1,
+        createOrganization: void 0,
+        getOrganizationMemberships: void 0,
+        getOrganization: void 0
+    };
+};
+var $3d510a5be12ccce7$export$deebe11a338de063 = typeof window < "u" ? (0, (/*@__PURE__*/$parcel$interopDefault($hJ1gd))).useLayoutEffect : (0, (/*@__PURE__*/$parcel$interopDefault($hJ1gd))).useEffect;
+ /*! Bundled license information:
+
+js-cookie/dist/js.cookie.mjs:
+  (*! js-cookie v3.0.1 | MIT *)
+
+swr/dist/index.mjs:
+  (*! *****************************************************************************
+  Copyright (c) Microsoft Corporation.
+  
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted.
+  
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+  REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+  AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+  INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+  LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+  OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THIS SOFTWARE.
+  ***************************************************************************** *)
+*/ 
+});
+parcelRequire.register("acgj4", function(module, exports) {
+
+$parcel$export(module.exports, "c", function () { return $76c7ac872c8b260e$export$db3b6bfb95261072; });
+var $76c7ac872c8b260e$var$t = Object.defineProperty;
+var $76c7ac872c8b260e$var$c = Object.getOwnPropertyDescriptor;
+var $76c7ac872c8b260e$var$d = Object.getOwnPropertyNames;
+var $76c7ac872c8b260e$var$e = Object.prototype.hasOwnProperty;
+var $76c7ac872c8b260e$export$407448d2b89b1813 = (n, o)=>{
+    for(var a in o)$76c7ac872c8b260e$var$t(n, a, {
+        get: o[a],
+        enumerable: !0
+    });
+}, $76c7ac872c8b260e$var$s = (n, o, a, r)=>{
+    if (o && typeof o == "object" || typeof o == "function") for (let p of $76c7ac872c8b260e$var$d(o))!$76c7ac872c8b260e$var$e.call(n, p) && p !== a && $76c7ac872c8b260e$var$t(n, p, {
+        get: ()=>o[p],
+        enumerable: !(r = $76c7ac872c8b260e$var$c(o, p)) || r.enumerable
+    });
+    return n;
+}, $76c7ac872c8b260e$export$8b22cf2602fb60ce = (n, o, a)=>($76c7ac872c8b260e$var$s(n, o, "default"), a && $76c7ac872c8b260e$var$s(a, o, "default"));
+var $76c7ac872c8b260e$export$db3b6bfb95261072 = (...n)=>{};
+
+});
+
+parcelRequire.register("1J5bN", function(module, exports) {
+module.exports = function(glob, opts) {
+    if (typeof glob !== "string") throw new TypeError("Expected a string");
+    var str = String(glob);
+    // The regexp we are building, as a string.
+    var reStr = "";
+    // Whether we are matching so called "extended" globs (like bash) and should
+    // support single character matching, matching ranges of characters, group
+    // matching, etc.
+    var extended = opts ? !!opts.extended : false;
+    // When globstar is _false_ (default), '/foo/*' is translated a regexp like
+    // '^\/foo\/.*$' which will match any string beginning with '/foo/'
+    // When globstar is _true_, '/foo/*' is translated to regexp like
+    // '^\/foo\/[^/]*$' which will match any string beginning with '/foo/' BUT
+    // which does not have a '/' to the right of it.
+    // E.g. with '/foo/*' these will match: '/foo/bar', '/foo/bar.txt' but
+    // these will not '/foo/bar/baz', '/foo/bar/baz.txt'
+    // Lastely, when globstar is _true_, '/foo/**' is equivelant to '/foo/*' when
+    // globstar is _false_
+    var globstar = opts ? !!opts.globstar : false;
+    // If we are doing extended matching, this boolean is true when we are inside
+    // a group (eg {*.html,*.js}), and false otherwise.
+    var inGroup = false;
+    // RegExp flags (eg "i" ) to pass in to RegExp constructor.
+    var flags = opts && typeof opts.flags === "string" ? opts.flags : "";
+    var c;
+    for(var i = 0, len = str.length; i < len; i++){
+        c = str[i];
+        switch(c){
+            case "/":
+            case "$":
+            case "^":
+            case "+":
+            case ".":
+            case "(":
+            case ")":
+            case "=":
+            case "!":
+            case "|":
+                reStr += "\\" + c;
+                break;
+            case "?":
+                if (extended) {
+                    reStr += ".";
+                    break;
+                }
+            case "[":
+            case "]":
+                if (extended) {
+                    reStr += c;
+                    break;
+                }
+            case "{":
+                if (extended) {
+                    inGroup = true;
+                    reStr += "(";
+                    break;
+                }
+            case "}":
+                if (extended) {
+                    inGroup = false;
+                    reStr += ")";
+                    break;
+                }
+            case ",":
+                if (inGroup) {
+                    reStr += "|";
+                    break;
+                }
+                reStr += "\\" + c;
+                break;
+            case "*":
+                // Move over all consecutive "*"'s.
+                // Also store the previous and next characters
+                var prevChar = str[i - 1];
+                var starCount = 1;
+                while(str[i + 1] === "*"){
+                    starCount++;
+                    i++;
+                }
+                var nextChar = str[i + 1];
+                if (!globstar) // globstar is disabled, so treat any number of "*" as one
+                reStr += ".*";
+                else {
+                    // globstar is enabled, so determine if this is a globstar segment
+                    var isGlobstar = starCount > 1 // multiple "*"'s
+                     && (prevChar === "/" || prevChar === undefined // from the start of the segment
+                    ) && (nextChar === "/" || nextChar === undefined // to the end of the segment
+                    );
+                    if (isGlobstar) {
+                        // it's a globstar, so match zero or more path segments
+                        reStr += "((?:[^/]*(?:/|$))*)";
+                        i++; // move over the "/"
+                    } else // it's not a globstar, so only match one path segment
+                    reStr += "([^/]*)";
+                }
+                break;
+            default:
+                reStr += c;
+        }
+    }
+    // When regexp 'g' flag is specified don't
+    // constrain the regular expression with ^ & $
+    if (!flags || !~flags.indexOf("g")) reStr = "^" + reStr + "$";
+    return new RegExp(reStr, flags);
+};
+
+});
+
+
+parcelRequire.register("1TPlq", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.unsupportedNonBrowserDomainOrProxyUrlFunction = module.exports.invalidStateError = module.exports.isMagicLinkError = module.exports.MagicLinkErrorCode = module.exports.multipleChildrenInButtonComponent = module.exports.hocChildrenNotAFunctionError = module.exports.multipleClerkProvidersError = module.exports.noGuaranteedUserError = module.exports.noGuaranteedLoadedError = module.exports.noClerkProviderError = module.exports.noFrontendApiError = void 0;
+module.exports.noFrontendApiError = "Clerk: You must add the frontendApi prop to your <ClerkProvider>";
+module.exports.noClerkProviderError = "Clerk: You must wrap your application in a <ClerkProvider> component.";
+const $1622c176e66d5272$var$noGuaranteedLoadedError = (hookName)=>`Clerk: You're calling ${hookName} before there's a guarantee the client has been loaded. Call ${hookName} from a child of <SignedIn>, <SignedOut>, or <ClerkLoaded>, or use the withClerk() HOC.`;
+module.exports.noGuaranteedLoadedError = $1622c176e66d5272$var$noGuaranteedLoadedError;
+const $1622c176e66d5272$var$noGuaranteedUserError = (hookName)=>`Clerk: You're calling ${hookName} before there's a guarantee there's an active user. Call ${hookName} from a child of <SignedIn> or use the withUser() HOC.`;
+module.exports.noGuaranteedUserError = $1622c176e66d5272$var$noGuaranteedUserError;
+module.exports.multipleClerkProvidersError = "Clerk: You've added multiple <ClerkProvider> components in your React component tree. Wrap your components in a single <ClerkProvider>.";
+module.exports.hocChildrenNotAFunctionError = "Clerk: Child of WithClerk must be a function.";
+const $1622c176e66d5272$var$multipleChildrenInButtonComponent = (name)=>`Clerk: You've passed multiple children components to <${name}/>. You can only pass a single child component or text.`;
+module.exports.multipleChildrenInButtonComponent = $1622c176e66d5272$var$multipleChildrenInButtonComponent;
+module.exports.MagicLinkErrorCode = {
+    Expired: "expired",
+    Failed: "failed"
+};
+function $1622c176e66d5272$var$isMagicLinkError(err) {
+    return !!err && (err.code === module.exports.MagicLinkErrorCode.Expired || err.code === module.exports.MagicLinkErrorCode.Failed);
+}
+module.exports.isMagicLinkError = $1622c176e66d5272$var$isMagicLinkError;
+module.exports.invalidStateError = "Invalid state. Feel free to submit a bug or reach out to support here: https://clerk.com/support";
+module.exports.unsupportedNonBrowserDomainOrProxyUrlFunction = "Unsupported usage of domain or proxyUrl. The usage of domain or proxyUrl as function is not supported in non-browser environments.";
+
+});
+
+parcelRequire.register("ebXSF", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+
+var $ajUHN = parcelRequire("ajUHN");
+
+$ajUHN.__exportStar((parcelRequire("e7Qgp")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("l1Jw8")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("faoZa")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("hpwbU")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("diEDB")), module.exports);
+
+});
+parcelRequire.register("e7Qgp", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.safeExecute = module.exports.normalizeWithDefaultValue = module.exports.assertSingleChild = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $a48a42a2b7e8fdb4$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+var $1TPlq = parcelRequire("1TPlq");
+const $a48a42a2b7e8fdb4$var$assertSingleChild = (children)=>(name)=>{
+        try {
+            return $a48a42a2b7e8fdb4$var$react_1.default.Children.only(children);
+        } catch (e) {
+            throw new Error((0, $1TPlq.multipleChildrenInButtonComponent)(name));
+        }
+    };
+module.exports.assertSingleChild = $a48a42a2b7e8fdb4$var$assertSingleChild;
+const $a48a42a2b7e8fdb4$var$normalizeWithDefaultValue = (children, defaultText)=>{
+    if (!children) children = defaultText;
+    if (typeof children === "string") children = $a48a42a2b7e8fdb4$var$react_1.default.createElement("button", null, children);
+    return children;
+};
+module.exports.normalizeWithDefaultValue = $a48a42a2b7e8fdb4$var$normalizeWithDefaultValue;
+const $a48a42a2b7e8fdb4$var$safeExecute = (cb)=>(...args)=>{
+        if (cb && typeof cb === "function") return cb(...args);
+    };
+module.exports.safeExecute = $a48a42a2b7e8fdb4$var$safeExecute;
+
+});
+
+parcelRequire.register("l1Jw8", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.__internal__setErrorThrowerOptions = module.exports.errorThrower = void 0;
+
+var $5gnYd = parcelRequire("5gnYd");
+const $f4ecffc5f1e50b34$var$errorThrower = (0, $5gnYd.buildErrorThrower)({
+    packageName: "@clerk/react"
+});
+module.exports.errorThrower = $f4ecffc5f1e50b34$var$errorThrower;
+function $f4ecffc5f1e50b34$var$__internal__setErrorThrowerOptions(options) {
+    $f4ecffc5f1e50b34$var$errorThrower.setMessages(options).setPackageName(options);
+}
+module.exports.__internal__setErrorThrowerOptions = $f4ecffc5f1e50b34$var$__internal__setErrorThrowerOptions;
+
+});
+
+parcelRequire.register("faoZa", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.isConstructor = void 0;
+function $b0ab2bce08845dc3$var$isConstructor(f) {
+    return typeof f === "function";
+}
+module.exports.isConstructor = $b0ab2bce08845dc3$var$isConstructor;
+
+});
+
+parcelRequire.register("hpwbU", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.loadScript = void 0;
+
+var $5gnYd = parcelRequire("5gnYd");
+
+var $9U1W0 = parcelRequire("9U1W0");
+
+var $l1Jw8 = parcelRequire("l1Jw8");
+
+var $7On8G = parcelRequire("7On8G");
+const $cacdbdf586757296$var$FAILED_TO_LOAD_ERROR = "Clerk: Failed to load Clerk";
+const $cacdbdf586757296$var$MISSING_BODY_ERROR = "Clerk: Missing <body> element.";
+const $cacdbdf586757296$var$UNSTABLE_RELEASE_TAGS = [
+    "staging",
+    "next"
+];
+const $cacdbdf586757296$var$extractNonStableTag = (packageVersion)=>{
+    var _a;
+    const tag = (_a = packageVersion.match(/-(.*)\./)) === null || _a === void 0 ? void 0 : _a[1];
+    return tag && $cacdbdf586757296$var$UNSTABLE_RELEASE_TAGS.includes(tag) ? tag : undefined;
+};
+const $cacdbdf586757296$var$extractMajorVersion = (packageVersion)=>{
+    return packageVersion.split(".")[0];
+};
+const $cacdbdf586757296$var$forceStagingReleaseForClerkFapi = (frontendApi)=>{
+    return frontendApi.endsWith(".lclstage.dev") || frontendApi.endsWith(".stgstage.dev") || frontendApi.endsWith(".clerkstage.dev") || frontendApi.endsWith(".accountsstage.dev");
+};
+function $cacdbdf586757296$var$getScriptSrc({ publishableKey: publishableKey , frontendApi: frontendApi , domain: domain , scriptUrl: scriptUrl , scriptVariant: scriptVariant = "" , proxyUrl: proxyUrl  }) {
+    var _a, _b;
+    if (scriptUrl) return scriptUrl;
+    let scriptHost = "";
+    if (!!proxyUrl && (0, $5gnYd.isValidProxyUrl)(proxyUrl)) scriptHost = (0, $5gnYd.proxyUrlToAbsoluteURL)(proxyUrl).replace(/http(s)?:\/\//, "");
+    else if (domain && !(0, $7On8G.isDevOrStagingUrl)(((_a = (0, $5gnYd.parsePublishableKey)(publishableKey)) === null || _a === void 0 ? void 0 : _a.frontendApi) || frontendApi || "")) scriptHost = (0, $5gnYd.addClerkPrefix)(domain);
+    else scriptHost = ((_b = (0, $5gnYd.parsePublishableKey)(publishableKey)) === null || _b === void 0 ? void 0 : _b.frontendApi) || frontendApi || "";
+    if (!scriptHost) $l1Jw8.errorThrower.throwMissingPublishableKeyError();
+    const variant = scriptVariant ? `${scriptVariant.replace(/\.+$/, "")}.` : "";
+    const getUrlForTag = (target)=>{
+        return `https://${scriptHost}/npm/@clerk/clerk-js@${target}/dist/clerk.${variant}browser.js`;
+    };
+    const nonStableTag = $cacdbdf586757296$var$extractNonStableTag($9U1W0.LIB_VERSION);
+    if ($cacdbdf586757296$var$forceStagingReleaseForClerkFapi(scriptHost)) return nonStableTag ? getUrlForTag(nonStableTag) : getUrlForTag("staging");
+    if (nonStableTag) return getUrlForTag(nonStableTag);
+    return getUrlForTag($cacdbdf586757296$var$extractMajorVersion($9U1W0.LIB_VERSION));
+}
+async function $cacdbdf586757296$var$loadScript(params) {
+    return new Promise((resolve, reject)=>{
+        const { frontendApi: frontendApi , publishableKey: publishableKey , proxyUrl: proxyUrl , domain: domain  } = params;
+        if ($parcel$global.Clerk) resolve(null);
+        const script = document.createElement("script");
+        if (!publishableKey && !frontendApi) $l1Jw8.errorThrower.throwMissingPublishableKeyError();
+        if (publishableKey) script.setAttribute("data-clerk-publishable-key", publishableKey);
+        else if (frontendApi) script.setAttribute("data-clerk-frontend-api", frontendApi);
+        if (proxyUrl) script.setAttribute("data-clerk-proxy-url", proxyUrl);
+        if (domain) script.setAttribute("data-clerk-domain", domain);
+        script.setAttribute("crossorigin", "anonymous");
+        script.async = true;
+        if (!document.body) reject($cacdbdf586757296$var$MISSING_BODY_ERROR);
+        script.addEventListener("load", ()=>resolve(script));
+        script.addEventListener("error", ()=>reject($cacdbdf586757296$var$FAILED_TO_LOAD_ERROR));
+        script.src = $cacdbdf586757296$var$getScriptSrc(params);
+        document.body.appendChild(script);
+    });
+}
+module.exports.loadScript = $cacdbdf586757296$var$loadScript;
+
+});
+parcelRequire.register("9U1W0", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.LIB_NAME = module.exports.LIB_VERSION = void 0;
+/** DO NOT EDIT: This file is automatically generated by ../scripts/info.js */ module.exports.LIB_VERSION = "4.16.1";
+module.exports.LIB_NAME = "@clerk/clerk-react";
+
+});
+
+parcelRequire.register("7On8G", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.isDevOrStagingUrl = void 0;
+
+var $5gnYd = parcelRequire("5gnYd");
+const { isDevOrStagingUrl: $5aff26dba5468d3f$var$isDevOrStagingUrl  } = (0, $5gnYd.createDevOrStagingUrlCache)();
+module.exports.isDevOrStagingUrl = $5aff26dba5468d3f$var$isDevOrStagingUrl;
+
+});
+
+
+parcelRequire.register("diEDB", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.withMaxAllowedInstancesGuard = module.exports.useMaxAllowedInstancesGuard = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $9aec7a9c47f55828$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+const $9aec7a9c47f55828$var$counts = new Map();
+function $9aec7a9c47f55828$var$useMaxAllowedInstancesGuard(name, error, maxCount = 1) {
+    $9aec7a9c47f55828$var$react_1.default.useEffect(()=>{
+        const count = $9aec7a9c47f55828$var$counts.get(name) || 0;
+        if (count == maxCount) throw new Error(error);
+        $9aec7a9c47f55828$var$counts.set(name, count + 1);
+        return ()=>{
+            $9aec7a9c47f55828$var$counts.set(name, ($9aec7a9c47f55828$var$counts.get(name) || 1) - 1);
+        };
+    }, []);
+}
+module.exports.useMaxAllowedInstancesGuard = $9aec7a9c47f55828$var$useMaxAllowedInstancesGuard;
+function $9aec7a9c47f55828$var$withMaxAllowedInstancesGuard(WrappedComponent, name, error) {
+    const displayName = WrappedComponent.displayName || WrappedComponent.name || name || "Component";
+    const Hoc = (props)=>{
+        $9aec7a9c47f55828$var$useMaxAllowedInstancesGuard(name, error);
+        return $9aec7a9c47f55828$var$react_1.default.createElement(WrappedComponent, Object.assign({}, props));
+    };
+    Hoc.displayName = `withMaxAllowedInstancesGuard(${displayName})`;
+    return Hoc;
+}
+module.exports.withMaxAllowedInstancesGuard = $9aec7a9c47f55828$var$withMaxAllowedInstancesGuard;
+
+});
+
+
+parcelRequire.register("34XaI", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.ClerkContextProvider = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $23dfa51dcbcd76ac$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+const $23dfa51dcbcd76ac$var$isomorphicClerk_1 = $ajUHN.__importDefault((parcelRequire("1StcZ")));
+
+var $aIZnO = parcelRequire("aIZnO");
+
+var $iBeE9 = parcelRequire("iBeE9");
+
+var $ljxZW = parcelRequire("ljxZW");
+
+var $is192 = parcelRequire("is192");
+
+var $g1k6W = parcelRequire("g1k6W");
+
+var $81tDl = parcelRequire("81tDl");
+
+var $8YITK = parcelRequire("8YITK");
+function $23dfa51dcbcd76ac$var$ClerkContextProvider(props) {
+    const { isomorphicClerkOptions: isomorphicClerkOptions , initialState: initialState , children: children  } = props;
+    const { isomorphicClerk: clerk , loaded: clerkLoaded  } = $23dfa51dcbcd76ac$var$useLoadedIsomorphicClerk(isomorphicClerkOptions);
+    const [state, setState] = $23dfa51dcbcd76ac$var$react_1.default.useState({
+        client: clerk.client,
+        session: clerk.session,
+        user: clerk.user,
+        organization: clerk.organization,
+        lastOrganizationInvitation: null,
+        lastOrganizationMember: null
+    });
+    $23dfa51dcbcd76ac$var$react_1.default.useEffect(()=>{
+        return clerk.addListener((e)=>setState(Object.assign({}, e)));
+    }, []);
+    const derivedState = (0, $aIZnO.deriveState)(clerkLoaded, state, initialState);
+    const clerkCtx = $23dfa51dcbcd76ac$var$react_1.default.useMemo(()=>({
+            value: clerk
+        }), [
+        clerkLoaded
+    ]);
+    const clientCtx = $23dfa51dcbcd76ac$var$react_1.default.useMemo(()=>({
+            value: state.client
+        }), [
+        state.client
+    ]);
+    const { sessionId: sessionId , session: session , userId: userId , user: user , orgId: orgId , actor: actor , lastOrganizationInvitation: lastOrganizationInvitation , lastOrganizationMember: lastOrganizationMember , organization: organization , orgRole: orgRole , orgSlug: orgSlug  } = derivedState;
+    const authCtx = $23dfa51dcbcd76ac$var$react_1.default.useMemo(()=>{
+        const value = {
+            sessionId: sessionId,
+            userId: userId,
+            actor: actor,
+            orgId: orgId,
+            orgRole: orgRole,
+            orgSlug: orgSlug
+        };
+        return {
+            value: value
+        };
+    }, [
+        sessionId,
+        userId,
+        actor,
+        orgId,
+        orgRole,
+        orgSlug
+    ]);
+    const userCtx = $23dfa51dcbcd76ac$var$react_1.default.useMemo(()=>({
+            value: user
+        }), [
+        userId,
+        user
+    ]);
+    const sessionCtx = $23dfa51dcbcd76ac$var$react_1.default.useMemo(()=>({
+            value: session
+        }), [
+        sessionId,
+        session
+    ]);
+    const organizationCtx = $23dfa51dcbcd76ac$var$react_1.default.useMemo(()=>{
+        const value = {
+            organization: organization,
+            lastOrganizationInvitation: lastOrganizationInvitation,
+            lastOrganizationMember: lastOrganizationMember
+        };
+        return {
+            value: value
+        };
+    }, [
+        orgId,
+        organization,
+        lastOrganizationInvitation,
+        lastOrganizationMember
+    ]);
+    return(// @ts-expect-error
+    $23dfa51dcbcd76ac$var$react_1.default.createElement($is192.IsomorphicClerkContext.Provider, {
+        value: clerkCtx
+    }, $23dfa51dcbcd76ac$var$react_1.default.createElement($ljxZW.ClientContext.Provider, {
+        value: clientCtx
+    }, $23dfa51dcbcd76ac$var$react_1.default.createElement($81tDl.SessionContext.Provider, {
+        value: sessionCtx
+    }, $23dfa51dcbcd76ac$var$react_1.default.createElement($g1k6W.OrganizationContext.Provider, {
+        value: organizationCtx
+    }, $23dfa51dcbcd76ac$var$react_1.default.createElement($iBeE9.AuthContext.Provider, {
+        value: authCtx
+    }, $23dfa51dcbcd76ac$var$react_1.default.createElement($8YITK.UserContext.Provider, {
+        value: userCtx
+    }, children)))))));
+}
+module.exports.ClerkContextProvider = $23dfa51dcbcd76ac$var$ClerkContextProvider;
+const $23dfa51dcbcd76ac$var$useLoadedIsomorphicClerk = (options)=>{
+    const [loaded, setLoaded] = $23dfa51dcbcd76ac$var$react_1.default.useState(false);
+    const isomorphicClerk = $23dfa51dcbcd76ac$var$react_1.default.useMemo(()=>$23dfa51dcbcd76ac$var$isomorphicClerk_1.default.getOrCreateInstance(options), []);
+    $23dfa51dcbcd76ac$var$react_1.default.useEffect(()=>{
+        isomorphicClerk.__unstable__updateProps({
+            appearance: options.appearance
+        });
+    }, [
+        options.appearance
+    ]);
+    $23dfa51dcbcd76ac$var$react_1.default.useEffect(()=>{
+        isomorphicClerk.__unstable__updateProps({
+            options: options
+        });
+    }, [
+        options.localization
+    ]);
+    $23dfa51dcbcd76ac$var$react_1.default.useEffect(()=>{
+        isomorphicClerk.addOnLoaded(()=>setLoaded(true));
+    }, []);
+    return {
+        isomorphicClerk: isomorphicClerk,
+        loaded: loaded
+    };
+};
+
+});
+parcelRequire.register("1StcZ", function(module, exports) {
+"use strict";
+var $15e17dc5344f9154$var$_a, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, $15e17dc5344f9154$var$_IsomorphicClerk_domain, $15e17dc5344f9154$var$_IsomorphicClerk_proxyUrl, $15e17dc5344f9154$var$_IsomorphicClerk_instance;
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+
+var $ajUHN = parcelRequire("ajUHN");
+
+var $5gnYd = parcelRequire("5gnYd");
+
+var $1TPlq = parcelRequire("1TPlq");
+
+var $ebXSF = parcelRequire("ebXSF");
+class $15e17dc5344f9154$var$IsomorphicClerk {
+    get loaded() {
+        return $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f");
+    }
+    static getOrCreateInstance(options) {
+        // During SSR: a new instance should be created for every request
+        // During CSR: use the cached instance for the whole lifetime of the app
+        // This method should be idempotent in both scenarios
+        if (!(0, $5gnYd.inClientSide)() || !$ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_a, "f", $15e17dc5344f9154$var$_IsomorphicClerk_instance)) $ajUHN.__classPrivateFieldSet(this, $15e17dc5344f9154$var$_a, new $15e17dc5344f9154$var$IsomorphicClerk(options), "f", $15e17dc5344f9154$var$_IsomorphicClerk_instance);
+        return $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_a, "f", $15e17dc5344f9154$var$_IsomorphicClerk_instance);
+    }
+    get domain() {
+        // This getter can run in environments where window is not available.
+        // In those cases we should expect and use domain as a string
+        if (typeof window !== "undefined" && window.location) return (0, $5gnYd.handleValueOrFn)($ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_domain, "f"), new URL(window.location.href), "");
+        if (typeof $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_domain, "f") === "function") throw new Error($1TPlq.unsupportedNonBrowserDomainOrProxyUrlFunction);
+        return $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_domain, "f") || "";
+    }
+    get proxyUrl() {
+        // This getter can run in environments where window is not available.
+        // In those cases we should expect and use proxy as a string
+        if (typeof window !== "undefined" && window.location) return (0, $5gnYd.handleValueOrFn)($ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_proxyUrl, "f"), new URL(window.location.href), "");
+        if (typeof $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_proxyUrl, "f") === "function") throw new Error($1TPlq.unsupportedNonBrowserDomainOrProxyUrlFunction);
+        return $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_proxyUrl, "f") || "";
+    }
+    constructor(options){
+        this.clerkjs = null;
+        this.preopenSignIn = null;
+        this.preopenSignUp = null;
+        this.preopenUserProfile = null;
+        this.preopenOrganizationProfile = null;
+        this.premountSignInNodes = new Map();
+        this.premountSignUpNodes = new Map();
+        this.premountUserProfileNodes = new Map();
+        this.premountUserButtonNodes = new Map();
+        this.premountOrganizationProfileNodes = new Map();
+        this.premountCreateOrganizationNodes = new Map();
+        this.premountOrganizationSwitcherNodes = new Map();
+        this.premountMethodCalls = new Map();
+        this.loadedListeners = [];
+        $15e17dc5344f9154$var$_IsomorphicClerk_loaded.set(this, false);
+        $15e17dc5344f9154$var$_IsomorphicClerk_domain.set(this, void 0);
+        $15e17dc5344f9154$var$_IsomorphicClerk_proxyUrl.set(this, void 0);
+        this.addOnLoaded = (cb)=>{
+            this.loadedListeners.push(cb);
+        };
+        this.emitLoaded = ()=>{
+            this.loadedListeners.forEach((cb)=>cb());
+            this.loadedListeners = [];
+        };
+        this.hydrateClerkJS = (clerkjs)=>{
+            if (!clerkjs) throw new Error("Failed to hydrate latest Clerk JS");
+            this.clerkjs = clerkjs;
+            this.premountMethodCalls.forEach((cb)=>cb());
+            if (this.preopenSignIn !== null) clerkjs.openSignIn(this.preopenSignIn);
+            if (this.preopenSignUp !== null) clerkjs.openSignUp(this.preopenSignUp);
+            if (this.preopenUserProfile !== null) clerkjs.openUserProfile(this.preopenUserProfile);
+            this.premountSignInNodes.forEach((props, node)=>{
+                clerkjs.mountSignIn(node, props);
+            });
+            this.premountSignUpNodes.forEach((props, node)=>{
+                clerkjs.mountSignUp(node, props);
+            });
+            this.premountUserProfileNodes.forEach((props, node)=>{
+                clerkjs.mountUserProfile(node, props);
+            });
+            this.premountUserButtonNodes.forEach((props, node)=>{
+                clerkjs.mountUserButton(node, props);
+            });
+            $ajUHN.__classPrivateFieldSet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, true, "f");
+            this.emitLoaded();
+            return this.clerkjs;
+        };
+        this.__unstable__updateProps = (props)=>{
+            // Handle case where accounts has clerk-react@4 installed, but clerk-js@3 is manually loaded
+            if (this.clerkjs && "__unstable__updateProps" in this.clerkjs) this.clerkjs.__unstable__updateProps(props);
+            else return undefined;
+        };
+        /**
+         * `setActive` can be used to set the active session and/or organization.
+         * It will eventually replace `setSession`.
+         *
+         * @experimental
+         */ this.setActive = ({ session: session , organization: organization , beforeEmit: beforeEmit  })=>{
+            if (this.clerkjs) return this.clerkjs.setActive({
+                session: session,
+                organization: organization,
+                beforeEmit: beforeEmit
+            });
+            else return Promise.reject();
+        };
+        this.setSession = (session, beforeEmit)=>{
+            return this.setActive({
+                session: session,
+                beforeEmit: beforeEmit
+            });
+        };
+        this.openSignIn = (props)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.openSignIn(props);
+            else this.preopenSignIn = props;
+        };
+        this.closeSignIn = ()=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.closeSignIn();
+            else this.preopenSignIn = null;
+        };
+        this.openUserProfile = (props)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.openUserProfile(props);
+            else this.preopenUserProfile = props;
+        };
+        this.closeUserProfile = ()=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.closeUserProfile();
+            else this.preopenUserProfile = null;
+        };
+        this.openOrganizationProfile = (props)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.openOrganizationProfile(props);
+            else this.preopenOrganizationProfile = props;
+        };
+        this.closeOrganizationProfile = ()=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.closeOrganizationProfile();
+            else this.preopenOrganizationProfile = null;
+        };
+        this.openSignUp = (props)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.openSignUp(props);
+            else this.preopenSignUp = props;
+        };
+        this.closeSignUp = ()=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.closeSignUp();
+            else this.preopenSignUp = null;
+        };
+        this.mountSignIn = (node, props)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountSignIn(node, props);
+            else this.premountSignInNodes.set(node, props);
+        };
+        this.unmountSignIn = (node)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountSignIn(node);
+            else this.premountSignInNodes.delete(node);
+        };
+        this.mountSignUp = (node, props)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountSignUp(node, props);
+            else this.premountSignUpNodes.set(node, props);
+        };
+        this.unmountSignUp = (node)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountSignUp(node);
+            else this.premountSignUpNodes.delete(node);
+        };
+        this.mountUserProfile = (node, props)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountUserProfile(node, props);
+            else this.premountUserProfileNodes.set(node, props);
+        };
+        this.unmountUserProfile = (node)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountUserProfile(node);
+            else this.premountUserProfileNodes.delete(node);
+        };
+        this.mountOrganizationProfile = (node, props)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountOrganizationProfile(node, props);
+            else this.premountOrganizationProfileNodes.set(node, props);
+        };
+        this.unmountOrganizationProfile = (node)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountOrganizationProfile(node);
+            else this.premountOrganizationProfileNodes.delete(node);
+        };
+        this.mountCreateOrganization = (node, props)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountCreateOrganization(node, props);
+            else this.premountCreateOrganizationNodes.set(node, props);
+        };
+        this.unmountCreateOrganization = (node)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountCreateOrganization(node);
+            else this.premountCreateOrganizationNodes.delete(node);
+        };
+        this.mountOrganizationSwitcher = (node, props)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountOrganizationSwitcher(node, props);
+            else this.premountOrganizationSwitcherNodes.set(node, props);
+        };
+        this.unmountOrganizationSwitcher = (node)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountOrganizationSwitcher(node);
+            else this.premountOrganizationSwitcherNodes.delete(node);
+        };
+        this.mountUserButton = (node, userButtonProps)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountUserButton(node, userButtonProps);
+            else this.premountUserButtonNodes.set(node, userButtonProps);
+        };
+        this.unmountUserButton = (node)=>{
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountUserButton(node);
+            else this.premountUserButtonNodes.delete(node);
+        };
+        this.addListener = (listener)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.addListener(listener);
+            };
+            if (this.clerkjs) callback();
+            else this.premountMethodCalls.set("addListener", callback);
+        };
+        this.navigate = (to)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.navigate(to);
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("navigate", callback);
+        };
+        this.redirectWithAuth = (...args)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectWithAuth(...args);
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectWithAuth", callback);
+        };
+        this.redirectToSignIn = (opts)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectToSignIn(opts);
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectToSignIn", callback);
+        };
+        this.redirectToSignUp = (opts)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectToSignUp(opts);
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectToSignUp", callback);
+        };
+        this.redirectToUserProfile = ()=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectToUserProfile();
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectToUserProfile", callback);
+        };
+        this.redirectToHome = ()=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectToHome();
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectToHome", callback);
+        };
+        this.redirectToOrganizationProfile = ()=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectToOrganizationProfile();
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectToOrganizationProfile", callback);
+        };
+        this.redirectToCreateOrganization = ()=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectToCreateOrganization();
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectToCreateOrganization", callback);
+        };
+        this.handleRedirectCallback = (params)=>{
+            var _b;
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.handleRedirectCallback(params);
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) (_b = callback()) === null || _b === void 0 || _b.catch(()=>{
+            // This error is caused when the host app is using React18
+            // and strictMode is enabled. This useEffects runs twice because
+            // the clerk-react ui components mounts, unmounts and mounts again
+            // so the clerk-js component loses its state because of the custom
+            // unmount callback we're using.
+            // This needs to be solved by tweaking the logic in uiComponents.tsx
+            // or by making handleRedirectCallback idempotent
+            });
+            else this.premountMethodCalls.set("handleRedirectCallback", callback);
+        };
+        this.handleMagicLinkVerification = async (params)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.handleMagicLinkVerification(params);
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) return callback();
+            else this.premountMethodCalls.set("handleMagicLinkVerification", callback);
+        };
+        this.authenticateWithMetamask = async (params)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.authenticateWithMetamask(params);
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) return callback();
+            else this.premountMethodCalls.set("authenticateWithMetamask", callback);
+        };
+        this.createOrganization = async (params)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.createOrganization(params);
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) return callback();
+            else this.premountMethodCalls.set("createOrganization", callback);
+        };
+        this.getOrganizationMemberships = async ()=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.getOrganizationMemberships();
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) return callback();
+            else this.premountMethodCalls.set("getOrganizationMemberships", callback);
+        };
+        this.getOrganization = async (organizationId)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.getOrganization(organizationId);
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) return callback();
+            else this.premountMethodCalls.set("getOrganization", callback);
+        };
+        this.signOut = async (signOutCallbackOrOptions, options)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.signOut(signOutCallbackOrOptions, options);
+            };
+            if (this.clerkjs && $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) return callback();
+            else this.premountMethodCalls.set("signOut", callback);
+        };
+        const { Clerk: Clerk = null , frontendApi: frontendApi , publishableKey: publishableKey  } = options || {};
+        this.frontendApi = frontendApi;
+        this.publishableKey = publishableKey;
+        $ajUHN.__classPrivateFieldSet(this, $15e17dc5344f9154$var$_IsomorphicClerk_proxyUrl, options === null || options === void 0 ? void 0 : options.proxyUrl, "f");
+        $ajUHN.__classPrivateFieldSet(this, $15e17dc5344f9154$var$_IsomorphicClerk_domain, options === null || options === void 0 ? void 0 : options.domain, "f");
+        this.options = options;
+        this.Clerk = Clerk;
+        this.mode = (0, $5gnYd.inClientSide)() ? "browser" : "server";
+        this.loadClerkJS();
+    }
+    async loadClerkJS() {
+        var _b, _c;
+        if (this.mode !== "browser" || $ajUHN.__classPrivateFieldGet(this, $15e17dc5344f9154$var$_IsomorphicClerk_loaded, "f")) return;
+        // Store frontendAPI value on window as a fallback. This value can be used as a
+        // fallback during ClerkJS hot loading in case ClerkJS fails to find the
+        // "data-clerk-frontend-api" attribute on its script tag.
+        // This can happen when the DOM is altered completely during client rehydration.
+        // For example, in Remix with React 18 the document changes completely via `hydrateRoot(document)`.
+        // For more information refer to:
+        // - https://github.com/remix-run/remix/issues/2947
+        // - https://github.com/facebook/react/issues/24430
+        if (typeof window !== "undefined") {
+            window.__clerk_frontend_api = this.frontendApi;
+            window.__clerk_publishable_key = this.publishableKey;
+            window.__clerk_proxy_url = this.proxyUrl;
+            window.__clerk_domain = this.domain;
+        }
+        try {
+            if (this.Clerk) {
+                // Set a fixed Clerk version
+                let c;
+                if ((0, $ebXSF.isConstructor)(this.Clerk)) {
+                    // Construct a new Clerk object if a constructor is passed
+                    c = new this.Clerk(this.publishableKey || this.frontendApi || "", {
+                        proxyUrl: this.proxyUrl,
+                        domain: this.domain
+                    });
+                    await c.load(this.options);
+                } else {
+                    // Otherwise use the instantiated Clerk object
+                    c = this.Clerk;
+                    if (!c.isReady()) await c.load(this.options);
+                }
+                $parcel$global.Clerk = c;
+            } else {
+                // Hot-load latest ClerkJS from Clerk CDN
+                await (0, $ebXSF.loadScript)({
+                    frontendApi: this.frontendApi,
+                    publishableKey: this.publishableKey,
+                    proxyUrl: this.proxyUrl,
+                    domain: this.domain,
+                    scriptUrl: this.options.clerkJSUrl,
+                    scriptVariant: this.options.clerkJSVariant
+                });
+                if (!$parcel$global.Clerk) throw new Error("Failed to download latest ClerkJS. Contact support@clerk.com.");
+                await $parcel$global.Clerk.load(this.options);
+            }
+            if (((_b = $parcel$global.Clerk) === null || _b === void 0 ? void 0 : _b.loaded) || ((_c = $parcel$global.Clerk) === null || _c === void 0 ? void 0 : _c.isReady())) return this.hydrateClerkJS($parcel$global.Clerk);
+            return;
+        } catch (err) {
+            const error = err;
+            console.error(error.stack || error.message || error);
+            return;
+        }
+    }
+    get version() {
+        var _b;
+        return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.version;
+    }
+    get client() {
+        if (this.clerkjs) return this.clerkjs.client;
+        else return undefined;
+    }
+    get session() {
+        if (this.clerkjs) return this.clerkjs.session;
+        else return undefined;
+    }
+    get user() {
+        if (this.clerkjs) return this.clerkjs.user;
+        else return undefined;
+    }
+    get organization() {
+        if (this.clerkjs) return this.clerkjs.organization;
+        else return undefined;
+    }
+    get __unstable__environment() {
+        if (this.clerkjs) return this.clerkjs.__unstable__environment;
+        else return undefined;
+    }
+    __unstable__setEnvironment(...args) {
+        if (this.clerkjs && "__unstable__setEnvironment" in this.clerkjs) this.clerkjs.__unstable__setEnvironment(args);
+        else return undefined;
+    }
+}
+module.exports.default = $15e17dc5344f9154$var$IsomorphicClerk;
+$15e17dc5344f9154$var$_a = $15e17dc5344f9154$var$IsomorphicClerk, $15e17dc5344f9154$var$_IsomorphicClerk_loaded = new WeakMap(), $15e17dc5344f9154$var$_IsomorphicClerk_domain = new WeakMap(), $15e17dc5344f9154$var$_IsomorphicClerk_proxyUrl = new WeakMap();
+$15e17dc5344f9154$var$_IsomorphicClerk_instance = {
+    value: void 0
+};
+
+});
+
+parcelRequire.register("aIZnO", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.deriveState = void 0;
+const $7ceda0d69efb991e$var$deriveState = (clerkLoaded, state, initialState)=>{
+    if (!clerkLoaded && initialState) return $7ceda0d69efb991e$var$deriveFromSsrInitialState(initialState);
+    return $7ceda0d69efb991e$var$deriveFromClientSideState(state);
+};
+module.exports.deriveState = $7ceda0d69efb991e$var$deriveState;
+const $7ceda0d69efb991e$var$deriveFromSsrInitialState = (initialState)=>{
+    const userId = initialState.userId;
+    const user = initialState.user;
+    const sessionId = initialState.sessionId;
+    const session = initialState.session;
+    const organization = initialState.organization;
+    const orgId = initialState.orgId;
+    const orgRole = initialState.orgRole;
+    const orgSlug = initialState.orgSlug;
+    const actor = initialState.actor;
+    return {
+        userId: userId,
+        user: user,
+        sessionId: sessionId,
+        session: session,
+        organization: organization,
+        orgId: orgId,
+        orgRole: orgRole,
+        orgSlug: orgSlug,
+        actor: actor,
+        lastOrganizationInvitation: null,
+        lastOrganizationMember: null
+    };
+};
+const $7ceda0d69efb991e$var$deriveFromClientSideState = (state)=>{
+    var _a;
+    const userId = state.user ? state.user.id : state.user;
+    const user = state.user;
+    const sessionId = state.session ? state.session.id : state.session;
+    const session = state.session;
+    const actor = session === null || session === void 0 ? void 0 : session.actor;
+    const organization = state.organization;
+    const orgId = state.organization ? state.organization.id : state.organization;
+    const orgSlug = organization === null || organization === void 0 ? void 0 : organization.slug;
+    const membership = organization ? (_a = user === null || user === void 0 ? void 0 : user.organizationMemberships) === null || _a === void 0 ? void 0 : _a.find((om)=>om.organization.id === orgId) : organization;
+    const orgRole = membership ? membership.role : membership;
+    const lastOrganizationInvitation = state.lastOrganizationInvitation;
+    const lastOrganizationMember = state.lastOrganizationMember;
+    return {
+        userId: userId,
+        user: user,
+        sessionId: sessionId,
+        session: session,
+        organization: organization,
+        orgId: orgId,
+        orgRole: orgRole,
+        orgSlug: orgSlug,
+        actor: actor,
+        lastOrganizationInvitation: lastOrganizationInvitation,
+        lastOrganizationMember: lastOrganizationMember
+    };
+};
+
+});
+
+parcelRequire.register("iBeE9", function(module, exports) {
+"use strict";
+var $d8a70b334b64cd2e$var$_a;
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useAuthContext = module.exports.AuthContext = void 0;
+
+var $5gnYd = parcelRequire("5gnYd");
+$d8a70b334b64cd2e$var$_a = (0, $5gnYd.createContextAndHook)("AuthContext"), module.exports.AuthContext = $d8a70b334b64cd2e$var$_a[0], module.exports.useAuthContext = $d8a70b334b64cd2e$var$_a[1];
+
+});
+
+parcelRequire.register("ljxZW", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useClientContext = module.exports.ClientContext = void 0;
+
+var $5gnYd = parcelRequire("5gnYd");
+Object.defineProperty(module.exports, "ClientContext", {
+    enumerable: true,
+    get: function() {
+        return $5gnYd.ClientContext;
+    }
+});
+Object.defineProperty(module.exports, "useClientContext", {
+    enumerable: true,
+    get: function() {
+        return $5gnYd.useClientContext;
+    }
+});
+
+});
+
+parcelRequire.register("is192", function(module, exports) {
+"use strict";
+var $d6ebbada5bd6bf48$var$_a;
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useIsomorphicClerkContext = module.exports.IsomorphicClerkContext = void 0;
+
+var $5gnYd = parcelRequire("5gnYd");
+$d6ebbada5bd6bf48$var$_a = [
+    $5gnYd.ClerkInstanceContext,
+    $5gnYd.useClerkInstanceContext
+], module.exports.IsomorphicClerkContext = $d6ebbada5bd6bf48$var$_a[0], module.exports.useIsomorphicClerkContext = $d6ebbada5bd6bf48$var$_a[1];
+
+});
+
+parcelRequire.register("g1k6W", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useOrganizationContext = module.exports.OrganizationContext = void 0;
+
+var $5gnYd = parcelRequire("5gnYd");
+Object.defineProperty(module.exports, "OrganizationContext", {
+    enumerable: true,
+    get: function() {
+        return $5gnYd.OrganizationContext;
+    }
+});
+Object.defineProperty(module.exports, "useOrganizationContext", {
+    enumerable: true,
+    get: function() {
+        return $5gnYd.useOrganizationContext;
+    }
+});
+
+});
+
+parcelRequire.register("81tDl", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useSessionContext = module.exports.SessionContext = void 0;
+
+var $5gnYd = parcelRequire("5gnYd");
+Object.defineProperty(module.exports, "SessionContext", {
+    enumerable: true,
+    get: function() {
+        return $5gnYd.SessionContext;
+    }
+});
+Object.defineProperty(module.exports, "useSessionContext", {
+    enumerable: true,
+    get: function() {
+        return $5gnYd.useSessionContext;
+    }
+});
+
+});
+
+parcelRequire.register("8YITK", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useUserContext = module.exports.UserContext = void 0;
+
+var $5gnYd = parcelRequire("5gnYd");
+Object.defineProperty(module.exports, "UserContext", {
+    enumerable: true,
+    get: function() {
+        return $5gnYd.UserContext;
+    }
+});
+Object.defineProperty(module.exports, "useUserContext", {
+    enumerable: true,
+    get: function() {
+        return $5gnYd.useUserContext;
+    }
+});
+
+});
+
+
+parcelRequire.register("2WAF2", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.LoadedGuarantee = module.exports.StructureContext = module.exports.StructureContextStates = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $224d6f9e5ba34458$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+var $5l9Kt = parcelRequire("5l9Kt");
+module.exports.StructureContextStates = Object.freeze({
+    noGuarantees: Object.freeze({
+        guaranteedLoaded: false
+    }),
+    guaranteedLoaded: Object.freeze({
+        guaranteedLoaded: true
+    })
+});
+module.exports.StructureContext = $224d6f9e5ba34458$var$react_1.default.createContext(undefined);
+module.exports.StructureContext.displayName = "StructureContext";
+const $224d6f9e5ba34458$var$useStructureContext = ()=>{
+    const structureCtx = $224d6f9e5ba34458$var$react_1.default.useContext(module.exports.StructureContext);
+    (0, $5l9Kt.assertWrappedByClerkProvider)(structureCtx);
+    return structureCtx;
+};
+const $224d6f9e5ba34458$var$LoadedGuarantee = ({ children: children  })=>{
+    const structure = $224d6f9e5ba34458$var$useStructureContext();
+    if (structure.guaranteedLoaded) return $224d6f9e5ba34458$var$react_1.default.createElement($224d6f9e5ba34458$var$react_1.default.Fragment, null, children);
+    return $224d6f9e5ba34458$var$react_1.default.createElement(module.exports.StructureContext.Provider, {
+        value: module.exports.StructureContextStates.guaranteedLoaded
+    }, children);
+};
+module.exports.LoadedGuarantee = $224d6f9e5ba34458$var$LoadedGuarantee;
+
+});
+parcelRequire.register("5l9Kt", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.assertClerkLoadedGuarantee = module.exports.assertWrappedByClerkProvider = void 0;
+
+var $1TPlq = parcelRequire("1TPlq");
+function $3e3679c16bce0920$var$assertWrappedByClerkProvider(contextVal) {
+    if (!contextVal) throw new Error($1TPlq.noClerkProviderError);
+}
+module.exports.assertWrappedByClerkProvider = $3e3679c16bce0920$var$assertWrappedByClerkProvider;
+function $3e3679c16bce0920$var$assertClerkLoadedGuarantee(guarantee, hookName) {
+    if (!guarantee) throw new Error((0, $1TPlq.noGuaranteedLoadedError)(hookName));
+}
+module.exports.assertClerkLoadedGuarantee = $3e3679c16bce0920$var$assertClerkLoadedGuarantee;
+
+});
+
+
+
+
+parcelRequire.register("2smA0", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.RedirectToOrganizationProfile = module.exports.RedirectToCreateOrganization = module.exports.MultisessionAppSupport = module.exports.AuthenticateWithRedirectCallback = module.exports.RedirectToUserProfile = module.exports.RedirectToSignUp = module.exports.RedirectToSignIn = module.exports.SignedIn = module.exports.SignedOut = module.exports.ClerkLoading = module.exports.ClerkLoaded = module.exports.CreateOrganization = module.exports.OrganizationProfile = module.exports.OrganizationSwitcher = module.exports.UserButton = module.exports.UserProfile = module.exports.SignIn = module.exports.SignUp = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+var $58YYX = parcelRequire("58YYX");
+Object.defineProperty(module.exports, "SignUp", {
+    enumerable: true,
+    get: function() {
+        return $58YYX.SignUp;
+    }
+});
+Object.defineProperty(module.exports, "SignIn", {
+    enumerable: true,
+    get: function() {
+        return $58YYX.SignIn;
+    }
+});
+Object.defineProperty(module.exports, "UserProfile", {
+    enumerable: true,
+    get: function() {
+        return $58YYX.UserProfile;
+    }
+});
+Object.defineProperty(module.exports, "UserButton", {
+    enumerable: true,
+    get: function() {
+        return $58YYX.UserButton;
+    }
+});
+Object.defineProperty(module.exports, "OrganizationSwitcher", {
+    enumerable: true,
+    get: function() {
+        return $58YYX.OrganizationSwitcher;
+    }
+});
+Object.defineProperty(module.exports, "OrganizationProfile", {
+    enumerable: true,
+    get: function() {
+        return $58YYX.OrganizationProfile;
+    }
+});
+Object.defineProperty(module.exports, "CreateOrganization", {
+    enumerable: true,
+    get: function() {
+        return $58YYX.CreateOrganization;
+    }
+});
+
+var $dOyAq = parcelRequire("dOyAq");
+Object.defineProperty(module.exports, "ClerkLoaded", {
+    enumerable: true,
+    get: function() {
+        return $dOyAq.ClerkLoaded;
+    }
+});
+Object.defineProperty(module.exports, "ClerkLoading", {
+    enumerable: true,
+    get: function() {
+        return $dOyAq.ClerkLoading;
+    }
+});
+Object.defineProperty(module.exports, "SignedOut", {
+    enumerable: true,
+    get: function() {
+        return $dOyAq.SignedOut;
+    }
+});
+Object.defineProperty(module.exports, "SignedIn", {
+    enumerable: true,
+    get: function() {
+        return $dOyAq.SignedIn;
+    }
+});
+Object.defineProperty(module.exports, "RedirectToSignIn", {
+    enumerable: true,
+    get: function() {
+        return $dOyAq.RedirectToSignIn;
+    }
+});
+Object.defineProperty(module.exports, "RedirectToSignUp", {
+    enumerable: true,
+    get: function() {
+        return $dOyAq.RedirectToSignUp;
+    }
+});
+Object.defineProperty(module.exports, "RedirectToUserProfile", {
+    enumerable: true,
+    get: function() {
+        return $dOyAq.RedirectToUserProfile;
+    }
+});
+Object.defineProperty(module.exports, "AuthenticateWithRedirectCallback", {
+    enumerable: true,
+    get: function() {
+        return $dOyAq.AuthenticateWithRedirectCallback;
+    }
+});
+Object.defineProperty(module.exports, "MultisessionAppSupport", {
+    enumerable: true,
+    get: function() {
+        return $dOyAq.MultisessionAppSupport;
+    }
+});
+Object.defineProperty(module.exports, "RedirectToCreateOrganization", {
+    enumerable: true,
+    get: function() {
+        return $dOyAq.RedirectToCreateOrganization;
+    }
+});
+Object.defineProperty(module.exports, "RedirectToOrganizationProfile", {
+    enumerable: true,
+    get: function() {
+        return $dOyAq.RedirectToOrganizationProfile;
+    }
+});
+
+$ajUHN.__exportStar((parcelRequire("eGNGx")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("819vR")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("eLCmw")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("2LVuq")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("dJFEL")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("k5jMd")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("9p93W")), module.exports);
+
+});
+parcelRequire.register("58YYX", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.OrganizationSwitcher = module.exports.CreateOrganization = module.exports.OrganizationProfile = module.exports.UserButton = module.exports.UserProfile = module.exports.SignUp = module.exports.SignIn = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $3bed00e0af812923$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+var $eGNGx = parcelRequire("eGNGx");
+// README: <Portal/> should be a class pure component in order for mount and unmount
+// lifecycle props to be invoked correctly. Replacing the class component with a
+// functional component wrapped with a React.memo is not identical to the original
+// class implementation due to React intricacies such as the useEffect’s cleanup
+// seems to run AFTER unmount, while componentWillUnmount runs BEFORE.
+// More information can be found at https://clerkinc.slack.com/archives/C015S0BGH8R/p1624891993016300
+// The function Portal implementation is commented out for future reference.
+// const Portal = React.memo(({ props, mount, unmount }: MountProps) => {
+//   const portalRef = React.createRef<HTMLDivElement>();
+//   useEffect(() => {
+//     if (portalRef.current) {
+//       mount(portalRef.current, props);
+//     }
+//     return () => {
+//       if (portalRef.current) {
+//         unmount(portalRef.current);
+//       }
+//     };
+//   }, []);
+//   return <div ref={portalRef} />;
+// });
+// Portal.displayName = 'ClerkPortal';
+class $3bed00e0af812923$var$Portal extends $3bed00e0af812923$var$react_1.default.PureComponent {
+    constructor(){
+        super(...arguments);
+        this.portalRef = $3bed00e0af812923$var$react_1.default.createRef();
+    }
+    componentDidUpdate(prevProps) {
+        if (prevProps.props.appearance !== this.props.props.appearance) this.props.updateProps({
+            node: this.portalRef.current,
+            props: this.props.props
+        });
+    }
+    componentDidMount() {
+        if (this.portalRef.current) this.props.mount(this.portalRef.current, this.props.props);
+    }
+    componentWillUnmount() {
+        if (this.portalRef.current) this.props.unmount(this.portalRef.current);
+    }
+    render() {
+        return $3bed00e0af812923$var$react_1.default.createElement("div", {
+            ref: this.portalRef
+        });
+    }
+}
+module.exports.SignIn = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk"
+    ]);
+    return $3bed00e0af812923$var$react_1.default.createElement($3bed00e0af812923$var$Portal, {
+        mount: clerk.mountSignIn,
+        unmount: clerk.unmountSignIn,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "SignIn");
+module.exports.SignUp = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk"
+    ]);
+    return $3bed00e0af812923$var$react_1.default.createElement($3bed00e0af812923$var$Portal, {
+        mount: clerk.mountSignUp,
+        unmount: clerk.unmountSignUp,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "SignUp");
+module.exports.UserProfile = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk"
+    ]);
+    return $3bed00e0af812923$var$react_1.default.createElement($3bed00e0af812923$var$Portal, {
+        mount: clerk.mountUserProfile,
+        unmount: clerk.unmountUserProfile,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "UserProfile");
+module.exports.UserButton = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk"
+    ]);
+    return $3bed00e0af812923$var$react_1.default.createElement($3bed00e0af812923$var$Portal, {
+        mount: clerk.mountUserButton,
+        unmount: clerk.unmountUserButton,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "UserButton");
+module.exports.OrganizationProfile = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk"
+    ]);
+    return $3bed00e0af812923$var$react_1.default.createElement($3bed00e0af812923$var$Portal, {
+        mount: clerk.mountOrganizationProfile,
+        unmount: clerk.unmountOrganizationProfile,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "OrganizationProfile");
+module.exports.CreateOrganization = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk"
+    ]);
+    return $3bed00e0af812923$var$react_1.default.createElement($3bed00e0af812923$var$Portal, {
+        mount: clerk.mountCreateOrganization,
+        unmount: clerk.unmountCreateOrganization,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "CreateOrganization");
+module.exports.OrganizationSwitcher = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk"
+    ]);
+    return $3bed00e0af812923$var$react_1.default.createElement($3bed00e0af812923$var$Portal, {
+        mount: clerk.mountOrganizationSwitcher,
+        unmount: clerk.unmountOrganizationSwitcher,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "OrganizationSwitcher");
+
+});
+parcelRequire.register("eGNGx", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.WithClerk = module.exports.withClerk = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $ab1b8760a4bf1f70$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+var $is192 = parcelRequire("is192");
+
+var $2WAF2 = parcelRequire("2WAF2");
+
+var $1TPlq = parcelRequire("1TPlq");
+const $ab1b8760a4bf1f70$var$withClerk = (Component, displayName)=>{
+    displayName = displayName || Component.displayName || Component.name || "Component";
+    Component.displayName = displayName;
+    const HOC = (props)=>{
+        const clerk = (0, $is192.useIsomorphicClerkContext)();
+        if (!clerk.loaded) return null;
+        return $ab1b8760a4bf1f70$var$react_1.default.createElement($2WAF2.LoadedGuarantee, null, $ab1b8760a4bf1f70$var$react_1.default.createElement(Component, Object.assign({}, props, {
+            clerk: clerk
+        })));
+    };
+    HOC.displayName = `withClerk(${displayName})`;
+    return HOC;
+};
+module.exports.withClerk = $ab1b8760a4bf1f70$var$withClerk;
+const $ab1b8760a4bf1f70$var$WithClerk = ({ children: children  })=>{
+    const clerk = (0, $is192.useIsomorphicClerkContext)();
+    if (typeof children !== "function") throw new Error($1TPlq.hocChildrenNotAFunctionError);
+    if (!clerk.loaded) return null;
+    return $ab1b8760a4bf1f70$var$react_1.default.createElement($2WAF2.LoadedGuarantee, null, children(clerk));
+};
+module.exports.WithClerk = $ab1b8760a4bf1f70$var$WithClerk;
+
+});
+
+
+parcelRequire.register("dOyAq", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.MultisessionAppSupport = module.exports.AuthenticateWithRedirectCallback = module.exports.RedirectToCreateOrganization = module.exports.RedirectToOrganizationProfile = module.exports.RedirectToUserProfile = module.exports.RedirectToSignUp = module.exports.RedirectToSignIn = module.exports.ClerkLoading = module.exports.ClerkLoaded = module.exports.SignedOut = module.exports.SignedIn = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $a0eac605cbdafcf6$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+var $iBeE9 = parcelRequire("iBeE9");
+
+var $is192 = parcelRequire("is192");
+
+var $81tDl = parcelRequire("81tDl");
+
+var $2WAF2 = parcelRequire("2WAF2");
+
+var $eGNGx = parcelRequire("eGNGx");
+const $a0eac605cbdafcf6$var$SignedIn = ({ children: children  })=>{
+    const { userId: userId  } = (0, $iBeE9.useAuthContext)();
+    if (userId) return $a0eac605cbdafcf6$var$react_1.default.createElement($a0eac605cbdafcf6$var$react_1.default.Fragment, null, children);
+    return null;
+};
+module.exports.SignedIn = $a0eac605cbdafcf6$var$SignedIn;
+const $a0eac605cbdafcf6$var$SignedOut = ({ children: children  })=>{
+    const { userId: userId  } = (0, $iBeE9.useAuthContext)();
+    if (userId === null) return $a0eac605cbdafcf6$var$react_1.default.createElement($a0eac605cbdafcf6$var$react_1.default.Fragment, null, children);
+    return null;
+};
+module.exports.SignedOut = $a0eac605cbdafcf6$var$SignedOut;
+const $a0eac605cbdafcf6$var$ClerkLoaded = ({ children: children  })=>{
+    const isomorphicClerk = (0, $is192.useIsomorphicClerkContext)();
+    if (!isomorphicClerk.loaded) return null;
+    return $a0eac605cbdafcf6$var$react_1.default.createElement($2WAF2.LoadedGuarantee, null, children);
+};
+module.exports.ClerkLoaded = $a0eac605cbdafcf6$var$ClerkLoaded;
+const $a0eac605cbdafcf6$var$ClerkLoading = ({ children: children  })=>{
+    const isomorphicClerk = (0, $is192.useIsomorphicClerkContext)();
+    if (isomorphicClerk.loaded) return null;
+    return $a0eac605cbdafcf6$var$react_1.default.createElement($a0eac605cbdafcf6$var$react_1.default.Fragment, null, children);
+};
+module.exports.ClerkLoading = $a0eac605cbdafcf6$var$ClerkLoading;
+module.exports.RedirectToSignIn = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk"
+    ]);
+    const { client: client , session: session  } = clerk;
+    // TODO: Remove temp use of __unstable__environment
+    const { __unstable__environment: __unstable__environment  } = clerk;
+    const hasActiveSessions = client.activeSessions && client.activeSessions.length > 0;
+    $a0eac605cbdafcf6$var$react_1.default.useEffect(()=>{
+        if (session === null && hasActiveSessions && __unstable__environment) {
+            const { afterSignOutOneUrl: afterSignOutOneUrl  } = __unstable__environment.displayConfig;
+            clerk.navigate(afterSignOutOneUrl);
+        } else clerk.redirectToSignIn(props);
+    }, []);
+    return null;
+}, "RedirectToSignIn");
+module.exports.RedirectToSignUp = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk"
+    ]);
+    $a0eac605cbdafcf6$var$react_1.default.useEffect(()=>{
+        clerk.redirectToSignUp(props);
+    }, []);
+    return null;
+}, "RedirectToSignUp");
+module.exports.RedirectToUserProfile = (0, $eGNGx.withClerk)(({ clerk: clerk  })=>{
+    $a0eac605cbdafcf6$var$react_1.default.useEffect(()=>{
+        clerk.redirectToUserProfile();
+    }, []);
+    return null;
+}, "RedirectToUserProfile");
+module.exports.RedirectToOrganizationProfile = (0, $eGNGx.withClerk)(({ clerk: clerk  })=>{
+    $a0eac605cbdafcf6$var$react_1.default.useEffect(()=>{
+        clerk.redirectToOrganizationProfile();
+    }, []);
+    return null;
+}, "RedirectToOrganizationProfile");
+module.exports.RedirectToCreateOrganization = (0, $eGNGx.withClerk)(({ clerk: clerk  })=>{
+    $a0eac605cbdafcf6$var$react_1.default.useEffect(()=>{
+        clerk.redirectToCreateOrganization();
+    }, []);
+    return null;
+}, "RedirectToCreateOrganization");
+module.exports.AuthenticateWithRedirectCallback = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, handleRedirectCallbackParams = $ajUHN.__rest(_a, [
+        "clerk"
+    ]);
+    $a0eac605cbdafcf6$var$react_1.default.useEffect(()=>{
+        clerk.handleRedirectCallback(handleRedirectCallbackParams);
+    }, []);
+    return null;
+}, "AuthenticateWithRedirectCallback");
+const $a0eac605cbdafcf6$var$MultisessionAppSupport = ({ children: children  })=>{
+    const session = (0, $81tDl.useSessionContext)();
+    return $a0eac605cbdafcf6$var$react_1.default.createElement($a0eac605cbdafcf6$var$react_1.default.Fragment, {
+        key: session ? session.id : "no-users"
+    }, children);
+};
+module.exports.MultisessionAppSupport = $a0eac605cbdafcf6$var$MultisessionAppSupport;
+
+});
+
+parcelRequire.register("819vR", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.WithUser = module.exports.withUser = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $5d65cbc5185f6a1c$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+var $8YITK = parcelRequire("8YITK");
+
+var $1TPlq = parcelRequire("1TPlq");
+const $5d65cbc5185f6a1c$var$withUser = (Component, displayName)=>{
+    displayName = displayName || Component.displayName || Component.name || "Component";
+    Component.displayName = displayName;
+    const HOC = (props)=>{
+        const user = (0, $8YITK.useUserContext)();
+        if (!user) return null;
+        return $5d65cbc5185f6a1c$var$react_1.default.createElement(Component, Object.assign({}, props, {
+            user: user
+        }));
+    };
+    HOC.displayName = `withUser(${displayName})`;
+    return HOC;
+};
+module.exports.withUser = $5d65cbc5185f6a1c$var$withUser;
+const $5d65cbc5185f6a1c$var$WithUser = ({ children: children  })=>{
+    const user = (0, $8YITK.useUserContext)();
+    if (typeof children !== "function") throw new Error($1TPlq.hocChildrenNotAFunctionError);
+    if (!user) return null;
+    return $5d65cbc5185f6a1c$var$react_1.default.createElement($5d65cbc5185f6a1c$var$react_1.default.Fragment, null, children(user));
+};
+module.exports.WithUser = $5d65cbc5185f6a1c$var$WithUser;
+
+});
+
+parcelRequire.register("eLCmw", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.WithSession = module.exports.withSession = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $ac0336668c2c9525$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+var $81tDl = parcelRequire("81tDl");
+
+var $1TPlq = parcelRequire("1TPlq");
+const $ac0336668c2c9525$var$withSession = (Component, displayName)=>{
+    displayName = displayName || Component.displayName || Component.name || "Component";
+    Component.displayName = displayName;
+    const HOC = (props)=>{
+        const session = (0, $81tDl.useSessionContext)();
+        if (!session) return null;
+        return $ac0336668c2c9525$var$react_1.default.createElement(Component, Object.assign({}, props, {
+            session: session
+        }));
+    };
+    HOC.displayName = `withSession(${displayName})`;
+    return HOC;
+};
+module.exports.withSession = $ac0336668c2c9525$var$withSession;
+const $ac0336668c2c9525$var$WithSession = ({ children: children  })=>{
+    const session = (0, $81tDl.useSessionContext)();
+    if (typeof children !== "function") throw new Error($1TPlq.hocChildrenNotAFunctionError);
+    if (!session) return null;
+    return $ac0336668c2c9525$var$react_1.default.createElement($ac0336668c2c9525$var$react_1.default.Fragment, null, children(session));
+};
+module.exports.WithSession = $ac0336668c2c9525$var$WithSession;
+
+});
+
+parcelRequire.register("2LVuq", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.SignInButton = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $204c90d04c904395$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+var $ebXSF = parcelRequire("ebXSF");
+
+var $eGNGx = parcelRequire("eGNGx");
+module.exports.SignInButton = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk , children: children  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk",
+        "children"
+    ]);
+    const { afterSignInUrl: afterSignInUrl , afterSignUpUrl: afterSignUpUrl , redirectUrl: redirectUrl , mode: mode  } = props, rest = $ajUHN.__rest(props, [
+        "afterSignInUrl",
+        "afterSignUpUrl",
+        "redirectUrl",
+        "mode"
+    ]);
+    children = (0, $ebXSF.normalizeWithDefaultValue)(children, "Sign in");
+    const child = (0, $ebXSF.assertSingleChild)(children)("SignInButton");
+    const clickHandler = ()=>{
+        const opts = {
+            afterSignInUrl: afterSignInUrl,
+            afterSignUpUrl: afterSignUpUrl,
+            redirectUrl: redirectUrl
+        };
+        if (mode === "modal") return clerk.openSignIn(opts);
+        return clerk.redirectToSignIn(opts);
+    };
+    const wrappedChildClickHandler = async (e)=>{
+        await (0, $ebXSF.safeExecute)(child.props.onClick)(e);
+        return clickHandler();
+    };
+    const childProps = Object.assign(Object.assign({}, rest), {
+        onClick: wrappedChildClickHandler
+    });
+    return $204c90d04c904395$var$react_1.default.cloneElement(child, childProps);
+}, "SignInButton");
+
+});
+
+parcelRequire.register("dJFEL", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.SignUpButton = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $9fffca703e633cf8$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+var $ebXSF = parcelRequire("ebXSF");
+
+var $eGNGx = parcelRequire("eGNGx");
+module.exports.SignUpButton = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk , children: children  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk",
+        "children"
+    ]);
+    const { afterSignInUrl: afterSignInUrl , afterSignUpUrl: afterSignUpUrl , redirectUrl: redirectUrl , mode: mode  } = props, rest = $ajUHN.__rest(props, [
+        "afterSignInUrl",
+        "afterSignUpUrl",
+        "redirectUrl",
+        "mode"
+    ]);
+    children = (0, $ebXSF.normalizeWithDefaultValue)(children, "Sign up");
+    const child = (0, $ebXSF.assertSingleChild)(children)("SignUpButton");
+    const clickHandler = ()=>{
+        const opts = {
+            afterSignInUrl: afterSignInUrl,
+            afterSignUpUrl: afterSignUpUrl,
+            redirectUrl: redirectUrl
+        };
+        if (mode === "modal") return clerk.openSignUp(opts);
+        return clerk.redirectToSignUp(opts);
+    };
+    const wrappedChildClickHandler = async (e)=>{
+        await (0, $ebXSF.safeExecute)(child.props.onClick)(e);
+        return clickHandler();
+    };
+    const childProps = Object.assign(Object.assign({}, rest), {
+        onClick: wrappedChildClickHandler
+    });
+    return $9fffca703e633cf8$var$react_1.default.cloneElement(child, childProps);
+}, "SignUpButton");
+
+});
+
+parcelRequire.register("k5jMd", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.SignOutButton = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $e9f39d7f60fef4b7$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+var $ebXSF = parcelRequire("ebXSF");
+
+var $eGNGx = parcelRequire("eGNGx");
+module.exports.SignOutButton = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk , children: children  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk",
+        "children"
+    ]);
+    const { signOutCallback: signOutCallback , signOutOptions: signOutOptions  } = props, rest = $ajUHN.__rest(props, [
+        "signOutCallback",
+        "signOutOptions"
+    ]);
+    children = (0, $ebXSF.normalizeWithDefaultValue)(children, "Sign out");
+    const child = (0, $ebXSF.assertSingleChild)(children)("SignOutButton");
+    const clickHandler = ()=>{
+        return clerk.signOut(signOutCallback, signOutOptions);
+    };
+    const wrappedChildClickHandler = async (e)=>{
+        await (0, $ebXSF.safeExecute)(child.props.onClick)(e);
+        return clickHandler();
+    };
+    const childProps = Object.assign(Object.assign({}, rest), {
+        onClick: wrappedChildClickHandler
+    });
+    return $e9f39d7f60fef4b7$var$react_1.default.cloneElement(child, childProps);
+}, "SignOutButton");
+
+});
+
+parcelRequire.register("9p93W", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.SignInWithMetamaskButton = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $6d8d7a812ce71c67$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+
+var $ebXSF = parcelRequire("ebXSF");
+
+var $eGNGx = parcelRequire("eGNGx");
+module.exports.SignInWithMetamaskButton = (0, $eGNGx.withClerk)((_a)=>{
+    var { clerk: clerk , children: children  } = _a, props = $ajUHN.__rest(_a, [
+        "clerk",
+        "children"
+    ]);
+    const { redirectUrl: redirectUrl  } = props, rest = $ajUHN.__rest(props, [
+        "redirectUrl"
+    ]);
+    children = (0, $ebXSF.normalizeWithDefaultValue)(children, "Sign in with Metamask");
+    const child = (0, $ebXSF.assertSingleChild)(children)("SignInWithMetamaskButton");
+    const clickHandler = async ()=>{
+        async function authenticate() {
+            await clerk.authenticateWithMetamask({
+                redirectUrl: redirectUrl
+            });
+        }
+        authenticate();
+    };
+    const wrappedChildClickHandler = async (e)=>{
+        await (0, $ebXSF.safeExecute)(child.props.onClick)(e);
+        return clickHandler();
+    };
+    const childProps = Object.assign(Object.assign({}, rest), {
+        onClick: wrappedChildClickHandler
+    });
+    return $6d8d7a812ce71c67$var$react_1.default.cloneElement(child, childProps);
+}, "SignInWithMetamask");
+
+});
+
+
+parcelRequire.register("9U2PI", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+
+var $ajUHN = parcelRequire("ajUHN");
+
+$ajUHN.__exportStar((parcelRequire("aY3uz")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("jN23v")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("3AVog")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("fNI4s")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("edIZj")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("lzQbI")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("6l4Yf")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("iwKIF")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("5Ctzt")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("cgIVA")), module.exports);
+
+$ajUHN.__exportStar((parcelRequire("02RET")), module.exports);
+
+});
+parcelRequire.register("aY3uz", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useUser = void 0;
+
+var $8YITK = parcelRequire("8YITK");
+/**
+ * Returns the current auth state and if a user is signed in, the user object.
+ *
+ * Until Clerk loads and initializes, `isLoaded` will be set to `false`.
+ * Once Clerk loads, `isLoaded` will be set to `true`, and you can
+ * safely access `isSignedIn` state and `user`.
+ *
+ * For projects using NextJs or Remix, you can make this state available during SSR
+ * simply by using the `withServerSideAuth` helper and setting the `loadUser` flag to `true`.
+ *
+ *
+ * @example
+ * A simple example:
+ *
+ * import { useUser } from '@clerk/clerk-react'
+ *
+ * function Hello() {
+ *   const { isSignedIn, user } = useUser();
+ *   if(!isSignedIn) {
+ *     return null;
+ *   }
+ *   return <div>Hello, {user.firstName}</div>
+ * }
+ *
+ * @example
+ * Basic example in a NextJs app. This page will be fully rendered during SSR:
+ *
+ * import { useUser } from '@clerk/nextjs'
+ * import { withServerSideAuth } from '@clerk/nextjs/api'
+ *
+ * export getServerSideProps = withServerSideAuth({ loadUser: true});
+ *
+ * export HelloPage = () => {
+ *   const { isSignedIn, user } = useUser();
+ *   if(!isSignedIn) {
+ *     return null;
+ *   }
+ *   return <div>Hello, {user.firstName}</div>
+ * }
+ *
+ */ function $7fc237734b4772b4$var$useUser() {
+    const user = (0, $8YITK.useUserContext)();
+    if (user === undefined) return {
+        isLoaded: false,
+        isSignedIn: undefined,
+        user: undefined
+    };
+    if (user === null) return {
+        isLoaded: true,
+        isSignedIn: false,
+        user: null
+    };
+    return {
+        isLoaded: true,
+        isSignedIn: true,
+        user: user
+    };
+}
+module.exports.useUser = $7fc237734b4772b4$var$useUser;
+
+});
+
+parcelRequire.register("jN23v", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useAuth = void 0;
+
+var $hJ1gd = parcelRequire("hJ1gd");
+
+var $iBeE9 = parcelRequire("iBeE9");
+
+var $is192 = parcelRequire("is192");
+
+var $1TPlq = parcelRequire("1TPlq");
+
+var $5B2Q1 = parcelRequire("5B2Q1");
+/**
+ * Returns the current auth state, the user and session ids and the `getToken`
+ * that can be used to retrieve the given template or the default Clerk token.
+ *
+ * Until Clerk loads, `isLoaded` will be set to `false`.
+ * Once Clerk loads, `isLoaded` will be set to `true`, and you can
+ * safely access the `userId` and `sessionId` variables.
+ *
+ * For projects using NextJs or Remix, you can have immediate access to this data  during SSR
+ * simply by using the `withServerSideAuth` helper.
+ *
+ * @example
+ * A simple example:
+ *
+ * import { useAuth } from '@clerk/clerk-react'
+ *
+ * function Hello() {
+ *   const { isSignedIn, sessionId, userId } = useAuth();
+ *   if(isSignedIn) {
+ *     return null;
+ *   }
+ *   console.log(sessionId, userId)
+ *   return <div>...</div>
+ * }
+ *
+ * @example
+ * Basic example in a NextJs app. This page will be fully rendered during SSR:
+ *
+ * import { useAuth } from '@clerk/nextjs'
+ * import { withServerSideAuth } from '@clerk/nextjs/api'
+ *
+ * export getServerSideProps = withServerSideAuth();
+ *
+ * export HelloPage = () => {
+ *   const { isSignedIn, sessionId, userId } = useAuth();
+ *   console.log(isSignedIn, sessionId, userId)
+ *   return <div>...</div>
+ * }
+ */ const $e684301f2bf1b659$var$useAuth = ()=>{
+    const { sessionId: sessionId , userId: userId , actor: actor , orgId: orgId , orgRole: orgRole , orgSlug: orgSlug  } = (0, $iBeE9.useAuthContext)();
+    const isomorphicClerk = (0, $is192.useIsomorphicClerkContext)();
+    const getToken = (0, $hJ1gd.useCallback)((0, $5B2Q1.createGetToken)(isomorphicClerk), [
+        isomorphicClerk
+    ]);
+    const signOut = (0, $hJ1gd.useCallback)((0, $5B2Q1.createSignOut)(isomorphicClerk), [
+        isomorphicClerk
+    ]);
+    if (sessionId === undefined && userId === undefined) return {
+        isLoaded: false,
+        isSignedIn: undefined,
+        sessionId: sessionId,
+        userId: userId,
+        actor: undefined,
+        orgId: undefined,
+        orgRole: undefined,
+        orgSlug: undefined,
+        signOut: signOut,
+        getToken: getToken
+    };
+    if (sessionId === null && userId === null) return {
+        isLoaded: true,
+        isSignedIn: false,
+        sessionId: sessionId,
+        userId: userId,
+        actor: null,
+        orgId: null,
+        orgRole: null,
+        orgSlug: null,
+        signOut: signOut,
+        getToken: getToken
+    };
+    if (!!sessionId && !!userId && !!orgId && !!orgRole) return {
+        isLoaded: true,
+        isSignedIn: true,
+        sessionId: sessionId,
+        userId: userId,
+        actor: actor || null,
+        orgId: orgId,
+        orgRole: orgRole,
+        orgSlug: orgSlug || null,
+        signOut: signOut,
+        getToken: getToken
+    };
+    if (!!sessionId && !!userId && !orgId) return {
+        isLoaded: true,
+        isSignedIn: true,
+        sessionId: sessionId,
+        userId: userId,
+        actor: actor || null,
+        orgId: null,
+        orgRole: null,
+        orgSlug: null,
+        signOut: signOut,
+        getToken: getToken
+    };
+    throw new Error($1TPlq.invalidStateError);
+};
+module.exports.useAuth = $e684301f2bf1b659$var$useAuth;
+
+});
+parcelRequire.register("5B2Q1", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.createSignOut = module.exports.createGetToken = void 0;
+/**
+ * @internal
+ */ const $41329c062df3eff4$var$clerkLoaded = (isomorphicClerk)=>{
+    return new Promise((resolve)=>{
+        if (isomorphicClerk.loaded) resolve();
+        isomorphicClerk.addOnLoaded(resolve);
+    });
+};
+/**
+ * @internal
+ */ const $41329c062df3eff4$var$createGetToken = (isomorphicClerk)=>{
+    return async (options)=>{
+        await $41329c062df3eff4$var$clerkLoaded(isomorphicClerk);
+        if (!isomorphicClerk.session) return null;
+        return isomorphicClerk.session.getToken(options);
+    };
+};
+module.exports.createGetToken = $41329c062df3eff4$var$createGetToken;
+/**
+ * @internal
+ */ const $41329c062df3eff4$var$createSignOut = (isomorphicClerk)=>{
+    return async (...args)=>{
+        await $41329c062df3eff4$var$clerkLoaded(isomorphicClerk);
+        return isomorphicClerk.signOut(...args);
+    };
+};
+module.exports.createSignOut = $41329c062df3eff4$var$createSignOut;
+
+});
+
+
+parcelRequire.register("3AVog", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useSession = void 0;
+
+var $81tDl = parcelRequire("81tDl");
+/**
+ * Returns the current auth state and if a session exists, the session object.
+ *
+ * Until Clerk loads and initializes, `isLoaded` will be set to `false`.
+ * Once Clerk loads, `isLoaded` will be set to `true`, and you can
+ * safely access `isSignedIn` state and `session`.
+ *
+ * For projects using NextJs or Remix, you can make this state available during SSR
+ * simply by using the `withServerSideAuth` helper and setting the `loadSession` flag to `true`.
+ *
+ * @example
+ * A simple example:
+ *
+ * import { useSession } from '@clerk/clerk-react'
+ *
+ * function Hello() {
+ *   const { isSignedIn, session } = useSession();
+ *   if(!isSignedIn) {
+ *     return null;
+ *   }
+ *   return <div>{session.updatedAt}</div>
+ * }
+ *
+ * @example
+ * Basic example in a NextJs app. This page will be fully rendered during SSR:
+ *
+ * import { useSession } from '@clerk/nextjs'
+ * import { withServerSideAuth } from '@clerk/nextjs/api'
+ *
+ * export getServerSideProps = withServerSideAuth({ loadSession: true});
+ *
+ * export HelloPage = () => {
+ *   const { isSignedIn, session } = useSession();
+ *   if(!isSignedIn) {
+ *     return null;
+ *   }
+ *  return <div>{session.updatedAt}</div>
+ * }
+ */ const $29e1406bd7438cb7$var$useSession = ()=>{
+    const session = (0, $81tDl.useSessionContext)();
+    if (session === undefined) return {
+        isLoaded: false,
+        isSignedIn: undefined,
+        session: undefined
+    };
+    if (session === null) return {
+        isLoaded: true,
+        isSignedIn: false,
+        session: null
+    };
+    return {
+        isLoaded: true,
+        isSignedIn: true,
+        session: session
+    };
+};
+module.exports.useSession = $29e1406bd7438cb7$var$useSession;
+
+});
+
+parcelRequire.register("fNI4s", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useClerk = void 0;
+
+var $is192 = parcelRequire("is192");
+const $b80d9e33a5bf63cf$var$useClerk = ()=>{
+    const isomorphicClerk = (0, $is192.useIsomorphicClerkContext)();
+    // The actual value is an instance of IsomorphicClerk, not Clerk
+    // we expose is as a Clerk instance
+    return isomorphicClerk;
+};
+module.exports.useClerk = $b80d9e33a5bf63cf$var$useClerk;
+
+});
+
+parcelRequire.register("edIZj", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useSignIn = void 0;
+
+var $ljxZW = parcelRequire("ljxZW");
+
+var $is192 = parcelRequire("is192");
+const $a5a52d3d53ca382f$var$useSignIn = ()=>{
+    const isomorphicClerk = (0, $is192.useIsomorphicClerkContext)();
+    const client = (0, $ljxZW.useClientContext)();
+    if (!client) return {
+        isLoaded: false,
+        signIn: undefined,
+        setSession: undefined,
+        setActive: undefined
+    };
+    return {
+        isLoaded: true,
+        signIn: client.signIn,
+        setSession: isomorphicClerk.setSession,
+        setActive: isomorphicClerk.setActive
+    };
+};
+module.exports.useSignIn = $a5a52d3d53ca382f$var$useSignIn;
+
+});
+
+parcelRequire.register("lzQbI", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useSignUp = void 0;
+
+var $ljxZW = parcelRequire("ljxZW");
+
+var $is192 = parcelRequire("is192");
+const $fb55594de0a3164f$var$useSignUp = ()=>{
+    const isomorphicClerk = (0, $is192.useIsomorphicClerkContext)();
+    const client = (0, $ljxZW.useClientContext)();
+    if (!client) return {
+        isLoaded: false,
+        signUp: undefined,
+        setSession: undefined,
+        setActive: undefined
+    };
+    return {
+        isLoaded: true,
+        signUp: client.signUp,
+        setSession: isomorphicClerk.setSession,
+        setActive: isomorphicClerk.setActive
+    };
+};
+module.exports.useSignUp = $fb55594de0a3164f$var$useSignUp;
+
+});
+
+parcelRequire.register("6l4Yf", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useSessionList = void 0;
+
+var $ljxZW = parcelRequire("ljxZW");
+
+var $is192 = parcelRequire("is192");
+const $49d88f513ac9c138$var$useSessionList = ()=>{
+    const isomorphicClerk = (0, $is192.useIsomorphicClerkContext)();
+    const client = (0, $ljxZW.useClientContext)();
+    if (!client) return {
+        isLoaded: false,
+        sessions: undefined,
+        setSession: undefined,
+        setActive: undefined
+    };
+    return {
+        isLoaded: true,
+        sessions: client.sessions,
+        setSession: isomorphicClerk.setSession,
+        setActive: isomorphicClerk.setActive
+    };
+};
+module.exports.useSessionList = $49d88f513ac9c138$var$useSessionList;
+
+});
+
+parcelRequire.register("iwKIF", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useOrganization = void 0;
+
+var $5gnYd = parcelRequire("5gnYd");
+Object.defineProperty(module.exports, "useOrganization", {
+    enumerable: true,
+    get: function() {
+        return $5gnYd.useOrganization;
+    }
+});
+
+});
+
+parcelRequire.register("5Ctzt", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useOrganizationList = void 0;
+
+var $5gnYd = parcelRequire("5gnYd");
+Object.defineProperty(module.exports, "useOrganizationList", {
+    enumerable: true,
+    get: function() {
+        return $5gnYd.useOrganizationList;
+    }
+});
+
+});
+
+parcelRequire.register("cgIVA", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useOrganizations = void 0;
+
+var $5gnYd = parcelRequire("5gnYd");
+Object.defineProperty(module.exports, "useOrganizations", {
+    enumerable: true,
+    get: function() {
+        return $5gnYd.useOrganizations;
+    }
+});
+
+});
+
+parcelRequire.register("02RET", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useMagicLink = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+const $0089cf7f657cdc51$var$react_1 = $ajUHN.__importDefault((parcelRequire("hJ1gd")));
+function $0089cf7f657cdc51$var$useMagicLink(resource) {
+    const { startMagicLinkFlow: startMagicLinkFlow , cancelMagicLinkFlow: cancelMagicLinkFlow  } = $0089cf7f657cdc51$var$react_1.default.useMemo(()=>resource.createMagicLinkFlow(), [
+        resource
+    ]);
+    $0089cf7f657cdc51$var$react_1.default.useEffect(()=>{
+        return cancelMagicLinkFlow;
+    }, []);
+    return {
+        startMagicLinkFlow: startMagicLinkFlow,
+        cancelMagicLinkFlow: cancelMagicLinkFlow
+    };
+}
+module.exports.useMagicLink = $0089cf7f657cdc51$var$useMagicLink;
+
+});
+
+
 var $c00a438d80f7d22b$exports = {};
 
-(parcelRequire("hY5GV")).register(JSON.parse('{"8zuhm":"index.47eef2b7.js","32jrd":"web-vitals.e5c9a779.js"}'));
+(parcelRequire("hY5GV")).register(JSON.parse('{"8zuhm":"index.ba2309da.js","32jrd":"web-vitals.e5c9a779.js"}'));
 
 /* eslint-disable @typescript-eslint/no-unused-vars */ var $2cf73df7d9c51a60$exports = {};
 "use strict";
@@ -42110,21 +46221,62 @@ function $6a1f9c7ed74d76c1$export$d07f55d4c15c0440() {
 }
 
 
-/* eslint-disable @typescript-eslint/no-unused-vars */ // import { ClerkProvider } from '@clerk/clerk-react'
+
+var $21524f58be072846$exports = {};
+"use strict";
+Object.defineProperty($21524f58be072846$exports, "__esModule", {
+    value: true
+});
+$21524f58be072846$exports.useMagicLink = $21524f58be072846$exports.MagicLinkErrorCode = $21524f58be072846$exports.isMagicLinkError = void 0;
+
+var $ajUHN = parcelRequire("ajUHN");
+
+$ajUHN.__exportStar((parcelRequire("3aDr2")), $21524f58be072846$exports);
+
+$ajUHN.__exportStar((parcelRequire("2smA0")), $21524f58be072846$exports);
+
+$ajUHN.__exportStar((parcelRequire("9U2PI")), $21524f58be072846$exports);
+
+var $1TPlq = parcelRequire("1TPlq");
+Object.defineProperty($21524f58be072846$exports, "isMagicLinkError", {
+    enumerable: true,
+    get: function() {
+        return $1TPlq.isMagicLinkError;
+    }
+});
+Object.defineProperty($21524f58be072846$exports, "MagicLinkErrorCode", {
+    enumerable: true,
+    get: function() {
+        return $1TPlq.MagicLinkErrorCode;
+    }
+});
+
+var $02RET = parcelRequire("02RET");
+Object.defineProperty($21524f58be072846$exports, "useMagicLink", {
+    enumerable: true,
+    get: function() {
+        return $02RET.useMagicLink;
+    }
+});
+/**
+ * Vite does not define `global` by default
+ * One workaround is to use the `define` config prop
+ * https://vitejs.dev/config/#define
+ * We are solving this in the SDK level to reduce setup steps.
+ */ if (typeof $parcel$global === "undefined" && typeof window !== "undefined" && !window.global) window.global = window;
 
 
+
+
+var $5rLiH = parcelRequire("5rLiH");
 const $3b6fbf3a770ed634$var$AuthProvider = ({ children: children  })=>{
     const navigate = (0, $68801c12d489f8c9$export$9770f232ac06a008)();
-    console.error("process.env.REACT_APP_CLERK_PUBLISHABLE_KEY", "REACT_APP_CLERK_PUBLISHABLE_KEY=pk_test_ZmxlZXQtY3ViLTk0LmNsZXJrLmFjY291bnRzLmRldiQ");
-    return /*#__PURE__*/ (0, $2cf73df7d9c51a60$exports.jsx)((0, $2cf73df7d9c51a60$exports.Fragment), {
+    console.log("process.env.REACT_APP_CLERK_PUBLISHABLE_KEY", $5rLiH.env);
+    return /*#__PURE__*/ (0, $2cf73df7d9c51a60$exports.jsx)((0, $21524f58be072846$exports.ClerkProvider), {
+        publishableKey: "REACT_APP_CLERK_PUBLISHABLE_KEY=pk_test_ZmxlZXQtY3ViLTk0LmNsZXJrLmFjY291bnRzLmRldiQ" ?? "",
+        navigate: (to)=>navigate(to),
         children: children
     });
-// return (
-//   <ClerkProvider
-//     publishableKey={process.env.REACT_APP_CLERK_PUBLISHABLE_KEY ?? ''}
-//     navigate={to => navigate(to)}
-//   ></ClerkProvider>
-// )
 };
 var $3b6fbf3a770ed634$export$2e2bcd8739ae039 = $3b6fbf3a770ed634$var$AuthProvider;
 
@@ -42156,4 +46308,4 @@ $9698b29ba1b9a049$var$root.render(/*#__PURE__*/ (0, $2cf73df7d9c51a60$exports.js
 $6a1f9c7ed74d76c1$export$6503ec6e8aabbaf();
 
 
-//# sourceMappingURL=index.47eef2b7.js.map
+//# sourceMappingURL=index.ba2309da.js.map

@@ -26551,9 +26551,4120 @@ module.exports = exports;
 
 });
 
+parcelRequire.register("aImsM", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.__internal__setErrorThrowerOptions = module.exports.ClerkProvider = void 0;
+
+var $lFz1l = parcelRequire("lFz1l");
+Object.defineProperty(module.exports, "ClerkProvider", {
+    enumerable: true,
+    get: function() {
+        return $lFz1l.ClerkProvider;
+    }
+});
+Object.defineProperty(module.exports, "__internal__setErrorThrowerOptions", {
+    enumerable: true,
+    get: function() {
+        return $lFz1l.__internal__setErrorThrowerOptions;
+    }
+});
+
+});
+parcelRequire.register("lFz1l", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.__internal__setErrorThrowerOptions = module.exports.ClerkProvider = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+var $6aCOC = parcelRequire("6aCOC");
+
+const $fc6897addcfed0c3$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+var $rLPvf = parcelRequire("rLPvf");
+
+var $9LdOB = parcelRequire("9LdOB");
+Object.defineProperty(module.exports, "__internal__setErrorThrowerOptions", {
+    enumerable: true,
+    get: function() {
+        return $9LdOB.__internal__setErrorThrowerOptions;
+    }
+});
+
+var $3IiGL = parcelRequire("3IiGL");
+
+var $1dBnc = parcelRequire("1dBnc");
+(0, $9LdOB.__internal__setErrorThrowerOptions)({
+    packageName: "@clerk/clerk-react"
+});
+function $fc6897addcfed0c3$var$ClerkProviderBase(props) {
+    const { initialState: initialState , children: children  } = props, restIsomorphicClerkOptions = $fOt1z.__rest(props, [
+        "initialState",
+        "children"
+    ]);
+    const { frontendApi: frontendApi = "" , publishableKey: publishableKey = "" , Clerk: userInitialisedClerk  } = restIsomorphicClerkOptions;
+    if (!userInitialisedClerk) {
+        if (!publishableKey && !frontendApi) $9LdOB.errorThrower.throwMissingPublishableKeyError();
+        else if (publishableKey && !(0, $6aCOC.isPublishableKey)(publishableKey)) $9LdOB.errorThrower.throwInvalidPublishableKeyError({
+            key: publishableKey
+        });
+        else if (!publishableKey && frontendApi && !(0, $6aCOC.isLegacyFrontendApiKey)(frontendApi)) $9LdOB.errorThrower.throwInvalidFrontendApiError({
+            key: frontendApi
+        });
+    }
+    return $fc6897addcfed0c3$var$react_1.default.createElement($1dBnc.StructureContext.Provider, {
+        value: $1dBnc.StructureContextStates.noGuarantees
+    }, $fc6897addcfed0c3$var$react_1.default.createElement($3IiGL.ClerkContextProvider, {
+        initialState: initialState,
+        isomorphicClerkOptions: restIsomorphicClerkOptions
+    }, children));
+}
+const $fc6897addcfed0c3$var$ClerkProvider = (0, $9LdOB.withMaxAllowedInstancesGuard)($fc6897addcfed0c3$var$ClerkProviderBase, "ClerkProvider", $rLPvf.multipleClerkProvidersError);
+module.exports.ClerkProvider = $fc6897addcfed0c3$var$ClerkProvider;
+$fc6897addcfed0c3$var$ClerkProvider.displayName = "ClerkProvider";
+
+});
+parcelRequire.register("fOt1z", function(module, exports) {
+
+$parcel$export(module.exports, "__rest", function () { return $b8320a2cbac41856$export$3c9a16f847548506; });
+$parcel$export(module.exports, "__exportStar", function () { return $b8320a2cbac41856$export$f33643c0debef087; });
+$parcel$export(module.exports, "__importDefault", function () { return $b8320a2cbac41856$export$da59b14a69baef04; });
+$parcel$export(module.exports, "__classPrivateFieldGet", function () { return $b8320a2cbac41856$export$d5dcaf168c640c35; });
+$parcel$export(module.exports, "__classPrivateFieldSet", function () { return $b8320a2cbac41856$export$d40a35129aaff81f; });
+/******************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */ /* global Reflect, Promise */ var $b8320a2cbac41856$var$extendStatics = function(d, b) {
+    $b8320a2cbac41856$var$extendStatics = Object.setPrototypeOf || ({
+        __proto__: []
+    }) instanceof Array && function(d, b) {
+        d.__proto__ = b;
+    } || function(d, b) {
+        for(var p in b)if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+    };
+    return $b8320a2cbac41856$var$extendStatics(d, b);
+};
+function $b8320a2cbac41856$export$a8ba968b8961cb8a(d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+    $b8320a2cbac41856$var$extendStatics(d, b);
+    function __() {
+        this.constructor = d;
+    }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+var $b8320a2cbac41856$export$18ce0697a983be9b = function() {
+    $b8320a2cbac41856$export$18ce0697a983be9b = Object.assign || function __assign(t) {
+        for(var s, i = 1, n = arguments.length; i < n; i++){
+            s = arguments[i];
+            for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return $b8320a2cbac41856$export$18ce0697a983be9b.apply(this, arguments);
+};
+function $b8320a2cbac41856$export$3c9a16f847548506(s, e) {
+    var t = {};
+    for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function") {
+        for(var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++)if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+    }
+    return t;
+}
+function $b8320a2cbac41856$export$29e00dfd3077644b(decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for(var i = decorators.length - 1; i >= 0; i--)if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+function $b8320a2cbac41856$export$d5ad3fd78186038f(paramIndex, decorator) {
+    return function(target, key) {
+        decorator(target, key, paramIndex);
+    };
+}
+function $b8320a2cbac41856$export$f1db080c865becb9(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+function $b8320a2cbac41856$export$1050f835b63b671e(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+function $b8320a2cbac41856$export$67ebef60e6f28a6(thisArg, body) {
+    var _ = {
+        label: 0,
+        sent: function() {
+            if (t[0] & 1) throw t[1];
+            return t[1];
+        },
+        trys: [],
+        ops: []
+    }, f, y, t, g;
+    return g = {
+        next: verb(0),
+        "throw": verb(1),
+        "return": verb(2)
+    }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
+        return this;
+    }), g;
+    function verb(n) {
+        return function(v) {
+            return step([
+                n,
+                v
+            ]);
+        };
+    }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while(g && (g = 0, op[0] && (_ = 0)), _)try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [
+                op[0] & 2,
+                t.value
+            ];
+            switch(op[0]){
+                case 0:
+                case 1:
+                    t = op;
+                    break;
+                case 4:
+                    _.label++;
+                    return {
+                        value: op[1],
+                        done: false
+                    };
+                case 5:
+                    _.label++;
+                    y = op[1];
+                    op = [
+                        0
+                    ];
+                    continue;
+                case 7:
+                    op = _.ops.pop();
+                    _.trys.pop();
+                    continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                        _ = 0;
+                        continue;
+                    }
+                    if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                        _.label = op[1];
+                        break;
+                    }
+                    if (op[0] === 6 && _.label < t[1]) {
+                        _.label = t[1];
+                        t = op;
+                        break;
+                    }
+                    if (t && _.label < t[2]) {
+                        _.label = t[2];
+                        _.ops.push(op);
+                        break;
+                    }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop();
+                    continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) {
+            op = [
+                6,
+                e
+            ];
+            y = 0;
+        } finally{
+            f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
+        return {
+            value: op[0] ? op[1] : void 0,
+            done: true
+        };
+    }
+}
+var $b8320a2cbac41856$export$45d3717a4c69092e = Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
+        enumerable: true,
+        get: function() {
+            return m[k];
+        }
+    };
+    Object.defineProperty(o, k2, desc);
+} : function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+};
+function $b8320a2cbac41856$export$f33643c0debef087(m, o) {
+    for(var p in m)if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) $b8320a2cbac41856$export$45d3717a4c69092e(o, m, p);
+}
+function $b8320a2cbac41856$export$19a8beecd37a4c45(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function() {
+            if (o && i >= o.length) o = void 0;
+            return {
+                value: o && o[i++],
+                done: !o
+            };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+}
+function $b8320a2cbac41856$export$8d051b38c9118094(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while((n === void 0 || n-- > 0) && !(r = i.next()).done)ar.push(r.value);
+    } catch (error) {
+        e = {
+            error: error
+        };
+    } finally{
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        } finally{
+            if (e) throw e.error;
+        }
+    }
+    return ar;
+}
+function $b8320a2cbac41856$export$afc72e2116322959() {
+    for(var ar = [], i = 0; i < arguments.length; i++)ar = ar.concat($b8320a2cbac41856$export$8d051b38c9118094(arguments[i]));
+    return ar;
+}
+function $b8320a2cbac41856$export$6388937ca91ccae8() {
+    for(var s = 0, i = 0, il = arguments.length; i < il; i++)s += arguments[i].length;
+    for(var r = Array(s), k = 0, i = 0; i < il; i++)for(var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)r[k] = a[j];
+    return r;
+}
+function $b8320a2cbac41856$export$1216008129fb82ed(to, from, pack) {
+    if (pack || arguments.length === 2) {
+        for(var i = 0, l = from.length, ar; i < l; i++)if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+}
+function $b8320a2cbac41856$export$10c90e4f7922046c(v) {
+    return this instanceof $b8320a2cbac41856$export$10c90e4f7922046c ? (this.v = v, this) : new $b8320a2cbac41856$export$10c90e4f7922046c(v);
+}
+function $b8320a2cbac41856$export$e427f37a30a4de9b(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
+        return this;
+    }, i;
+    function verb(n) {
+        if (g[n]) i[n] = function(v) {
+            return new Promise(function(a, b) {
+                q.push([
+                    n,
+                    v,
+                    a,
+                    b
+                ]) > 1 || resume(n, v);
+            });
+        };
+    }
+    function resume(n, v) {
+        try {
+            step(g[n](v));
+        } catch (e) {
+            settle(q[0][3], e);
+        }
+    }
+    function step(r) {
+        r.value instanceof $b8320a2cbac41856$export$10c90e4f7922046c ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
+    }
+    function fulfill(value) {
+        resume("next", value);
+    }
+    function reject(value) {
+        resume("throw", value);
+    }
+    function settle(f, v) {
+        if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]);
+    }
+}
+function $b8320a2cbac41856$export$bbd80228419bb833(o) {
+    var i, p;
+    return i = {}, verb("next"), verb("throw", function(e) {
+        throw e;
+    }), verb("return"), i[Symbol.iterator] = function() {
+        return this;
+    }, i;
+    function verb(n, f) {
+        i[n] = o[n] ? function(v) {
+            return (p = !p) ? {
+                value: $b8320a2cbac41856$export$10c90e4f7922046c(o[n](v)),
+                done: n === "return"
+            } : f ? f(v) : v;
+        } : f;
+    }
+}
+function $b8320a2cbac41856$export$e3b29a3d6162315f(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof $b8320a2cbac41856$export$19a8beecd37a4c45 === "function" ? $b8320a2cbac41856$export$19a8beecd37a4c45(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
+        return this;
+    }, i);
+    function verb(n) {
+        i[n] = o[n] && function(v) {
+            return new Promise(function(resolve, reject) {
+                v = o[n](v), settle(resolve, reject, v.done, v.value);
+            });
+        };
+    }
+    function settle(resolve, reject, d, v) {
+        Promise.resolve(v).then(function(v) {
+            resolve({
+                value: v,
+                done: d
+            });
+        }, reject);
+    }
+}
+function $b8320a2cbac41856$export$4fb47efe1390b86f(cooked, raw) {
+    if (Object.defineProperty) Object.defineProperty(cooked, "raw", {
+        value: raw
+    });
+    else cooked.raw = raw;
+    return cooked;
+}
+var $b8320a2cbac41856$var$__setModuleDefault = Object.create ? function(o, v) {
+    Object.defineProperty(o, "default", {
+        enumerable: true,
+        value: v
+    });
+} : function(o, v) {
+    o["default"] = v;
+};
+function $b8320a2cbac41856$export$c21735bcef00d192(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) {
+        for(var k in mod)if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) $b8320a2cbac41856$export$45d3717a4c69092e(result, mod, k);
+    }
+    $b8320a2cbac41856$var$__setModuleDefault(result, mod);
+    return result;
+}
+function $b8320a2cbac41856$export$da59b14a69baef04(mod) {
+    return mod && mod.__esModule ? mod : {
+        default: mod
+    };
+}
+function $b8320a2cbac41856$export$d5dcaf168c640c35(receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+}
+function $b8320a2cbac41856$export$d40a35129aaff81f(receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
+}
+function $b8320a2cbac41856$export$81fdc39f203e4e04(state, receiver) {
+    if (receiver === null || typeof receiver !== "object" && typeof receiver !== "function") throw new TypeError("Cannot use 'in' operator on non-object");
+    return typeof state === "function" ? receiver === state : state.has(receiver);
+}
+
+});
+
+parcelRequire.register("6aCOC", function(module, exports) {
+
+$parcel$export(module.exports, "buildErrorThrower", function () { return $47e1c9301463c82b$export$d6149cfe10ecbed3; });
+$parcel$export(module.exports, "parsePublishableKey", function () { return $47e1c9301463c82b$export$e714dbd47ccca8af; });
+$parcel$export(module.exports, "isPublishableKey", function () { return $47e1c9301463c82b$export$e7b0b0686142f5e8; });
+$parcel$export(module.exports, "isLegacyFrontendApiKey", function () { return $47e1c9301463c82b$export$64ce68e329c0c00a; });
+$parcel$export(module.exports, "createDevOrStagingUrlCache", function () { return $47e1c9301463c82b$export$31072de0539b233; });
+$parcel$export(module.exports, "handleValueOrFn", function () { return $47e1c9301463c82b$export$af80d780caaebdea; });
+$parcel$export(module.exports, "isValidProxyUrl", function () { return $47e1c9301463c82b$export$e2743abb42a775d; });
+$parcel$export(module.exports, "proxyUrlToAbsoluteURL", function () { return $47e1c9301463c82b$export$b5f197fdba327544; });
+$parcel$export(module.exports, "inClientSide", function () { return $47e1c9301463c82b$export$8176888a712f743c; });
+$parcel$export(module.exports, "addClerkPrefix", function () { return $47e1c9301463c82b$export$34d7ddd66a763253; });
+$parcel$export(module.exports, "createContextAndHook", function () { return $47e1c9301463c82b$export$b4f021037e6d7d3f; });
+$parcel$export(module.exports, "ClerkInstanceContext", function () { return $47e1c9301463c82b$export$8aa96e0f8b054cda; });
+$parcel$export(module.exports, "useClerkInstanceContext", function () { return $47e1c9301463c82b$export$5ebbb6ccfffc7393; });
+$parcel$export(module.exports, "UserContext", function () { return $47e1c9301463c82b$export$38ee920e59704589; });
+$parcel$export(module.exports, "useUserContext", function () { return $47e1c9301463c82b$export$87c54b525b914dab; });
+$parcel$export(module.exports, "ClientContext", function () { return $47e1c9301463c82b$export$56e68f8f57ecfde4; });
+$parcel$export(module.exports, "useClientContext", function () { return $47e1c9301463c82b$export$6627e187bf6ba3fd; });
+$parcel$export(module.exports, "SessionContext", function () { return $47e1c9301463c82b$export$3285420c698bc605; });
+$parcel$export(module.exports, "useSessionContext", function () { return $47e1c9301463c82b$export$a3931362f3958630; });
+$parcel$export(module.exports, "OrganizationContext", function () { return $47e1c9301463c82b$export$14ec650242c84392; });
+$parcel$export(module.exports, "useOrganizationContext", function () { return $47e1c9301463c82b$export$7305fb39264bef77; });
+$parcel$export(module.exports, "useOrganization", function () { return $47e1c9301463c82b$export$ae85931d305e13b1; });
+$parcel$export(module.exports, "useOrganizationList", function () { return $47e1c9301463c82b$export$70272151be64739d; });
+$parcel$export(module.exports, "useOrganizations", function () { return $47e1c9301463c82b$export$5fc38fde58f5cf66; });
+
+var $kbVfw = parcelRequire("kbVfw");
+
+var $kVsbi = parcelRequire("kVsbi");
+
+var $laauJ = parcelRequire("laauJ");
+
+var $laauJ = parcelRequire("laauJ");
+
+var $laauJ = parcelRequire("laauJ");
+var $47e1c9301463c82b$var$St = Object.freeze({
+    InvalidFrontendApiErrorMessage: "The frontendApi passed to Clerk is invalid. You can get your Frontend API key at https://dashboard.clerk.com/last-active?path=api-keys. (key={{key}})",
+    InvalidProxyUrlErrorMessage: "The proxyUrl passed to Clerk is invalid. The expected value for proxyUrl is an absolute URL or a relative path with a leading '/'. (key={{url}})",
+    InvalidPublishableKeyErrorMessage: "The publishableKey passed to Clerk is invalid. You can get your Publishable key at https://dashboard.clerk.com/last-active?path=api-keys. (key={{key}})",
+    MissingPublishableKeyErrorMessage: "Missing publishableKey. You can get your key at https://dashboard.clerk.com/last-active?path=api-keys."
+});
+function $47e1c9301463c82b$export$d6149cfe10ecbed3({ packageName: e , customMessages: r  }) {
+    let t = e, n = {
+        ...$47e1c9301463c82b$var$St,
+        ...r
+    };
+    function o(i, a) {
+        if (!a) return `${t}: ${i}`;
+        let u = i, f = i.matchAll(/{{([a-zA-Z0-9-_]+)}}/g);
+        for (let s of f){
+            let l = (a[s[1]] || "").toString();
+            u = u.replace(`{{${s[1]}}}`, l);
+        }
+        return `${t}: ${u}`;
+    }
+    return {
+        setPackageName ({ packageName: i  }) {
+            return typeof i == "string" && (t = i), this;
+        },
+        setMessages ({ customMessages: i  }) {
+            return Object.assign(n, i || {}), this;
+        },
+        throwInvalidPublishableKeyError (i) {
+            throw new Error(o(n.InvalidPublishableKeyErrorMessage, i));
+        },
+        throwInvalidFrontendApiError (i) {
+            throw new Error(o(n.InvalidFrontendApiErrorMessage, i));
+        },
+        throwInvalidProxyUrl (i) {
+            throw new Error(o(n.InvalidProxyUrlErrorMessage, i));
+        },
+        throwMissingPublishableKeyError () {
+            throw new Error(o(n.MissingPublishableKeyErrorMessage));
+        }
+    };
+}
+var $47e1c9301463c82b$export$65cb8af9798db83d = (e)=>{
+    if (e.length == 0) return "";
+    if (e.length == 1) return e[0];
+    let r = e.slice(0, -1).join(", ");
+    return r += `, or ${e.slice(-1)}`, r;
+};
+function $47e1c9301463c82b$export$620a268685f0ac45() {
+    return typeof window < "u";
+}
+function $47e1c9301463c82b$export$c17cdb790e99cd44(e) {
+    return new RegExp([
+        /bot/,
+        /spider/,
+        /crawl/,
+        /APIs-Google/,
+        /AdsBot/,
+        /Googlebot/,
+        /mediapartners/,
+        /Google Favicon/,
+        /FeedFetcher/,
+        /Google-Read-Aloud/,
+        /DuplexWeb-Google/,
+        /googleweblight/,
+        /bing/,
+        /yandex/,
+        /baidu/,
+        /duckduck/,
+        /yahoo/,
+        /ecosia/,
+        /ia_archiver/,
+        /facebook/,
+        /instagram/,
+        /pinterest/,
+        /reddit/,
+        /slack/,
+        /twitter/,
+        /whatsapp/,
+        /youtube/,
+        /semrush/
+    ].map((t)=>t.source).join("|"), "i").test(e);
+}
+function $47e1c9301463c82b$export$aa41b89db26550c5() {
+    let e = window?.navigator;
+    if (!$47e1c9301463c82b$export$620a268685f0ac45() || !e) return !1;
+    let r = $47e1c9301463c82b$export$c17cdb790e99cd44(e?.userAgent), t = e?.webdriver, n = e?.onLine, o = e?.connection?.rtt !== 0 && e?.connection?.downlink !== 0;
+    return !r && !t && o && n;
+}
+var $47e1c9301463c82b$var$Mt = /^#?([A-F0-9]{6}|[A-F0-9]{3})$/i, $47e1c9301463c82b$var$Dt = /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/i, $47e1c9301463c82b$var$Pt = /^rgba\((\d+),\s*(\d+),\s*(\d+)(,\s*\d+(\.\d+)?)\)$/i, $47e1c9301463c82b$var$At = /^hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)$/i, $47e1c9301463c82b$var$Ut = /^hsla\((\d+),\s*([\d.]+)%,\s*([\d.]+)%(,\s*\d+(\.\d+)?)*\)$/i, $47e1c9301463c82b$export$d65a36119baa393e = (e)=>!!e.match($47e1c9301463c82b$var$Mt), $47e1c9301463c82b$export$219fded437b850e2 = (e)=>!!(e.match($47e1c9301463c82b$var$Dt) || e.match($47e1c9301463c82b$var$Pt)), $47e1c9301463c82b$export$2122b77a09d043a3 = (e)=>!!e.match($47e1c9301463c82b$var$At) || !!e.match($47e1c9301463c82b$var$Ut), $47e1c9301463c82b$export$9b9bf1db1bd6d350 = (e)=>typeof e != "string" && "r" in e, $47e1c9301463c82b$export$c2b843a3f636a08c = (e)=>typeof e != "string" && "h" in e, $47e1c9301463c82b$export$b5066e04f2f87723 = (e)=>e === "transparent", $47e1c9301463c82b$export$7c6623716c246f1 = (e)=>typeof e != "string" && e.a != null && e.a < 1;
+var $47e1c9301463c82b$var$_t = /[hsla()]/g, $47e1c9301463c82b$var$Ft = /[rgba()]/g, $47e1c9301463c82b$export$2ddd6e970c7527b7 = (e)=>e === "transparent" ? {
+        h: 0,
+        s: 0,
+        l: 0,
+        a: 0
+    } : $47e1c9301463c82b$export$d65a36119baa393e(e) ? $47e1c9301463c82b$var$Nt(e) : $47e1c9301463c82b$export$2122b77a09d043a3(e) ? $47e1c9301463c82b$var$qe(e) : $47e1c9301463c82b$export$219fded437b850e2(e) ? $47e1c9301463c82b$var$Xe(e) : null, $47e1c9301463c82b$export$6375abddade00d53 = (e)=>(e = e.trim(), $47e1c9301463c82b$export$d65a36119baa393e(e) ? e.startsWith("#") ? e : `#${e}` : $47e1c9301463c82b$export$219fded437b850e2(e) ? $47e1c9301463c82b$var$Ye(e) : $47e1c9301463c82b$export$2122b77a09d043a3(e) ? $47e1c9301463c82b$var$qe(e) : $47e1c9301463c82b$export$b5066e04f2f87723(e) ? e : ""), $47e1c9301463c82b$export$fd9b4b6e61e89f57 = (e)=>typeof e == "string" && ($47e1c9301463c82b$export$d65a36119baa393e(e) || $47e1c9301463c82b$export$b5066e04f2f87723(e)) ? e : $47e1c9301463c82b$export$9b9bf1db1bd6d350(e) ? $47e1c9301463c82b$var$$t(e) : $47e1c9301463c82b$export$c2b843a3f636a08c(e) ? $47e1c9301463c82b$var$Ht(e) : "", $47e1c9301463c82b$export$d8d8fd9aec3aff47 = (e)=>{
+    e = e.replace("#", "");
+    let r = parseInt(e.substring(0, 2), 16), t = parseInt(e.substring(2, 4), 16), n = parseInt(e.substring(4, 6), 16);
+    return {
+        r: r,
+        g: t,
+        b: n
+    };
+}, $47e1c9301463c82b$var$$t = (e)=>{
+    let { a: r , b: t , g: n , r: o  } = e;
+    return e.a === 0 ? "transparent" : e.a != null ? `rgba(${o},${n},${t},${r})` : `rgb(${o},${n},${t})`;
+}, $47e1c9301463c82b$var$Ht = (e)=>{
+    let { h: r , s: t , l: n , a: o  } = e, i = Math.round(t * 100), a = Math.round(n * 100);
+    return e.a === 0 ? "transparent" : e.a != null ? `hsla(${r},${i}%,${a}%,${o})` : `hsl(${r},${i}%,${a}%)`;
+}, $47e1c9301463c82b$var$Nt = (e)=>{
+    let r = $47e1c9301463c82b$export$fd9b4b6e61e89f57($47e1c9301463c82b$export$d8d8fd9aec3aff47(e));
+    return $47e1c9301463c82b$var$Xe(r);
+}, $47e1c9301463c82b$var$Xe = (e)=>{
+    let r = $47e1c9301463c82b$var$Ye(e), t = r.r / 255, n = r.g / 255, o = r.b / 255, i = Math.max(t, n, o), a = Math.min(t, n, o), u, f, s = (i + a) / 2;
+    if (i == a) u = f = 0;
+    else {
+        let c = i - a;
+        switch(f = s >= .5 ? c / (2 - (i + a)) : c / (i + a), i){
+            case t:
+                u = (n - o) / c * 60;
+                break;
+            case n:
+                u = ((o - t) / c + 2) * 60;
+                break;
+            default:
+                u = ((t - n) / c + 4) * 60;
+                break;
+        }
+    }
+    let l = {
+        h: Math.round(u),
+        s: f,
+        l: s
+    }, p = r.a;
+    return p != null && (l.a = p), l;
+}, $47e1c9301463c82b$var$Ye = (e)=>{
+    let [r, t, n, o] = e.replace($47e1c9301463c82b$var$Ft, "").split(",").map((i)=>Number.parseFloat(i));
+    return {
+        r: r,
+        g: t,
+        b: n,
+        a: o
+    };
+}, $47e1c9301463c82b$var$qe = (e)=>{
+    let [r, t, n, o] = e.replace($47e1c9301463c82b$var$_t, "").split(",").map((i)=>Number.parseFloat(i));
+    return {
+        h: r,
+        s: t / 100,
+        l: n / 100,
+        a: o
+    };
+};
+function $47e1c9301463c82b$var$ae(e) {
+    for(var r = 1; r < arguments.length; r++){
+        var t = arguments[r];
+        for(var n in t)e[n] = t[n];
+    }
+    return e;
+}
+var $47e1c9301463c82b$var$Gt = {
+    read: function(e) {
+        return e[0] === '"' && (e = e.slice(1, -1)), e.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent);
+    },
+    write: function(e) {
+        return encodeURIComponent(e).replace(/%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g, decodeURIComponent);
+    }
+};
+function $47e1c9301463c82b$var$ye(e, r) {
+    function t(o, i, a) {
+        if (!(typeof document > "u")) {
+            a = $47e1c9301463c82b$var$ae({}, r, a), typeof a.expires == "number" && (a.expires = new Date(Date.now() + a.expires * 864e5)), a.expires && (a.expires = a.expires.toUTCString()), o = encodeURIComponent(o).replace(/%(2[346B]|5E|60|7C)/g, decodeURIComponent).replace(/[()]/g, escape);
+            var u = "";
+            for(var f in a)a[f] && (u += "; " + f, a[f] !== !0 && (u += "=" + a[f].split(";")[0]));
+            return document.cookie = o + "=" + e.write(i, o) + u;
+        }
+    }
+    function n(o) {
+        if (!(typeof document > "u" || arguments.length && !o)) {
+            for(var i = document.cookie ? document.cookie.split("; ") : [], a = {}, u = 0; u < i.length; u++){
+                var f = i[u].split("="), s = f.slice(1).join("=");
+                try {
+                    var l = decodeURIComponent(f[0]);
+                    if (a[l] = e.read(s, l), o === l) break;
+                } catch  {}
+            }
+            return o ? a[o] : a;
+        }
+    }
+    return Object.create({
+        set: t,
+        get: n,
+        remove: function(o, i) {
+            t(o, "", $47e1c9301463c82b$var$ae({}, i, {
+                expires: -1
+            }));
+        },
+        withAttributes: function(o) {
+            return $47e1c9301463c82b$var$ye(this.converter, $47e1c9301463c82b$var$ae({}, this.attributes, o));
+        },
+        withConverter: function(o) {
+            return $47e1c9301463c82b$var$ye($47e1c9301463c82b$var$ae({}, this.converter, o), this.attributes);
+        }
+    }, {
+        attributes: {
+            value: Object.freeze(r)
+        },
+        converter: {
+            value: Object.freeze(e)
+        }
+    });
+}
+var $47e1c9301463c82b$var$Kt = $47e1c9301463c82b$var$ye($47e1c9301463c82b$var$Gt, {
+    path: "/"
+}), $47e1c9301463c82b$var$se = $47e1c9301463c82b$var$Kt;
+function $47e1c9301463c82b$export$492cdf8e65f2099e(e) {
+    return {
+        get () {
+            return $47e1c9301463c82b$var$se.get(e);
+        },
+        set (r, t = {}) {
+            return $47e1c9301463c82b$var$se.set(e, r, t);
+        },
+        remove (r) {
+            $47e1c9301463c82b$var$se.remove(e, r);
+        }
+    };
+}
+var $47e1c9301463c82b$export$87a845ded7190bfc = ()=>{
+    let e = (0, $kbVfw.c), r = (0, $kbVfw.c);
+    return {
+        promise: new Promise((n, o)=>{
+            e = n, r = o;
+        }),
+        resolve: e,
+        reject: r
+    };
+};
+function $47e1c9301463c82b$export$95edd8e74ffdc7e7(e) {
+    return e ? e.toLocaleString("en-US", {
+        hour: "2-digit",
+        minute: "numeric",
+        hour12: !0
+    }) : "";
+}
+function $47e1c9301463c82b$export$4a02e9c37dab4871(e, r, { absolute: t = !0  } = {}) {
+    if (!e || !r) return 0;
+    let n = Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()), o = Date.UTC(r.getFullYear(), r.getMonth(), r.getDate()), i = Math.floor((o - n) / 864e5);
+    return t ? Math.abs(i) : i;
+}
+function $47e1c9301463c82b$export$fcc71269590ba0a8(e) {
+    try {
+        return new Date(e || new Date);
+    } catch  {
+        return new Date;
+    }
+}
+function $47e1c9301463c82b$export$8fbbfd65594f46a0(e) {
+    let { date: r , relativeTo: t  } = e;
+    if (!r || !t) return null;
+    let n = $47e1c9301463c82b$export$fcc71269590ba0a8(r), o = $47e1c9301463c82b$export$fcc71269590ba0a8(t), i = $47e1c9301463c82b$export$4a02e9c37dab4871(o, n, {
+        absolute: !1
+    });
+    return i < -6 ? {
+        relativeDateCase: "other",
+        date: n
+    } : i < -1 ? {
+        relativeDateCase: "previous6Days",
+        date: n
+    } : i === -1 ? {
+        relativeDateCase: "lastDay",
+        date: n
+    } : i === 0 ? {
+        relativeDateCase: "sameDay",
+        date: n
+    } : i === 1 ? {
+        relativeDateCase: "nextDay",
+        date: n
+    } : i < 7 ? {
+        relativeDateCase: "next6Days",
+        date: n
+    } : {
+        relativeDateCase: "other",
+        date: n
+    };
+}
+function $47e1c9301463c82b$export$3d83eec43f4ea476(e, r) {
+    let t = $47e1c9301463c82b$export$fcc71269590ba0a8(e);
+    return t.setFullYear(t.getFullYear() + r), t;
+}
+function $47e1c9301463c82b$export$55152de1f925fd05(e) {
+    let r = e?.status;
+    return e?.errors?.[0]?.code === "authentication_invalid" && r === 401;
+}
+function $47e1c9301463c82b$export$476aa014e2fd89d5(e) {
+    return (`${e.message}${e.name}` || "").toLowerCase().replace(/\s+/g, "").includes("networkerror");
+}
+function $47e1c9301463c82b$export$aa2c7ad2063c8ec6(e) {
+    return new Promise((r, t)=>{
+        let n = new FileReader;
+        n.addEventListener("load", function() {
+            let o = JSON.parse(n.result);
+            r(o);
+        }), n.addEventListener("error", t), n.readAsText(e);
+    });
+}
+var $47e1c9301463c82b$export$c1e1b7be43d0d063 = (e)=>typeof atob < "u" && typeof atob == "function" ? atob(e) : typeof $parcel$global < "u" && $parcel$global.Buffer ? new $parcel$global.Buffer(e, "base64").toString() : e;
+var $47e1c9301463c82b$var$Re = "pk_live_", $47e1c9301463c82b$var$Je = "pk_test_", $47e1c9301463c82b$var$jt = /^(([a-z]+)-){2}([0-9]{1,2})\.clerk\.accounts([a-z.]*)(dev|com)$/i;
+function $47e1c9301463c82b$export$dbd57dddc2edde62(e) {
+    return `${$47e1c9301463c82b$var$jt.test(e) ? $47e1c9301463c82b$var$Je : $47e1c9301463c82b$var$Re}${btoa(`${e}$`)}`;
+}
+function $47e1c9301463c82b$export$e714dbd47ccca8af(e) {
+    if (e = e || "", !$47e1c9301463c82b$export$e7b0b0686142f5e8(e)) return null;
+    let r = e.startsWith($47e1c9301463c82b$var$Re) ? "production" : "development", t = $47e1c9301463c82b$export$c1e1b7be43d0d063(e.split("_")[2]);
+    return t.endsWith("$") ? (t = t.slice(0, -1), {
+        instanceType: r,
+        frontendApi: t
+    }) : null;
+}
+function $47e1c9301463c82b$export$e7b0b0686142f5e8(e) {
+    e = e || "";
+    let r = e.startsWith($47e1c9301463c82b$var$Re) || e.startsWith($47e1c9301463c82b$var$Je), t = $47e1c9301463c82b$export$c1e1b7be43d0d063(e.split("_")[2] || "").endsWith("$");
+    return r && t;
+}
+function $47e1c9301463c82b$export$64ce68e329c0c00a(e) {
+    return e = e || "", e.startsWith("clerk.");
+}
+function $47e1c9301463c82b$export$31072de0539b233() {
+    let e = [
+        ".lcl.dev",
+        ".stg.dev",
+        ".lclstage.dev",
+        ".stgstage.dev",
+        ".dev.lclclerk.com",
+        ".stg.lclclerk.com",
+        ".accounts.lclclerk.com",
+        "accountsstage.dev",
+        "accounts.dev"
+    ], r = new Map;
+    return {
+        isDevOrStagingUrl: (t)=>{
+            if (!t) return !1;
+            let n = typeof t == "string" ? t : t.hostname, o = r.get(n);
+            return o === void 0 && (o = e.some((i)=>n.endsWith(i)), r.set(n, o)), o;
+        }
+    };
+}
+function $47e1c9301463c82b$export$4c012cc1e603e93() {
+    if (!window.matchMedia) return !1;
+    let e = window.matchMedia("only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen  and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx)");
+    return e && e.matches || window.devicePixelRatio > 1;
+}
+var $47e1c9301463c82b$var$Yt = "__lsbc__", $47e1c9301463c82b$export$e30d1d60d460c8ce = class {
+    constructor(r){
+        this.eventTarget = window;
+        this.postMessage = (r)=>{
+            try {
+                localStorage.setItem(this.channelKey, JSON.stringify(r)), localStorage.removeItem(this.channelKey);
+            } catch  {}
+        };
+        this.addEventListener = (r, t)=>{
+            this.eventTarget.addEventListener(this.prefixEventName(r), (n)=>{
+                t(n);
+            });
+        };
+        this.setupLocalStorageListener = ()=>{
+            let r = (t)=>{
+                if (!(t.key !== this.channelKey || !t.newValue)) try {
+                    let n = JSON.parse(t.newValue || ""), o = new MessageEvent(this.prefixEventName("message"), {
+                        data: n
+                    });
+                    this.eventTarget.dispatchEvent(o);
+                } catch  {}
+            };
+            window.addEventListener("storage", r);
+        };
+        this.channelKey = $47e1c9301463c82b$var$Yt + r, this.setupLocalStorageListener();
+    }
+    prefixEventName(r) {
+        return this.channelKey + r;
+    }
+};
+var $47e1c9301463c82b$var$qt = Object.freeze({
+    "image/png": "png",
+    "image/jpeg": "jpg",
+    "image/gif": "gif",
+    "image/webp": "webp",
+    "image/x-icon": "ico",
+    "image/vnd.microsoft.icon": "ico"
+}), $47e1c9301463c82b$export$1b45514b112dd749 = (e)=>$47e1c9301463c82b$var$qt[e];
+function $47e1c9301463c82b$export$af80d780caaebdea(e, r, t) {
+    if (typeof e == "function") return e(r);
+    if (typeof e < "u") return e;
+    if (typeof t < "u") return t;
+}
+var $47e1c9301463c82b$var$Jt = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+function $47e1c9301463c82b$export$402d6c4b260c768(e) {
+    return $47e1c9301463c82b$var$Jt.test(e || "");
+}
+function $47e1c9301463c82b$export$29d0dd1cc36cee26(e) {
+    let r = e || "";
+    return r.charAt(0).toUpperCase() + r.slice(1);
+}
+function $47e1c9301463c82b$export$b70dcce1c70696bf(e) {
+    return e ? e.replace(/([-_][a-z])/g, (r)=>r.toUpperCase().replace(/-|_/, "")) : "";
+}
+function $47e1c9301463c82b$export$e12f55f9c91df96a(e) {
+    return e ? e.replace(/[A-Z]/g, (r)=>`_${r.toLowerCase()}`) : "";
+}
+var $47e1c9301463c82b$var$tt = (e)=>{
+    let r = (t)=>{
+        if (!t) return t;
+        if (Array.isArray(t)) return t.map((i)=>typeof i == "object" || Array.isArray(i) ? r(i) : i);
+        let n = {
+            ...t
+        }, o = Object.keys(n);
+        for (let i of o){
+            let a = e(i.toString());
+            a !== i && (n[a] = n[i], delete n[i]), typeof n[a] == "object" && (n[a] = r(n[a]));
+        }
+        return n;
+    };
+    return r;
+}, $47e1c9301463c82b$export$962fa8d541f74d2b = $47e1c9301463c82b$var$tt($47e1c9301463c82b$export$e12f55f9c91df96a), $47e1c9301463c82b$export$b0c2d4a93e16a70b = $47e1c9301463c82b$var$tt($47e1c9301463c82b$export$b70dcce1c70696bf);
+var $47e1c9301463c82b$var$Te = `const respond=r=>{self.postMessage(r)},workerToTabIds={};self.addEventListener("message",r=>{const e=r.data;switch(e.type){case"setTimeout":workerToTabIds[e.id]=setTimeout(()=>{respond({id:e.id})},e.ms);break;case"clearTimeout":workerToTabIds[e.id]&&(clearTimeout(workerToTabIds[e.id]),delete workerToTabIds[e.id]);break;case"setInterval":workerToTabIds[e.id]=setInterval(()=>{respond({id:e.id})},e.ms);break;case"clearInterval":workerToTabIds[e.id]&&(clearInterval(workerToTabIds[e.id]),delete workerToTabIds[e.id]);break}});
+`;
+var $47e1c9301463c82b$var$rt = (e, r = {})=>{
+    if (typeof Worker > "u") return null;
+    try {
+        let t = new Blob([
+            e
+        ], {
+            type: "application/javascript; charset=utf-8"
+        }), n = globalThis.URL.createObjectURL(t);
+        return new Worker(n, r);
+    } catch  {
+        return console.warn("Clerk: Cannot create worker from blob. Consider adding worker-src blob:; to your CSP"), null;
+    }
+}, $47e1c9301463c82b$var$Qt = ()=>{
+    let e = globalThis.setTimeout.bind(globalThis), r = globalThis.setInterval.bind(globalThis), t = globalThis.clearTimeout.bind(globalThis), n = globalThis.clearInterval.bind(globalThis);
+    return {
+        setTimeout: e,
+        setInterval: r,
+        clearTimeout: t,
+        clearInterval: n,
+        cleanup: (0, $kbVfw.c)
+    };
+}, $47e1c9301463c82b$export$aaca7980e2aa3e57 = ()=>{
+    let e = 0, r = ()=>e++, t = new Map, n = (c, m)=>c?.postMessage(m), o = (c)=>{
+        t.get(c.data.id)?.();
+    }, i = $47e1c9301463c82b$var$rt($47e1c9301463c82b$var$Te, {
+        name: "clerk-timers"
+    });
+    if (i?.addEventListener("message", o), !i) return $47e1c9301463c82b$var$Qt();
+    let a = ()=>{
+        i || (i = $47e1c9301463c82b$var$rt($47e1c9301463c82b$var$Te, {
+            name: "clerk-timers"
+        }), i?.addEventListener("message", o));
+    };
+    return {
+        setTimeout: (c, m)=>{
+            a();
+            let C = r();
+            return t.set(C, c), n(i, {
+                type: "setTimeout",
+                id: C,
+                ms: m
+            }), C;
+        },
+        setInterval: (c, m)=>{
+            a();
+            let C = r();
+            return t.set(C, c), n(i, {
+                type: "setInterval",
+                id: C,
+                ms: m
+            }), C;
+        },
+        clearTimeout: (c)=>{
+            a(), t.delete(c), n(i, {
+                type: "clearTimeout",
+                id: c
+            });
+        },
+        clearInterval: (c)=>{
+            a(), t.delete(c), n(i, {
+                type: "clearInterval",
+                id: c
+            });
+        },
+        cleanup: ()=>{
+            i && (i.terminate(), i = null, t.clear());
+        }
+    };
+};
+function $47e1c9301463c82b$export$d7350d97c7b41caa({ delayInMs: e  } = {
+    delayInMs: 1e3
+}) {
+    let r = $47e1c9301463c82b$export$aaca7980e2aa3e57(), t, n = !1, o = ()=>{
+        t && (r.clearTimeout(t), r.cleanup()), n = !0;
+    }, i = async (a)=>{
+        n = !1, await a(o), !n && (t = r.setTimeout(()=>{
+            i(a);
+        }, e));
+    };
+    return {
+        run: i,
+        stop: o
+    };
+}
+function $47e1c9301463c82b$export$e2743abb42a775d(e) {
+    return e ? $47e1c9301463c82b$export$10e521722f10e8f7(e) || $47e1c9301463c82b$export$b9e876062c8906fe(e) : !0;
+}
+function $47e1c9301463c82b$export$10e521722f10e8f7(e) {
+    return /^http(s)?:\/\//.test(e || "");
+}
+function $47e1c9301463c82b$export$b9e876062c8906fe(e) {
+    return e.startsWith("/");
+}
+function $47e1c9301463c82b$export$b5f197fdba327544(e) {
+    return e ? $47e1c9301463c82b$export$b9e876062c8906fe(e) ? new URL(e, window.location.origin).toString() : e : "";
+}
+function $47e1c9301463c82b$export$14619c0eed01a470({ request: e , relativePath: r  }) {
+    let { headers: t , url: n  } = e, o = new URL(n), i = t.get("X-Forwarded-Host") ?? t.get("host") ?? t.host ?? o.host, a = (t.get("X-Forwarded-Proto") ?? t["X-Forwarded-Proto"])?.split(",")[0] ?? o.protocol;
+    return a = a.replace(/[:/]/, ""), new URL(r || o.pathname, `${a}://${i}`);
+}
+var $47e1c9301463c82b$export$8176888a712f743c = ()=>typeof window < "u";
+function $47e1c9301463c82b$export$9a9a4ec1b3864074(e = "") {
+    return e.startsWith("?") && (e = e.slice(1)), new URLSearchParams(e);
+}
+function $47e1c9301463c82b$export$c5f13991f66aa26a(e = "") {
+    return (e || "").replace(/^.+:\/\//, "");
+}
+function $47e1c9301463c82b$export$34d7ddd66a763253(e) {
+    if (!e) return "";
+    let r;
+    if (e.match(/^(clerk\.)+\w*$/)) r = /(clerk\.)*(?=clerk\.)/;
+    else {
+        if (e.match(/\.clerk.accounts/)) return e;
+        r = /^(clerk\.)*/gi;
+    }
+    return `clerk.${e.replace(r, "")}`;
+}
+var $47e1c9301463c82b$var$tr = {
+    maxRetries: 10,
+    firstDelay: 125,
+    maxDelay: 0,
+    timeMultiple: 2,
+    shouldRetry: ()=>!0
+}, $47e1c9301463c82b$var$rr = async (e)=>new Promise((r)=>setTimeout(r, e)), $47e1c9301463c82b$var$nr = (e)=>{
+    let r = 0, t = ()=>{
+        let n = e.firstDelay, o = e.timeMultiple, i = n * Math.pow(o, r);
+        return Math.min(e.maxDelay || i, i);
+    };
+    return async ()=>{
+        await $47e1c9301463c82b$var$rr(t()), r++;
+    };
+}, $47e1c9301463c82b$export$66fdaba09a8b6da = async (e, r = {})=>{
+    let t = 0, { maxRetries: n , shouldRetry: o , firstDelay: i , maxDelay: a , timeMultiple: u  } = {
+        ...$47e1c9301463c82b$var$tr,
+        ...r
+    }, f = ()=>t === n, s = $47e1c9301463c82b$var$nr({
+        firstDelay: i,
+        maxDelay: a,
+        timeMultiple: u
+    });
+    for(; !f();)try {
+        return await e();
+    } catch (l) {
+        if (t++, !o(l, t) || f()) throw l;
+        await s();
+    }
+    throw new Error("Something went wrong");
+};
+var $47e1c9301463c82b$export$9f1ac3e4ddeb29bb = {
+    toRegexp: (e)=>{
+        try {
+            return (0, (/*@__PURE__*/$parcel$interopDefault($kVsbi)))(e);
+        } catch (r) {
+            throw new Error(`Invalid pattern: ${e}.
+Consult the documentation of glob-to-regexp here: https://www.npmjs.com/package/glob-to-regexp.
+${r.message}`);
+        }
+    }
+};
+function $47e1c9301463c82b$export$9f6298504fcd4ed(e, r) {
+    if (!e) throw typeof r == "string" ? new Error(r) : new Error(`${r.displayName} not found`);
+}
+var $47e1c9301463c82b$export$b4f021037e6d7d3f = (e, r)=>{
+    let { assertCtxFn: t = $47e1c9301463c82b$export$9f6298504fcd4ed  } = r || {}, n = (0, (/*@__PURE__*/$parcel$interopDefault($laauJ))).createContext(void 0);
+    return n.displayName = e, [
+        n,
+        ()=>{
+            let a = (0, (/*@__PURE__*/$parcel$interopDefault($laauJ))).useContext(n);
+            return t(a, `${e} not found`), a.value;
+        },
+        ()=>{
+            let a = (0, (/*@__PURE__*/$parcel$interopDefault($laauJ))).useContext(n);
+            return a ? a.value : {};
+        }
+    ];
+};
+function $47e1c9301463c82b$var$ct(e, r, t, n) {
+    function o(i) {
+        return i instanceof t ? i : new t(function(a) {
+            a(i);
+        });
+    }
+    return new (t || (t = Promise))(function(i, a) {
+        function u(l) {
+            try {
+                s(n.next(l));
+            } catch (p) {
+                a(p);
+            }
+        }
+        function f(l) {
+            try {
+                s(n.throw(l));
+            } catch (p) {
+                a(p);
+            }
+        }
+        function s(l) {
+            l.done ? i(l.value) : o(l.value).then(u, f);
+        }
+        s((n = n.apply(e, r || [])).next());
+    });
+}
+function $47e1c9301463c82b$var$dt(e, r) {
+    var t = {
+        label: 0,
+        sent: function() {
+            if (i[0] & 1) throw i[1];
+            return i[1];
+        },
+        trys: [],
+        ops: []
+    }, n, o, i, a;
+    return a = {
+        next: u(0),
+        throw: u(1),
+        return: u(2)
+    }, typeof Symbol == "function" && (a[Symbol.iterator] = function() {
+        return this;
+    }), a;
+    function u(s) {
+        return function(l) {
+            return f([
+                s,
+                l
+            ]);
+        };
+    }
+    function f(s) {
+        if (n) throw new TypeError("Generator is already executing.");
+        for(; t;)try {
+            if (n = 1, o && (i = s[0] & 2 ? o.return : s[0] ? o.throw || ((i = o.return) && i.call(o), 0) : o.next) && !(i = i.call(o, s[1])).done) return i;
+            switch(o = 0, i && (s = [
+                s[0] & 2,
+                i.value
+            ]), s[0]){
+                case 0:
+                case 1:
+                    i = s;
+                    break;
+                case 4:
+                    return t.label++, {
+                        value: s[1],
+                        done: !1
+                    };
+                case 5:
+                    t.label++, o = s[1], s = [
+                        0
+                    ];
+                    continue;
+                case 7:
+                    s = t.ops.pop(), t.trys.pop();
+                    continue;
+                default:
+                    if (i = t.trys, !(i = i.length > 0 && i[i.length - 1]) && (s[0] === 6 || s[0] === 2)) {
+                        t = 0;
+                        continue;
+                    }
+                    if (s[0] === 3 && (!i || s[1] > i[0] && s[1] < i[3])) {
+                        t.label = s[1];
+                        break;
+                    }
+                    if (s[0] === 6 && t.label < i[1]) {
+                        t.label = i[1], i = s;
+                        break;
+                    }
+                    if (i && t.label < i[2]) {
+                        t.label = i[2], t.ops.push(s);
+                        break;
+                    }
+                    i[2] && t.ops.pop(), t.trys.pop();
+                    continue;
+            }
+            s = r.call(e, t);
+        } catch (l) {
+            s = [
+                6,
+                l
+            ], o = 0;
+        } finally{
+            n = i = 0;
+        }
+        if (s[0] & 5) throw s[1];
+        return {
+            value: s[0] ? s[1] : void 0,
+            done: !0
+        };
+    }
+}
+var $47e1c9301463c82b$var$I = function() {}, $47e1c9301463c82b$var$h = $47e1c9301463c82b$var$I(), $47e1c9301463c82b$var$Q = Object, $47e1c9301463c82b$var$y = function(e) {
+    return e === $47e1c9301463c82b$var$h;
+}, $47e1c9301463c82b$var$A = function(e) {
+    return typeof e == "function";
+}, $47e1c9301463c82b$var$M = function(e, r) {
+    return $47e1c9301463c82b$var$Q.assign({}, e, r);
+}, $47e1c9301463c82b$var$Pe = "undefined", $47e1c9301463c82b$var$Ae = function() {
+    return typeof window != $47e1c9301463c82b$var$Pe;
+}, $47e1c9301463c82b$var$cr = function() {
+    return typeof document != $47e1c9301463c82b$var$Pe;
+}, $47e1c9301463c82b$var$dr = function() {
+    return $47e1c9301463c82b$var$Ae() && typeof window.requestAnimationFrame != $47e1c9301463c82b$var$Pe;
+}, $47e1c9301463c82b$var$ue = new WeakMap, $47e1c9301463c82b$var$fr = 0, $47e1c9301463c82b$var$re = function(e) {
+    var r = typeof e, t = e && e.constructor, n = t == Date, o, i;
+    if ($47e1c9301463c82b$var$Q(e) === e && !n && t != RegExp) {
+        if (o = $47e1c9301463c82b$var$ue.get(e), o) return o;
+        if (o = ++$47e1c9301463c82b$var$fr + "~", $47e1c9301463c82b$var$ue.set(e, o), t == Array) {
+            for(o = "@", i = 0; i < e.length; i++)o += $47e1c9301463c82b$var$re(e[i]) + ",";
+            $47e1c9301463c82b$var$ue.set(e, o);
+        }
+        if (t == $47e1c9301463c82b$var$Q) {
+            o = "#";
+            for(var a = $47e1c9301463c82b$var$Q.keys(e).sort(); !$47e1c9301463c82b$var$y(i = a.pop());)$47e1c9301463c82b$var$y(e[i]) || (o += i + ":" + $47e1c9301463c82b$var$re(e[i]) + ",");
+            $47e1c9301463c82b$var$ue.set(e, o);
+        }
+    } else o = n ? e.toJSON() : r == "symbol" ? e.toString() : r == "string" ? JSON.stringify(e) : "" + e;
+    return o;
+}, $47e1c9301463c82b$var$Ie = !0, $47e1c9301463c82b$var$pr = function() {
+    return $47e1c9301463c82b$var$Ie;
+}, $47e1c9301463c82b$var$ft = $47e1c9301463c82b$var$Ae(), $47e1c9301463c82b$var$Ue = $47e1c9301463c82b$var$cr(), $47e1c9301463c82b$var$Le = $47e1c9301463c82b$var$ft && window.addEventListener ? window.addEventListener.bind(window) : $47e1c9301463c82b$var$I, $47e1c9301463c82b$var$gr = $47e1c9301463c82b$var$Ue ? document.addEventListener.bind(document) : $47e1c9301463c82b$var$I, $47e1c9301463c82b$var$ze = $47e1c9301463c82b$var$ft && window.removeEventListener ? window.removeEventListener.bind(window) : $47e1c9301463c82b$var$I, $47e1c9301463c82b$var$mr = $47e1c9301463c82b$var$Ue ? document.removeEventListener.bind(document) : $47e1c9301463c82b$var$I, $47e1c9301463c82b$var$vr = function() {
+    var e = $47e1c9301463c82b$var$Ue && document.visibilityState;
+    return $47e1c9301463c82b$var$y(e) || e !== "hidden";
+}, $47e1c9301463c82b$var$hr = function(e) {
+    return $47e1c9301463c82b$var$gr("visibilitychange", e), $47e1c9301463c82b$var$Le("focus", e), function() {
+        $47e1c9301463c82b$var$mr("visibilitychange", e), $47e1c9301463c82b$var$ze("focus", e);
+    };
+}, $47e1c9301463c82b$var$br = function(e) {
+    var r = function() {
+        $47e1c9301463c82b$var$Ie = !0, e();
+    }, t = function() {
+        $47e1c9301463c82b$var$Ie = !1;
+    };
+    return $47e1c9301463c82b$var$Le("online", r), $47e1c9301463c82b$var$Le("offline", t), function() {
+        $47e1c9301463c82b$var$ze("online", r), $47e1c9301463c82b$var$ze("offline", t);
+    };
+}, $47e1c9301463c82b$var$yr = {
+    isOnline: $47e1c9301463c82b$var$pr,
+    isVisible: $47e1c9301463c82b$var$vr
+}, $47e1c9301463c82b$var$Cr = {
+    initFocus: $47e1c9301463c82b$var$hr,
+    initReconnect: $47e1c9301463c82b$var$br
+}, $47e1c9301463c82b$var$le = !$47e1c9301463c82b$var$Ae() || "Deno" in window, $47e1c9301463c82b$var$xr = function(e) {
+    return $47e1c9301463c82b$var$dr() ? window.requestAnimationFrame(e) : setTimeout(e, 1);
+}, $47e1c9301463c82b$var$ee = $47e1c9301463c82b$var$le ? (0, $laauJ.useEffect) : (0, $laauJ.useLayoutEffect), $47e1c9301463c82b$var$Ee = typeof navigator < "u" && navigator.connection, $47e1c9301463c82b$var$ot = !$47e1c9301463c82b$var$le && $47e1c9301463c82b$var$Ee && ([
+    "slow-2g",
+    "2g"
+].includes($47e1c9301463c82b$var$Ee.effectiveType) || $47e1c9301463c82b$var$Ee.saveData), $47e1c9301463c82b$var$pt = function(e) {
+    if ($47e1c9301463c82b$var$A(e)) try {
+        e = e();
+    } catch  {
+        e = "";
+    }
+    var r = [].concat(e);
+    e = typeof e == "string" ? e : (Array.isArray(e) ? e.length : e) ? $47e1c9301463c82b$var$re(e) : "";
+    var t = e ? "$swr$" + e : "";
+    return [
+        e,
+        r,
+        t
+    ];
+}, $47e1c9301463c82b$var$H = new WeakMap, $47e1c9301463c82b$var$gt = 0, $47e1c9301463c82b$var$mt = 1, $47e1c9301463c82b$var$vt = 2, $47e1c9301463c82b$var$te = function(e, r, t, n, o, i, a) {
+    a === void 0 && (a = !0);
+    var u = $47e1c9301463c82b$var$H.get(e), f = u[0], s = u[1], l = u[3], p = f[r], c = s[r];
+    if (a && c) for(var m = 0; m < c.length; ++m)c[m](t, n, o);
+    return i && (delete l[r], p && p[0]) ? p[0]($47e1c9301463c82b$var$vt).then(function() {
+        return e.get(r);
+    }) : e.get(r);
+}, $47e1c9301463c82b$var$Rr = 0, $47e1c9301463c82b$var$Me = function() {
+    return ++$47e1c9301463c82b$var$Rr;
+}, $47e1c9301463c82b$var$ht = function() {
+    for(var e = [], r = 0; r < arguments.length; r++)e[r] = arguments[r];
+    return $47e1c9301463c82b$var$ct(void 0, void 0, void 0, function() {
+        var t, n, o, i, a, u, f, s, l, p, c, m, C, x, g, d, B, U, L, E, _;
+        return $47e1c9301463c82b$var$dt(this, function(D) {
+            switch(D.label){
+                case 0:
+                    if (t = e[0], n = e[1], o = e[2], i = e[3], a = typeof i == "boolean" ? {
+                        revalidate: i
+                    } : i || {}, u = $47e1c9301463c82b$var$y(a.populateCache) ? !0 : a.populateCache, f = a.revalidate !== !1, s = a.rollbackOnError !== !1, l = a.optimisticData, p = $47e1c9301463c82b$var$pt(n), c = p[0], m = p[2], !c) return [
+                        2
+                    ];
+                    if (C = $47e1c9301463c82b$var$H.get(t), x = C[2], e.length < 3) return [
+                        2,
+                        $47e1c9301463c82b$var$te(t, c, t.get(c), $47e1c9301463c82b$var$h, $47e1c9301463c82b$var$h, f, !0)
+                    ];
+                    if (g = o, B = $47e1c9301463c82b$var$Me(), x[c] = [
+                        B,
+                        0
+                    ], U = !$47e1c9301463c82b$var$y(l), L = t.get(c), U && (E = $47e1c9301463c82b$var$A(l) ? l(L) : l, t.set(c, E), $47e1c9301463c82b$var$te(t, c, E)), $47e1c9301463c82b$var$A(g)) try {
+                        g = g(t.get(c));
+                    } catch (F) {
+                        d = F;
+                    }
+                    return g && $47e1c9301463c82b$var$A(g.then) ? [
+                        4,
+                        g.catch(function(F) {
+                            d = F;
+                        })
+                    ] : [
+                        3,
+                        2
+                    ];
+                case 1:
+                    if (g = D.sent(), B !== x[c][0]) {
+                        if (d) throw d;
+                        return [
+                            2,
+                            g
+                        ];
+                    } else d && U && s && (u = !0, g = L, t.set(c, L));
+                    D.label = 2;
+                case 2:
+                    return u && (d || ($47e1c9301463c82b$var$A(u) && (g = u(g, L)), t.set(c, g)), t.set(m, $47e1c9301463c82b$var$M(t.get(m), {
+                        error: d
+                    }))), x[c][1] = $47e1c9301463c82b$var$Me(), [
+                        4,
+                        $47e1c9301463c82b$var$te(t, c, g, d, $47e1c9301463c82b$var$h, f, !!u)
+                    ];
+                case 3:
+                    if (_ = D.sent(), d) throw d;
+                    return [
+                        2,
+                        u ? _ : g
+                    ];
+            }
+        });
+    });
+}, $47e1c9301463c82b$var$at = function(e, r) {
+    for(var t in e)e[t][0] && e[t][0](r);
+}, $47e1c9301463c82b$var$bt = function(e, r) {
+    if (!$47e1c9301463c82b$var$H.has(e)) {
+        var t = $47e1c9301463c82b$var$M($47e1c9301463c82b$var$Cr, r), n = {}, o = $47e1c9301463c82b$var$ht.bind($47e1c9301463c82b$var$h, e), i = $47e1c9301463c82b$var$I;
+        if ($47e1c9301463c82b$var$H.set(e, [
+            n,
+            {},
+            {},
+            {},
+            o
+        ]), !$47e1c9301463c82b$var$le) {
+            var a = t.initFocus(setTimeout.bind($47e1c9301463c82b$var$h, $47e1c9301463c82b$var$at.bind($47e1c9301463c82b$var$h, n, $47e1c9301463c82b$var$gt))), u = t.initReconnect(setTimeout.bind($47e1c9301463c82b$var$h, $47e1c9301463c82b$var$at.bind($47e1c9301463c82b$var$h, n, $47e1c9301463c82b$var$mt)));
+            i = function() {
+                a && a(), u && u(), $47e1c9301463c82b$var$H.delete(e);
+            };
+        }
+        return [
+            e,
+            o,
+            i
+        ];
+    }
+    return [
+        e,
+        $47e1c9301463c82b$var$H.get(e)[4]
+    ];
+}, $47e1c9301463c82b$var$Tr = function(e, r, t, n, o) {
+    var i = t.errorRetryCount, a = o.retryCount, u = ~~((Math.random() + .5) * (1 << (a < 8 ? a : 8))) * t.errorRetryInterval;
+    !$47e1c9301463c82b$var$y(i) && a > i || setTimeout(n, u, o);
+}, $47e1c9301463c82b$var$yt = $47e1c9301463c82b$var$bt(new Map), $47e1c9301463c82b$var$Ct = $47e1c9301463c82b$var$yt[0], $47e1c9301463c82b$var$wr = $47e1c9301463c82b$var$yt[1], $47e1c9301463c82b$var$xt = $47e1c9301463c82b$var$M({
+    onLoadingSlow: $47e1c9301463c82b$var$I,
+    onSuccess: $47e1c9301463c82b$var$I,
+    onError: $47e1c9301463c82b$var$I,
+    onErrorRetry: $47e1c9301463c82b$var$Tr,
+    onDiscarded: $47e1c9301463c82b$var$I,
+    revalidateOnFocus: !0,
+    revalidateOnReconnect: !0,
+    revalidateIfStale: !0,
+    shouldRetryOnError: !0,
+    errorRetryInterval: $47e1c9301463c82b$var$ot ? 1e4 : 5e3,
+    focusThrottleInterval: 5000,
+    dedupingInterval: 2000,
+    loadingTimeout: $47e1c9301463c82b$var$ot ? 5e3 : 3e3,
+    compare: function(e, r) {
+        return $47e1c9301463c82b$var$re(e) == $47e1c9301463c82b$var$re(r);
+    },
+    isPaused: function() {
+        return !1;
+    },
+    cache: $47e1c9301463c82b$var$Ct,
+    mutate: $47e1c9301463c82b$var$wr,
+    fallback: {}
+}, $47e1c9301463c82b$var$yr), $47e1c9301463c82b$var$Rt = function(e, r) {
+    var t = $47e1c9301463c82b$var$M(e, r);
+    if (r) {
+        var n = e.use, o = e.fallback, i = r.use, a = r.fallback;
+        n && i && (t.use = n.concat(i)), o && a && (t.fallback = $47e1c9301463c82b$var$M(o, a));
+    }
+    return t;
+}, $47e1c9301463c82b$var$De = (0, $laauJ.createContext)({}), $47e1c9301463c82b$var$Or = function(e) {
+    var r = e.value, t = $47e1c9301463c82b$var$Rt((0, $laauJ.useContext)($47e1c9301463c82b$var$De), r), n = r && r.provider, o = (0, $laauJ.useState)(function() {
+        return n ? $47e1c9301463c82b$var$bt(n(t.cache || $47e1c9301463c82b$var$Ct), r) : $47e1c9301463c82b$var$h;
+    })[0];
+    return o && (t.cache = o[0], t.mutate = o[1]), $47e1c9301463c82b$var$ee(function() {
+        return o ? o[2] : $47e1c9301463c82b$var$h;
+    }, []), (0, $laauJ.createElement)($47e1c9301463c82b$var$De.Provider, $47e1c9301463c82b$var$M(e, {
+        value: t
+    }));
+}, $47e1c9301463c82b$var$Er = function(e, r) {
+    var t = (0, $laauJ.useState)({})[1], n = (0, $laauJ.useRef)(e), o = (0, $laauJ.useRef)({
+        data: !1,
+        error: !1,
+        isValidating: !1
+    }), i = (0, $laauJ.useCallback)(function(a) {
+        var u = !1, f = n.current;
+        for(var s in a){
+            var l = s;
+            f[l] !== a[l] && (f[l] = a[l], o.current[l] && (u = !0));
+        }
+        u && !r.current && t({});
+    }, []);
+    return $47e1c9301463c82b$var$ee(function() {
+        n.current = e;
+    }), [
+        n,
+        o.current,
+        i
+    ];
+}, $47e1c9301463c82b$var$kr = function(e) {
+    return $47e1c9301463c82b$var$A(e[1]) ? [
+        e[0],
+        e[1],
+        e[2] || {}
+    ] : [
+        e[0],
+        null,
+        (e[1] === null ? e[2] : e[1]) || {}
+    ];
+}, $47e1c9301463c82b$var$Sr = function() {
+    return $47e1c9301463c82b$var$M($47e1c9301463c82b$var$xt, (0, $laauJ.useContext)($47e1c9301463c82b$var$De));
+}, $47e1c9301463c82b$var$Ir = function(e) {
+    return function() {
+        for(var t = [], n = 0; n < arguments.length; n++)t[n] = arguments[n];
+        var o = $47e1c9301463c82b$var$Sr(), i = $47e1c9301463c82b$var$kr(t), a = i[0], u = i[1], f = i[2], s = $47e1c9301463c82b$var$Rt(o, f), l = e, p = s.use;
+        if (p) for(var c = p.length; c-- > 0;)l = p[c](l);
+        return l(a, u || s.fetcher, s);
+    };
+}, $47e1c9301463c82b$var$st = function(e, r, t) {
+    var n = r[e] || (r[e] = []);
+    return n.push(t), function() {
+        var o = n.indexOf(t);
+        o >= 0 && (n[o] = n[n.length - 1], n.pop());
+    };
+}, $47e1c9301463c82b$var$ke = {
+    dedupe: !0
+}, $47e1c9301463c82b$var$Lr = function(e, r, t) {
+    var n = t.cache, o = t.compare, i = t.fallbackData, a = t.suspense, u = t.revalidateOnMount, f = t.refreshInterval, s = t.refreshWhenHidden, l = t.refreshWhenOffline, p = $47e1c9301463c82b$var$H.get(n), c = p[0], m = p[1], C = p[2], x = p[3], g = $47e1c9301463c82b$var$pt(e), d = g[0], B = g[1], U = g[2], L = (0, $laauJ.useRef)(!1), E = (0, $laauJ.useRef)(!1), _ = (0, $laauJ.useRef)(d), D = (0, $laauJ.useRef)(r), F = (0, $laauJ.useRef)(t), v = function() {
+        return F.current;
+    }, ce = function() {
+        return v().isVisible() && v().isOnline();
+    }, ne = function(w) {
+        return n.set(U, $47e1c9301463c82b$var$M(n.get(U), w));
+    }, $e = n.get(d), Ot = $47e1c9301463c82b$var$y(i) ? t.fallback[d] : i, z = $47e1c9301463c82b$var$y($e) ? Ot : $e, He = n.get(U) || {}, j = He.error, Ne = !L.current, Ge = function() {
+        return Ne && !$47e1c9301463c82b$var$y(u) ? u : v().isPaused() ? !1 : a ? $47e1c9301463c82b$var$y(z) ? !1 : t.revalidateIfStale : $47e1c9301463c82b$var$y(z) || t.revalidateIfStale;
+    }, Et = function() {
+        return !d || !r ? !1 : He.isValidating ? !0 : Ne && Ge();
+    }, de = Et(), fe = $47e1c9301463c82b$var$Er({
+        data: z,
+        error: j,
+        isValidating: de
+    }, E), G = fe[0], pe = fe[1], ie = fe[2], W = (0, $laauJ.useCallback)(function(w) {
+        return $47e1c9301463c82b$var$ct(void 0, void 0, void 0, function() {
+            var R, T, O, X, Y, k, b, P, S, ge, q, K, me;
+            return $47e1c9301463c82b$var$dt(this, function(J) {
+                switch(J.label){
+                    case 0:
+                        if (R = D.current, !d || !R || E.current || v().isPaused()) return [
+                            2,
+                            !1
+                        ];
+                        X = !0, Y = w || {}, k = !x[d] || !Y.dedupe, b = function() {
+                            return !E.current && d === _.current && L.current;
+                        }, P = function() {
+                            var Ke = x[d];
+                            Ke && Ke[1] === O && delete x[d];
+                        }, S = {
+                            isValidating: !1
+                        }, ge = function() {
+                            ne({
+                                isValidating: !1
+                            }), b() && ie(S);
+                        }, ne({
+                            isValidating: !0
+                        }), ie({
+                            isValidating: !0
+                        }), J.label = 1;
+                    case 1:
+                        return J.trys.push([
+                            1,
+                            3,
+                            ,
+                            4
+                        ]), k && ($47e1c9301463c82b$var$te(n, d, G.current.data, G.current.error, !0), t.loadingTimeout && !n.get(d) && setTimeout(function() {
+                            X && b() && v().onLoadingSlow(d, t);
+                        }, t.loadingTimeout), x[d] = [
+                            R.apply(void 0, B),
+                            $47e1c9301463c82b$var$Me()
+                        ]), me = x[d], T = me[0], O = me[1], [
+                            4,
+                            T
+                        ];
+                    case 2:
+                        return T = J.sent(), k && setTimeout(P, t.dedupingInterval), !x[d] || x[d][1] !== O ? (k && b() && v().onDiscarded(d), [
+                            2,
+                            !1
+                        ]) : (ne({
+                            error: $47e1c9301463c82b$var$h
+                        }), S.error = $47e1c9301463c82b$var$h, q = C[d], !$47e1c9301463c82b$var$y(q) && (O <= q[0] || O <= q[1] || q[1] === 0) ? (ge(), k && b() && v().onDiscarded(d), [
+                            2,
+                            !1
+                        ]) : (o(G.current.data, T) ? S.data = G.current.data : S.data = T, o(n.get(d), T) || n.set(d, T), k && b() && v().onSuccess(T, d, t), [
+                            3,
+                            4
+                        ]));
+                    case 3:
+                        return K = J.sent(), P(), v().isPaused() || (ne({
+                            error: K
+                        }), S.error = K, k && b() && (v().onError(K, d, t), (typeof t.shouldRetryOnError == "boolean" && t.shouldRetryOnError || $47e1c9301463c82b$var$A(t.shouldRetryOnError) && t.shouldRetryOnError(K)) && ce() && v().onErrorRetry(K, d, t, W, {
+                            retryCount: (Y.retryCount || 0) + 1,
+                            dedupe: !0
+                        }))), [
+                            3,
+                            4
+                        ];
+                    case 4:
+                        return X = !1, ge(), b() && k && $47e1c9301463c82b$var$te(n, d, S.data, S.error, !1), [
+                            2,
+                            !0
+                        ];
+                }
+            });
+        });
+    }, [
+        d
+    ]), kt = (0, $laauJ.useCallback)($47e1c9301463c82b$var$ht.bind($47e1c9301463c82b$var$h, n, function() {
+        return _.current;
+    }), []);
+    if ($47e1c9301463c82b$var$ee(function() {
+        D.current = r, F.current = t;
+    }), $47e1c9301463c82b$var$ee(function() {
+        if (d) {
+            var w = d !== _.current, R = W.bind($47e1c9301463c82b$var$h, $47e1c9301463c82b$var$ke), T = function(b, P, S) {
+                ie($47e1c9301463c82b$var$M({
+                    error: P,
+                    isValidating: S
+                }, o(G.current.data, b) ? $47e1c9301463c82b$var$h : {
+                    data: b
+                }));
+            }, O = 0, X = function(b) {
+                if (b == $47e1c9301463c82b$var$gt) {
+                    var P = Date.now();
+                    v().revalidateOnFocus && P > O && ce() && (O = P + v().focusThrottleInterval, R());
+                } else if (b == $47e1c9301463c82b$var$mt) v().revalidateOnReconnect && ce() && R();
+                else if (b == $47e1c9301463c82b$var$vt) return W();
+            }, Y = $47e1c9301463c82b$var$st(d, m, T), k = $47e1c9301463c82b$var$st(d, c, X);
+            return E.current = !1, _.current = d, L.current = !0, w && ie({
+                data: z,
+                error: j,
+                isValidating: de
+            }), Ge() && ($47e1c9301463c82b$var$y(z) || $47e1c9301463c82b$var$le ? R() : $47e1c9301463c82b$var$xr(R)), function() {
+                E.current = !0, Y(), k();
+            };
+        }
+    }, [
+        d,
+        W
+    ]), $47e1c9301463c82b$var$ee(function() {
+        var w;
+        function R() {
+            var O = $47e1c9301463c82b$var$A(f) ? f(z) : f;
+            O && w !== -1 && (w = setTimeout(T, O));
+        }
+        function T() {
+            !G.current.error && (s || v().isVisible()) && (l || v().isOnline()) ? W($47e1c9301463c82b$var$ke).then(R) : R();
+        }
+        return R(), function() {
+            w && (clearTimeout(w), w = -1);
+        };
+    }, [
+        f,
+        s,
+        l,
+        W
+    ]), (0, $laauJ.useDebugValue)(z), a && $47e1c9301463c82b$var$y(z) && d) throw D.current = r, F.current = t, E.current = !1, $47e1c9301463c82b$var$y(j) ? W($47e1c9301463c82b$var$ke) : j;
+    return {
+        mutate: kt,
+        get data () {
+            return pe.data = !0, z;
+        },
+        get error () {
+            return pe.error = !0, j;
+        },
+        get isValidating () {
+            return pe.isValidating = !0, de;
+        }
+    };
+}, $47e1c9301463c82b$var$di = $47e1c9301463c82b$var$Q.defineProperty($47e1c9301463c82b$var$Or, "default", {
+    value: $47e1c9301463c82b$var$xt
+});
+var $47e1c9301463c82b$var$_e = $47e1c9301463c82b$var$Ir($47e1c9301463c82b$var$Lr);
+var [$47e1c9301463c82b$export$8aa96e0f8b054cda, $47e1c9301463c82b$export$5ebbb6ccfffc7393] = $47e1c9301463c82b$export$b4f021037e6d7d3f("ClerkInstanceContext"), [$47e1c9301463c82b$export$38ee920e59704589, $47e1c9301463c82b$export$87c54b525b914dab] = $47e1c9301463c82b$export$b4f021037e6d7d3f("UserContext"), [$47e1c9301463c82b$export$56e68f8f57ecfde4, $47e1c9301463c82b$export$6627e187bf6ba3fd] = $47e1c9301463c82b$export$b4f021037e6d7d3f("ClientContext"), [$47e1c9301463c82b$export$3285420c698bc605, $47e1c9301463c82b$export$a3931362f3958630] = $47e1c9301463c82b$export$b4f021037e6d7d3f("SessionContext"), [$47e1c9301463c82b$export$14ec650242c84392, $47e1c9301463c82b$export$7305fb39264bef77] = $47e1c9301463c82b$export$b4f021037e6d7d3f("OrganizationContext");
+var $47e1c9301463c82b$export$ae85931d305e13b1 = (e)=>{
+    let { invitationList: r , membershipList: t  } = e || {}, { organization: n , lastOrganizationMember: o , lastOrganizationInvitation: i  } = $47e1c9301463c82b$export$7305fb39264bef77(), a = $47e1c9301463c82b$export$a3931362f3958630(), u = $47e1c9301463c82b$export$5ebbb6ccfffc7393(), f = u.loaded && a && n, s = u.loaded ? ()=>u.organization?.getPendingInvitations(r) : ()=>[], l = u.loaded ? ()=>u.organization?.getMemberships(t) : ()=>[], { data: p , isValidating: c , mutate: m  } = $47e1c9301463c82b$var$_e(f && r ? $47e1c9301463c82b$var$Tt("invites", n, i, r) : null, s), { data: C , isValidating: x , mutate: g  } = $47e1c9301463c82b$var$_e(f && t ? $47e1c9301463c82b$var$Tt("memberships", n, o, t) : null, l);
+    return n === void 0 ? {
+        isLoaded: !1,
+        organization: void 0,
+        invitationList: void 0,
+        membershipList: void 0,
+        membership: void 0
+    } : n === null ? {
+        isLoaded: !0,
+        organization: null,
+        invitationList: null,
+        membershipList: null,
+        membership: null
+    } : !u.loaded && n ? {
+        isLoaded: !0,
+        organization: n,
+        invitationList: void 0,
+        membershipList: void 0,
+        membership: void 0
+    } : {
+        isLoaded: !x && !c,
+        organization: n,
+        membershipList: C,
+        membership: $47e1c9301463c82b$var$Fr(a.user.organizationMemberships, n.id),
+        invitationList: p,
+        unstable__mutate: ()=>{
+            g(), m();
+        }
+    };
+};
+function $47e1c9301463c82b$var$Fr(e, r) {
+    return e.find((t)=>t.organization.id === r);
+}
+function $47e1c9301463c82b$var$Tt(e, r, t, n) {
+    return [
+        e,
+        r.id,
+        t?.id,
+        t?.updatedAt,
+        n.offset,
+        n.limit
+    ].filter(Boolean).join("-");
+}
+var $47e1c9301463c82b$export$70272151be64739d = ()=>{
+    let e = $47e1c9301463c82b$export$5ebbb6ccfffc7393(), r = $47e1c9301463c82b$export$87c54b525b914dab();
+    return !e.loaded || !r ? {
+        isLoaded: !1,
+        organizationList: void 0,
+        createOrganization: void 0,
+        setActive: void 0
+    } : {
+        isLoaded: !0,
+        organizationList: $47e1c9301463c82b$var$Vr(r.organizationMemberships),
+        setActive: e.setActive,
+        createOrganization: e.createOrganization
+    };
+};
+function $47e1c9301463c82b$var$Vr(e) {
+    return e.map((r)=>({
+            membership: r,
+            organization: r.organization
+        }));
+}
+var $47e1c9301463c82b$export$5fc38fde58f5cf66 = ()=>{
+    let e = $47e1c9301463c82b$export$5ebbb6ccfffc7393();
+    return e.loaded ? {
+        isLoaded: !0,
+        createOrganization: e.createOrganization,
+        getOrganizationMemberships: e.getOrganizationMemberships,
+        getOrganization: e.getOrganization
+    } : {
+        isLoaded: !1,
+        createOrganization: void 0,
+        getOrganizationMemberships: void 0,
+        getOrganization: void 0
+    };
+};
+var $47e1c9301463c82b$export$deebe11a338de063 = typeof window < "u" ? (0, (/*@__PURE__*/$parcel$interopDefault($laauJ))).useLayoutEffect : (0, (/*@__PURE__*/$parcel$interopDefault($laauJ))).useEffect;
+ /*! Bundled license information:
+
+js-cookie/dist/js.cookie.mjs:
+  (*! js-cookie v3.0.1 | MIT *)
+
+swr/dist/index.mjs:
+  (*! *****************************************************************************
+  Copyright (c) Microsoft Corporation.
+  
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted.
+  
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+  REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+  AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+  INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+  LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+  OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THIS SOFTWARE.
+  ***************************************************************************** *)
+*/ 
+});
+parcelRequire.register("kbVfw", function(module, exports) {
+
+$parcel$export(module.exports, "c", function () { return $eb313e3fdea4c561$export$db3b6bfb95261072; });
+var $eb313e3fdea4c561$var$t = Object.defineProperty;
+var $eb313e3fdea4c561$var$c = Object.getOwnPropertyDescriptor;
+var $eb313e3fdea4c561$var$d = Object.getOwnPropertyNames;
+var $eb313e3fdea4c561$var$e = Object.prototype.hasOwnProperty;
+var $eb313e3fdea4c561$export$407448d2b89b1813 = (n, o)=>{
+    for(var a in o)$eb313e3fdea4c561$var$t(n, a, {
+        get: o[a],
+        enumerable: !0
+    });
+}, $eb313e3fdea4c561$var$s = (n, o, a, r)=>{
+    if (o && typeof o == "object" || typeof o == "function") for (let p of $eb313e3fdea4c561$var$d(o))!$eb313e3fdea4c561$var$e.call(n, p) && p !== a && $eb313e3fdea4c561$var$t(n, p, {
+        get: ()=>o[p],
+        enumerable: !(r = $eb313e3fdea4c561$var$c(o, p)) || r.enumerable
+    });
+    return n;
+}, $eb313e3fdea4c561$export$8b22cf2602fb60ce = (n, o, a)=>($eb313e3fdea4c561$var$s(n, o, "default"), a && $eb313e3fdea4c561$var$s(a, o, "default"));
+var $eb313e3fdea4c561$export$db3b6bfb95261072 = (...n)=>{};
+
+});
+
+parcelRequire.register("kVsbi", function(module, exports) {
+module.exports = function(glob, opts) {
+    if (typeof glob !== "string") throw new TypeError("Expected a string");
+    var str = String(glob);
+    // The regexp we are building, as a string.
+    var reStr = "";
+    // Whether we are matching so called "extended" globs (like bash) and should
+    // support single character matching, matching ranges of characters, group
+    // matching, etc.
+    var extended = opts ? !!opts.extended : false;
+    // When globstar is _false_ (default), '/foo/*' is translated a regexp like
+    // '^\/foo\/.*$' which will match any string beginning with '/foo/'
+    // When globstar is _true_, '/foo/*' is translated to regexp like
+    // '^\/foo\/[^/]*$' which will match any string beginning with '/foo/' BUT
+    // which does not have a '/' to the right of it.
+    // E.g. with '/foo/*' these will match: '/foo/bar', '/foo/bar.txt' but
+    // these will not '/foo/bar/baz', '/foo/bar/baz.txt'
+    // Lastely, when globstar is _true_, '/foo/**' is equivelant to '/foo/*' when
+    // globstar is _false_
+    var globstar = opts ? !!opts.globstar : false;
+    // If we are doing extended matching, this boolean is true when we are inside
+    // a group (eg {*.html,*.js}), and false otherwise.
+    var inGroup = false;
+    // RegExp flags (eg "i" ) to pass in to RegExp constructor.
+    var flags = opts && typeof opts.flags === "string" ? opts.flags : "";
+    var c;
+    for(var i = 0, len = str.length; i < len; i++){
+        c = str[i];
+        switch(c){
+            case "/":
+            case "$":
+            case "^":
+            case "+":
+            case ".":
+            case "(":
+            case ")":
+            case "=":
+            case "!":
+            case "|":
+                reStr += "\\" + c;
+                break;
+            case "?":
+                if (extended) {
+                    reStr += ".";
+                    break;
+                }
+            case "[":
+            case "]":
+                if (extended) {
+                    reStr += c;
+                    break;
+                }
+            case "{":
+                if (extended) {
+                    inGroup = true;
+                    reStr += "(";
+                    break;
+                }
+            case "}":
+                if (extended) {
+                    inGroup = false;
+                    reStr += ")";
+                    break;
+                }
+            case ",":
+                if (inGroup) {
+                    reStr += "|";
+                    break;
+                }
+                reStr += "\\" + c;
+                break;
+            case "*":
+                // Move over all consecutive "*"'s.
+                // Also store the previous and next characters
+                var prevChar = str[i - 1];
+                var starCount = 1;
+                while(str[i + 1] === "*"){
+                    starCount++;
+                    i++;
+                }
+                var nextChar = str[i + 1];
+                if (!globstar) // globstar is disabled, so treat any number of "*" as one
+                reStr += ".*";
+                else {
+                    // globstar is enabled, so determine if this is a globstar segment
+                    var isGlobstar = starCount > 1 // multiple "*"'s
+                     && (prevChar === "/" || prevChar === undefined // from the start of the segment
+                    ) && (nextChar === "/" || nextChar === undefined // to the end of the segment
+                    );
+                    if (isGlobstar) {
+                        // it's a globstar, so match zero or more path segments
+                        reStr += "((?:[^/]*(?:/|$))*)";
+                        i++; // move over the "/"
+                    } else // it's not a globstar, so only match one path segment
+                    reStr += "([^/]*)";
+                }
+                break;
+            default:
+                reStr += c;
+        }
+    }
+    // When regexp 'g' flag is specified don't
+    // constrain the regular expression with ^ & $
+    if (!flags || !~flags.indexOf("g")) reStr = "^" + reStr + "$";
+    return new RegExp(reStr, flags);
+};
+
+});
+
+
+parcelRequire.register("rLPvf", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.unsupportedNonBrowserDomainOrProxyUrlFunction = module.exports.invalidStateError = module.exports.isMagicLinkError = module.exports.MagicLinkErrorCode = module.exports.multipleChildrenInButtonComponent = module.exports.hocChildrenNotAFunctionError = module.exports.multipleClerkProvidersError = module.exports.noGuaranteedUserError = module.exports.noGuaranteedLoadedError = module.exports.noClerkProviderError = module.exports.noFrontendApiError = void 0;
+module.exports.noFrontendApiError = "Clerk: You must add the frontendApi prop to your <ClerkProvider>";
+module.exports.noClerkProviderError = "Clerk: You must wrap your application in a <ClerkProvider> component.";
+const $05379fb651e9abd4$var$noGuaranteedLoadedError = (hookName)=>`Clerk: You're calling ${hookName} before there's a guarantee the client has been loaded. Call ${hookName} from a child of <SignedIn>, <SignedOut>, or <ClerkLoaded>, or use the withClerk() HOC.`;
+module.exports.noGuaranteedLoadedError = $05379fb651e9abd4$var$noGuaranteedLoadedError;
+const $05379fb651e9abd4$var$noGuaranteedUserError = (hookName)=>`Clerk: You're calling ${hookName} before there's a guarantee there's an active user. Call ${hookName} from a child of <SignedIn> or use the withUser() HOC.`;
+module.exports.noGuaranteedUserError = $05379fb651e9abd4$var$noGuaranteedUserError;
+module.exports.multipleClerkProvidersError = "Clerk: You've added multiple <ClerkProvider> components in your React component tree. Wrap your components in a single <ClerkProvider>.";
+module.exports.hocChildrenNotAFunctionError = "Clerk: Child of WithClerk must be a function.";
+const $05379fb651e9abd4$var$multipleChildrenInButtonComponent = (name)=>`Clerk: You've passed multiple children components to <${name}/>. You can only pass a single child component or text.`;
+module.exports.multipleChildrenInButtonComponent = $05379fb651e9abd4$var$multipleChildrenInButtonComponent;
+module.exports.MagicLinkErrorCode = {
+    Expired: "expired",
+    Failed: "failed"
+};
+function $05379fb651e9abd4$var$isMagicLinkError(err) {
+    return !!err && (err.code === module.exports.MagicLinkErrorCode.Expired || err.code === module.exports.MagicLinkErrorCode.Failed);
+}
+module.exports.isMagicLinkError = $05379fb651e9abd4$var$isMagicLinkError;
+module.exports.invalidStateError = "Invalid state. Feel free to submit a bug or reach out to support here: https://clerk.com/support";
+module.exports.unsupportedNonBrowserDomainOrProxyUrlFunction = "Unsupported usage of domain or proxyUrl. The usage of domain or proxyUrl as function is not supported in non-browser environments.";
+
+});
+
+parcelRequire.register("9LdOB", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+
+var $fOt1z = parcelRequire("fOt1z");
+
+$fOt1z.__exportStar((parcelRequire("k6YWg")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("jUgI1")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("a8qQh")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("byN9Y")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("1ewZq")), module.exports);
+
+});
+parcelRequire.register("k6YWg", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.safeExecute = module.exports.normalizeWithDefaultValue = module.exports.assertSingleChild = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $ea43a35d4a1a070f$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+var $rLPvf = parcelRequire("rLPvf");
+const $ea43a35d4a1a070f$var$assertSingleChild = (children)=>(name)=>{
+        try {
+            return $ea43a35d4a1a070f$var$react_1.default.Children.only(children);
+        } catch (e) {
+            throw new Error((0, $rLPvf.multipleChildrenInButtonComponent)(name));
+        }
+    };
+module.exports.assertSingleChild = $ea43a35d4a1a070f$var$assertSingleChild;
+const $ea43a35d4a1a070f$var$normalizeWithDefaultValue = (children, defaultText)=>{
+    if (!children) children = defaultText;
+    if (typeof children === "string") children = $ea43a35d4a1a070f$var$react_1.default.createElement("button", null, children);
+    return children;
+};
+module.exports.normalizeWithDefaultValue = $ea43a35d4a1a070f$var$normalizeWithDefaultValue;
+const $ea43a35d4a1a070f$var$safeExecute = (cb)=>(...args)=>{
+        if (cb && typeof cb === "function") return cb(...args);
+    };
+module.exports.safeExecute = $ea43a35d4a1a070f$var$safeExecute;
+
+});
+
+parcelRequire.register("jUgI1", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.__internal__setErrorThrowerOptions = module.exports.errorThrower = void 0;
+
+var $6aCOC = parcelRequire("6aCOC");
+const $e7e0355adb5bb330$var$errorThrower = (0, $6aCOC.buildErrorThrower)({
+    packageName: "@clerk/react"
+});
+module.exports.errorThrower = $e7e0355adb5bb330$var$errorThrower;
+function $e7e0355adb5bb330$var$__internal__setErrorThrowerOptions(options) {
+    $e7e0355adb5bb330$var$errorThrower.setMessages(options).setPackageName(options);
+}
+module.exports.__internal__setErrorThrowerOptions = $e7e0355adb5bb330$var$__internal__setErrorThrowerOptions;
+
+});
+
+parcelRequire.register("a8qQh", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.isConstructor = void 0;
+function $760f7911f28c7a49$var$isConstructor(f) {
+    return typeof f === "function";
+}
+module.exports.isConstructor = $760f7911f28c7a49$var$isConstructor;
+
+});
+
+parcelRequire.register("byN9Y", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.loadScript = void 0;
+
+var $6aCOC = parcelRequire("6aCOC");
+
+var $36PYC = parcelRequire("36PYC");
+
+var $jUgI1 = parcelRequire("jUgI1");
+
+var $eGbF5 = parcelRequire("eGbF5");
+const $86a900d373e006c9$var$FAILED_TO_LOAD_ERROR = "Clerk: Failed to load Clerk";
+const $86a900d373e006c9$var$MISSING_BODY_ERROR = "Clerk: Missing <body> element.";
+const $86a900d373e006c9$var$UNSTABLE_RELEASE_TAGS = [
+    "staging",
+    "next"
+];
+const $86a900d373e006c9$var$extractNonStableTag = (packageVersion)=>{
+    var _a;
+    const tag = (_a = packageVersion.match(/-(.*)\./)) === null || _a === void 0 ? void 0 : _a[1];
+    return tag && $86a900d373e006c9$var$UNSTABLE_RELEASE_TAGS.includes(tag) ? tag : undefined;
+};
+const $86a900d373e006c9$var$extractMajorVersion = (packageVersion)=>{
+    return packageVersion.split(".")[0];
+};
+const $86a900d373e006c9$var$forceStagingReleaseForClerkFapi = (frontendApi)=>{
+    return frontendApi.endsWith(".lclstage.dev") || frontendApi.endsWith(".stgstage.dev") || frontendApi.endsWith(".clerkstage.dev") || frontendApi.endsWith(".accountsstage.dev");
+};
+function $86a900d373e006c9$var$getScriptSrc({ publishableKey: publishableKey , frontendApi: frontendApi , domain: domain , scriptUrl: scriptUrl , scriptVariant: scriptVariant = "" , proxyUrl: proxyUrl  }) {
+    var _a, _b;
+    if (scriptUrl) return scriptUrl;
+    let scriptHost = "";
+    if (!!proxyUrl && (0, $6aCOC.isValidProxyUrl)(proxyUrl)) scriptHost = (0, $6aCOC.proxyUrlToAbsoluteURL)(proxyUrl).replace(/http(s)?:\/\//, "");
+    else if (domain && !(0, $eGbF5.isDevOrStagingUrl)(((_a = (0, $6aCOC.parsePublishableKey)(publishableKey)) === null || _a === void 0 ? void 0 : _a.frontendApi) || frontendApi || "")) scriptHost = (0, $6aCOC.addClerkPrefix)(domain);
+    else scriptHost = ((_b = (0, $6aCOC.parsePublishableKey)(publishableKey)) === null || _b === void 0 ? void 0 : _b.frontendApi) || frontendApi || "";
+    if (!scriptHost) $jUgI1.errorThrower.throwMissingPublishableKeyError();
+    const variant = scriptVariant ? `${scriptVariant.replace(/\.+$/, "")}.` : "";
+    const getUrlForTag = (target)=>{
+        return `https://${scriptHost}/npm/@clerk/clerk-js@${target}/dist/clerk.${variant}browser.js`;
+    };
+    const nonStableTag = $86a900d373e006c9$var$extractNonStableTag($36PYC.LIB_VERSION);
+    if ($86a900d373e006c9$var$forceStagingReleaseForClerkFapi(scriptHost)) return nonStableTag ? getUrlForTag(nonStableTag) : getUrlForTag("staging");
+    if (nonStableTag) return getUrlForTag(nonStableTag);
+    return getUrlForTag($86a900d373e006c9$var$extractMajorVersion($36PYC.LIB_VERSION));
+}
+async function $86a900d373e006c9$var$loadScript(params) {
+    return new Promise((resolve, reject)=>{
+        const { frontendApi: frontendApi , publishableKey: publishableKey , proxyUrl: proxyUrl , domain: domain  } = params;
+        if ($parcel$global.Clerk) resolve(null);
+        const script = document.createElement("script");
+        if (!publishableKey && !frontendApi) $jUgI1.errorThrower.throwMissingPublishableKeyError();
+        if (publishableKey) script.setAttribute("data-clerk-publishable-key", publishableKey);
+        else if (frontendApi) script.setAttribute("data-clerk-frontend-api", frontendApi);
+        if (proxyUrl) script.setAttribute("data-clerk-proxy-url", proxyUrl);
+        if (domain) script.setAttribute("data-clerk-domain", domain);
+        script.setAttribute("crossorigin", "anonymous");
+        script.async = true;
+        if (!document.body) reject($86a900d373e006c9$var$MISSING_BODY_ERROR);
+        script.addEventListener("load", ()=>resolve(script));
+        script.addEventListener("error", ()=>reject($86a900d373e006c9$var$FAILED_TO_LOAD_ERROR));
+        script.src = $86a900d373e006c9$var$getScriptSrc(params);
+        document.body.appendChild(script);
+    });
+}
+module.exports.loadScript = $86a900d373e006c9$var$loadScript;
+
+});
+parcelRequire.register("36PYC", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.LIB_NAME = module.exports.LIB_VERSION = void 0;
+/** DO NOT EDIT: This file is automatically generated by ../scripts/info.js */ module.exports.LIB_VERSION = "4.16.1";
+module.exports.LIB_NAME = "@clerk/clerk-react";
+
+});
+
+parcelRequire.register("eGbF5", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.isDevOrStagingUrl = void 0;
+
+var $6aCOC = parcelRequire("6aCOC");
+const { isDevOrStagingUrl: $aafe08b109f9411b$var$isDevOrStagingUrl  } = (0, $6aCOC.createDevOrStagingUrlCache)();
+module.exports.isDevOrStagingUrl = $aafe08b109f9411b$var$isDevOrStagingUrl;
+
+});
+
+
+parcelRequire.register("1ewZq", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.withMaxAllowedInstancesGuard = module.exports.useMaxAllowedInstancesGuard = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $0e60b04ced22656b$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+const $0e60b04ced22656b$var$counts = new Map();
+function $0e60b04ced22656b$var$useMaxAllowedInstancesGuard(name, error, maxCount = 1) {
+    $0e60b04ced22656b$var$react_1.default.useEffect(()=>{
+        const count = $0e60b04ced22656b$var$counts.get(name) || 0;
+        if (count == maxCount) throw new Error(error);
+        $0e60b04ced22656b$var$counts.set(name, count + 1);
+        return ()=>{
+            $0e60b04ced22656b$var$counts.set(name, ($0e60b04ced22656b$var$counts.get(name) || 1) - 1);
+        };
+    }, []);
+}
+module.exports.useMaxAllowedInstancesGuard = $0e60b04ced22656b$var$useMaxAllowedInstancesGuard;
+function $0e60b04ced22656b$var$withMaxAllowedInstancesGuard(WrappedComponent, name, error) {
+    const displayName = WrappedComponent.displayName || WrappedComponent.name || name || "Component";
+    const Hoc = (props)=>{
+        $0e60b04ced22656b$var$useMaxAllowedInstancesGuard(name, error);
+        return $0e60b04ced22656b$var$react_1.default.createElement(WrappedComponent, Object.assign({}, props));
+    };
+    Hoc.displayName = `withMaxAllowedInstancesGuard(${displayName})`;
+    return Hoc;
+}
+module.exports.withMaxAllowedInstancesGuard = $0e60b04ced22656b$var$withMaxAllowedInstancesGuard;
+
+});
+
+
+parcelRequire.register("3IiGL", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.ClerkContextProvider = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $2b43fa5cc42c47e3$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+const $2b43fa5cc42c47e3$var$isomorphicClerk_1 = $fOt1z.__importDefault((parcelRequire("9zmC9")));
+
+var $k01wq = parcelRequire("k01wq");
+
+var $3DzEQ = parcelRequire("3DzEQ");
+
+var $2sApG = parcelRequire("2sApG");
+
+var $1g6nu = parcelRequire("1g6nu");
+
+var $i5neq = parcelRequire("i5neq");
+
+var $4ajRi = parcelRequire("4ajRi");
+
+var $4uQd8 = parcelRequire("4uQd8");
+function $2b43fa5cc42c47e3$var$ClerkContextProvider(props) {
+    const { isomorphicClerkOptions: isomorphicClerkOptions , initialState: initialState , children: children  } = props;
+    const { isomorphicClerk: clerk , loaded: clerkLoaded  } = $2b43fa5cc42c47e3$var$useLoadedIsomorphicClerk(isomorphicClerkOptions);
+    const [state, setState] = $2b43fa5cc42c47e3$var$react_1.default.useState({
+        client: clerk.client,
+        session: clerk.session,
+        user: clerk.user,
+        organization: clerk.organization,
+        lastOrganizationInvitation: null,
+        lastOrganizationMember: null
+    });
+    $2b43fa5cc42c47e3$var$react_1.default.useEffect(()=>{
+        return clerk.addListener((e)=>setState(Object.assign({}, e)));
+    }, []);
+    const derivedState = (0, $k01wq.deriveState)(clerkLoaded, state, initialState);
+    const clerkCtx = $2b43fa5cc42c47e3$var$react_1.default.useMemo(()=>({
+            value: clerk
+        }), [
+        clerkLoaded
+    ]);
+    const clientCtx = $2b43fa5cc42c47e3$var$react_1.default.useMemo(()=>({
+            value: state.client
+        }), [
+        state.client
+    ]);
+    const { sessionId: sessionId , session: session , userId: userId , user: user , orgId: orgId , actor: actor , lastOrganizationInvitation: lastOrganizationInvitation , lastOrganizationMember: lastOrganizationMember , organization: organization , orgRole: orgRole , orgSlug: orgSlug  } = derivedState;
+    const authCtx = $2b43fa5cc42c47e3$var$react_1.default.useMemo(()=>{
+        const value = {
+            sessionId: sessionId,
+            userId: userId,
+            actor: actor,
+            orgId: orgId,
+            orgRole: orgRole,
+            orgSlug: orgSlug
+        };
+        return {
+            value: value
+        };
+    }, [
+        sessionId,
+        userId,
+        actor,
+        orgId,
+        orgRole,
+        orgSlug
+    ]);
+    const userCtx = $2b43fa5cc42c47e3$var$react_1.default.useMemo(()=>({
+            value: user
+        }), [
+        userId,
+        user
+    ]);
+    const sessionCtx = $2b43fa5cc42c47e3$var$react_1.default.useMemo(()=>({
+            value: session
+        }), [
+        sessionId,
+        session
+    ]);
+    const organizationCtx = $2b43fa5cc42c47e3$var$react_1.default.useMemo(()=>{
+        const value = {
+            organization: organization,
+            lastOrganizationInvitation: lastOrganizationInvitation,
+            lastOrganizationMember: lastOrganizationMember
+        };
+        return {
+            value: value
+        };
+    }, [
+        orgId,
+        organization,
+        lastOrganizationInvitation,
+        lastOrganizationMember
+    ]);
+    return(// @ts-expect-error
+    $2b43fa5cc42c47e3$var$react_1.default.createElement($1g6nu.IsomorphicClerkContext.Provider, {
+        value: clerkCtx
+    }, $2b43fa5cc42c47e3$var$react_1.default.createElement($2sApG.ClientContext.Provider, {
+        value: clientCtx
+    }, $2b43fa5cc42c47e3$var$react_1.default.createElement($4ajRi.SessionContext.Provider, {
+        value: sessionCtx
+    }, $2b43fa5cc42c47e3$var$react_1.default.createElement($i5neq.OrganizationContext.Provider, {
+        value: organizationCtx
+    }, $2b43fa5cc42c47e3$var$react_1.default.createElement($3DzEQ.AuthContext.Provider, {
+        value: authCtx
+    }, $2b43fa5cc42c47e3$var$react_1.default.createElement($4uQd8.UserContext.Provider, {
+        value: userCtx
+    }, children)))))));
+}
+module.exports.ClerkContextProvider = $2b43fa5cc42c47e3$var$ClerkContextProvider;
+const $2b43fa5cc42c47e3$var$useLoadedIsomorphicClerk = (options)=>{
+    const [loaded, setLoaded] = $2b43fa5cc42c47e3$var$react_1.default.useState(false);
+    const isomorphicClerk = $2b43fa5cc42c47e3$var$react_1.default.useMemo(()=>$2b43fa5cc42c47e3$var$isomorphicClerk_1.default.getOrCreateInstance(options), []);
+    $2b43fa5cc42c47e3$var$react_1.default.useEffect(()=>{
+        isomorphicClerk.__unstable__updateProps({
+            appearance: options.appearance
+        });
+    }, [
+        options.appearance
+    ]);
+    $2b43fa5cc42c47e3$var$react_1.default.useEffect(()=>{
+        isomorphicClerk.__unstable__updateProps({
+            options: options
+        });
+    }, [
+        options.localization
+    ]);
+    $2b43fa5cc42c47e3$var$react_1.default.useEffect(()=>{
+        isomorphicClerk.addOnLoaded(()=>setLoaded(true));
+    }, []);
+    return {
+        isomorphicClerk: isomorphicClerk,
+        loaded: loaded
+    };
+};
+
+});
+parcelRequire.register("9zmC9", function(module, exports) {
+"use strict";
+var $6f78eca7b0b72923$var$_a, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, $6f78eca7b0b72923$var$_IsomorphicClerk_domain, $6f78eca7b0b72923$var$_IsomorphicClerk_proxyUrl, $6f78eca7b0b72923$var$_IsomorphicClerk_instance;
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+
+var $fOt1z = parcelRequire("fOt1z");
+
+var $6aCOC = parcelRequire("6aCOC");
+
+var $rLPvf = parcelRequire("rLPvf");
+
+var $9LdOB = parcelRequire("9LdOB");
+class $6f78eca7b0b72923$var$IsomorphicClerk {
+    get loaded() {
+        return $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f");
+    }
+    static getOrCreateInstance(options) {
+        // During SSR: a new instance should be created for every request
+        // During CSR: use the cached instance for the whole lifetime of the app
+        // This method should be idempotent in both scenarios
+        if (!(0, $6aCOC.inClientSide)() || !$fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_a, "f", $6f78eca7b0b72923$var$_IsomorphicClerk_instance)) $fOt1z.__classPrivateFieldSet(this, $6f78eca7b0b72923$var$_a, new $6f78eca7b0b72923$var$IsomorphicClerk(options), "f", $6f78eca7b0b72923$var$_IsomorphicClerk_instance);
+        return $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_a, "f", $6f78eca7b0b72923$var$_IsomorphicClerk_instance);
+    }
+    get domain() {
+        // This getter can run in environments where window is not available.
+        // In those cases we should expect and use domain as a string
+        if (typeof window !== "undefined" && window.location) return (0, $6aCOC.handleValueOrFn)($fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_domain, "f"), new URL(window.location.href), "");
+        if (typeof $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_domain, "f") === "function") throw new Error($rLPvf.unsupportedNonBrowserDomainOrProxyUrlFunction);
+        return $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_domain, "f") || "";
+    }
+    get proxyUrl() {
+        // This getter can run in environments where window is not available.
+        // In those cases we should expect and use proxy as a string
+        if (typeof window !== "undefined" && window.location) return (0, $6aCOC.handleValueOrFn)($fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_proxyUrl, "f"), new URL(window.location.href), "");
+        if (typeof $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_proxyUrl, "f") === "function") throw new Error($rLPvf.unsupportedNonBrowserDomainOrProxyUrlFunction);
+        return $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_proxyUrl, "f") || "";
+    }
+    constructor(options){
+        this.clerkjs = null;
+        this.preopenSignIn = null;
+        this.preopenSignUp = null;
+        this.preopenUserProfile = null;
+        this.preopenOrganizationProfile = null;
+        this.premountSignInNodes = new Map();
+        this.premountSignUpNodes = new Map();
+        this.premountUserProfileNodes = new Map();
+        this.premountUserButtonNodes = new Map();
+        this.premountOrganizationProfileNodes = new Map();
+        this.premountCreateOrganizationNodes = new Map();
+        this.premountOrganizationSwitcherNodes = new Map();
+        this.premountMethodCalls = new Map();
+        this.loadedListeners = [];
+        $6f78eca7b0b72923$var$_IsomorphicClerk_loaded.set(this, false);
+        $6f78eca7b0b72923$var$_IsomorphicClerk_domain.set(this, void 0);
+        $6f78eca7b0b72923$var$_IsomorphicClerk_proxyUrl.set(this, void 0);
+        this.addOnLoaded = (cb)=>{
+            this.loadedListeners.push(cb);
+        };
+        this.emitLoaded = ()=>{
+            this.loadedListeners.forEach((cb)=>cb());
+            this.loadedListeners = [];
+        };
+        this.hydrateClerkJS = (clerkjs)=>{
+            if (!clerkjs) throw new Error("Failed to hydrate latest Clerk JS");
+            this.clerkjs = clerkjs;
+            this.premountMethodCalls.forEach((cb)=>cb());
+            if (this.preopenSignIn !== null) clerkjs.openSignIn(this.preopenSignIn);
+            if (this.preopenSignUp !== null) clerkjs.openSignUp(this.preopenSignUp);
+            if (this.preopenUserProfile !== null) clerkjs.openUserProfile(this.preopenUserProfile);
+            this.premountSignInNodes.forEach((props, node)=>{
+                clerkjs.mountSignIn(node, props);
+            });
+            this.premountSignUpNodes.forEach((props, node)=>{
+                clerkjs.mountSignUp(node, props);
+            });
+            this.premountUserProfileNodes.forEach((props, node)=>{
+                clerkjs.mountUserProfile(node, props);
+            });
+            this.premountUserButtonNodes.forEach((props, node)=>{
+                clerkjs.mountUserButton(node, props);
+            });
+            $fOt1z.__classPrivateFieldSet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, true, "f");
+            this.emitLoaded();
+            return this.clerkjs;
+        };
+        this.__unstable__updateProps = (props)=>{
+            // Handle case where accounts has clerk-react@4 installed, but clerk-js@3 is manually loaded
+            if (this.clerkjs && "__unstable__updateProps" in this.clerkjs) this.clerkjs.__unstable__updateProps(props);
+            else return undefined;
+        };
+        /**
+         * `setActive` can be used to set the active session and/or organization.
+         * It will eventually replace `setSession`.
+         *
+         * @experimental
+         */ this.setActive = ({ session: session , organization: organization , beforeEmit: beforeEmit  })=>{
+            if (this.clerkjs) return this.clerkjs.setActive({
+                session: session,
+                organization: organization,
+                beforeEmit: beforeEmit
+            });
+            else return Promise.reject();
+        };
+        this.setSession = (session, beforeEmit)=>{
+            return this.setActive({
+                session: session,
+                beforeEmit: beforeEmit
+            });
+        };
+        this.openSignIn = (props)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.openSignIn(props);
+            else this.preopenSignIn = props;
+        };
+        this.closeSignIn = ()=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.closeSignIn();
+            else this.preopenSignIn = null;
+        };
+        this.openUserProfile = (props)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.openUserProfile(props);
+            else this.preopenUserProfile = props;
+        };
+        this.closeUserProfile = ()=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.closeUserProfile();
+            else this.preopenUserProfile = null;
+        };
+        this.openOrganizationProfile = (props)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.openOrganizationProfile(props);
+            else this.preopenOrganizationProfile = props;
+        };
+        this.closeOrganizationProfile = ()=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.closeOrganizationProfile();
+            else this.preopenOrganizationProfile = null;
+        };
+        this.openSignUp = (props)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.openSignUp(props);
+            else this.preopenSignUp = props;
+        };
+        this.closeSignUp = ()=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.closeSignUp();
+            else this.preopenSignUp = null;
+        };
+        this.mountSignIn = (node, props)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountSignIn(node, props);
+            else this.premountSignInNodes.set(node, props);
+        };
+        this.unmountSignIn = (node)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountSignIn(node);
+            else this.premountSignInNodes.delete(node);
+        };
+        this.mountSignUp = (node, props)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountSignUp(node, props);
+            else this.premountSignUpNodes.set(node, props);
+        };
+        this.unmountSignUp = (node)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountSignUp(node);
+            else this.premountSignUpNodes.delete(node);
+        };
+        this.mountUserProfile = (node, props)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountUserProfile(node, props);
+            else this.premountUserProfileNodes.set(node, props);
+        };
+        this.unmountUserProfile = (node)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountUserProfile(node);
+            else this.premountUserProfileNodes.delete(node);
+        };
+        this.mountOrganizationProfile = (node, props)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountOrganizationProfile(node, props);
+            else this.premountOrganizationProfileNodes.set(node, props);
+        };
+        this.unmountOrganizationProfile = (node)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountOrganizationProfile(node);
+            else this.premountOrganizationProfileNodes.delete(node);
+        };
+        this.mountCreateOrganization = (node, props)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountCreateOrganization(node, props);
+            else this.premountCreateOrganizationNodes.set(node, props);
+        };
+        this.unmountCreateOrganization = (node)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountCreateOrganization(node);
+            else this.premountCreateOrganizationNodes.delete(node);
+        };
+        this.mountOrganizationSwitcher = (node, props)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountOrganizationSwitcher(node, props);
+            else this.premountOrganizationSwitcherNodes.set(node, props);
+        };
+        this.unmountOrganizationSwitcher = (node)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountOrganizationSwitcher(node);
+            else this.premountOrganizationSwitcherNodes.delete(node);
+        };
+        this.mountUserButton = (node, userButtonProps)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.mountUserButton(node, userButtonProps);
+            else this.premountUserButtonNodes.set(node, userButtonProps);
+        };
+        this.unmountUserButton = (node)=>{
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) this.clerkjs.unmountUserButton(node);
+            else this.premountUserButtonNodes.delete(node);
+        };
+        this.addListener = (listener)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.addListener(listener);
+            };
+            if (this.clerkjs) callback();
+            else this.premountMethodCalls.set("addListener", callback);
+        };
+        this.navigate = (to)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.navigate(to);
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("navigate", callback);
+        };
+        this.redirectWithAuth = (...args)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectWithAuth(...args);
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectWithAuth", callback);
+        };
+        this.redirectToSignIn = (opts)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectToSignIn(opts);
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectToSignIn", callback);
+        };
+        this.redirectToSignUp = (opts)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectToSignUp(opts);
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectToSignUp", callback);
+        };
+        this.redirectToUserProfile = ()=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectToUserProfile();
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectToUserProfile", callback);
+        };
+        this.redirectToHome = ()=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectToHome();
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectToHome", callback);
+        };
+        this.redirectToOrganizationProfile = ()=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectToOrganizationProfile();
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectToOrganizationProfile", callback);
+        };
+        this.redirectToCreateOrganization = ()=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.redirectToCreateOrganization();
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) callback();
+            else this.premountMethodCalls.set("redirectToCreateOrganization", callback);
+        };
+        this.handleRedirectCallback = (params)=>{
+            var _b;
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.handleRedirectCallback(params);
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) (_b = callback()) === null || _b === void 0 || _b.catch(()=>{
+            // This error is caused when the host app is using React18
+            // and strictMode is enabled. This useEffects runs twice because
+            // the clerk-react ui components mounts, unmounts and mounts again
+            // so the clerk-js component loses its state because of the custom
+            // unmount callback we're using.
+            // This needs to be solved by tweaking the logic in uiComponents.tsx
+            // or by making handleRedirectCallback idempotent
+            });
+            else this.premountMethodCalls.set("handleRedirectCallback", callback);
+        };
+        this.handleMagicLinkVerification = async (params)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.handleMagicLinkVerification(params);
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) return callback();
+            else this.premountMethodCalls.set("handleMagicLinkVerification", callback);
+        };
+        this.authenticateWithMetamask = async (params)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.authenticateWithMetamask(params);
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) return callback();
+            else this.premountMethodCalls.set("authenticateWithMetamask", callback);
+        };
+        this.createOrganization = async (params)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.createOrganization(params);
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) return callback();
+            else this.premountMethodCalls.set("createOrganization", callback);
+        };
+        this.getOrganizationMemberships = async ()=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.getOrganizationMemberships();
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) return callback();
+            else this.premountMethodCalls.set("getOrganizationMemberships", callback);
+        };
+        this.getOrganization = async (organizationId)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.getOrganization(organizationId);
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) return callback();
+            else this.premountMethodCalls.set("getOrganization", callback);
+        };
+        this.signOut = async (signOutCallbackOrOptions, options)=>{
+            const callback = ()=>{
+                var _b;
+                return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.signOut(signOutCallbackOrOptions, options);
+            };
+            if (this.clerkjs && $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) return callback();
+            else this.premountMethodCalls.set("signOut", callback);
+        };
+        const { Clerk: Clerk = null , frontendApi: frontendApi , publishableKey: publishableKey  } = options || {};
+        this.frontendApi = frontendApi;
+        this.publishableKey = publishableKey;
+        $fOt1z.__classPrivateFieldSet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_proxyUrl, options === null || options === void 0 ? void 0 : options.proxyUrl, "f");
+        $fOt1z.__classPrivateFieldSet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_domain, options === null || options === void 0 ? void 0 : options.domain, "f");
+        this.options = options;
+        this.Clerk = Clerk;
+        this.mode = (0, $6aCOC.inClientSide)() ? "browser" : "server";
+        this.loadClerkJS();
+    }
+    async loadClerkJS() {
+        var _b, _c;
+        if (this.mode !== "browser" || $fOt1z.__classPrivateFieldGet(this, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded, "f")) return;
+        // Store frontendAPI value on window as a fallback. This value can be used as a
+        // fallback during ClerkJS hot loading in case ClerkJS fails to find the
+        // "data-clerk-frontend-api" attribute on its script tag.
+        // This can happen when the DOM is altered completely during client rehydration.
+        // For example, in Remix with React 18 the document changes completely via `hydrateRoot(document)`.
+        // For more information refer to:
+        // - https://github.com/remix-run/remix/issues/2947
+        // - https://github.com/facebook/react/issues/24430
+        if (typeof window !== "undefined") {
+            window.__clerk_frontend_api = this.frontendApi;
+            window.__clerk_publishable_key = this.publishableKey;
+            window.__clerk_proxy_url = this.proxyUrl;
+            window.__clerk_domain = this.domain;
+        }
+        try {
+            if (this.Clerk) {
+                // Set a fixed Clerk version
+                let c;
+                if ((0, $9LdOB.isConstructor)(this.Clerk)) {
+                    // Construct a new Clerk object if a constructor is passed
+                    c = new this.Clerk(this.publishableKey || this.frontendApi || "", {
+                        proxyUrl: this.proxyUrl,
+                        domain: this.domain
+                    });
+                    await c.load(this.options);
+                } else {
+                    // Otherwise use the instantiated Clerk object
+                    c = this.Clerk;
+                    if (!c.isReady()) await c.load(this.options);
+                }
+                $parcel$global.Clerk = c;
+            } else {
+                // Hot-load latest ClerkJS from Clerk CDN
+                await (0, $9LdOB.loadScript)({
+                    frontendApi: this.frontendApi,
+                    publishableKey: this.publishableKey,
+                    proxyUrl: this.proxyUrl,
+                    domain: this.domain,
+                    scriptUrl: this.options.clerkJSUrl,
+                    scriptVariant: this.options.clerkJSVariant
+                });
+                if (!$parcel$global.Clerk) throw new Error("Failed to download latest ClerkJS. Contact support@clerk.com.");
+                await $parcel$global.Clerk.load(this.options);
+            }
+            if (((_b = $parcel$global.Clerk) === null || _b === void 0 ? void 0 : _b.loaded) || ((_c = $parcel$global.Clerk) === null || _c === void 0 ? void 0 : _c.isReady())) return this.hydrateClerkJS($parcel$global.Clerk);
+            return;
+        } catch (err) {
+            const error = err;
+            console.error(error.stack || error.message || error);
+            return;
+        }
+    }
+    get version() {
+        var _b;
+        return (_b = this.clerkjs) === null || _b === void 0 ? void 0 : _b.version;
+    }
+    get client() {
+        if (this.clerkjs) return this.clerkjs.client;
+        else return undefined;
+    }
+    get session() {
+        if (this.clerkjs) return this.clerkjs.session;
+        else return undefined;
+    }
+    get user() {
+        if (this.clerkjs) return this.clerkjs.user;
+        else return undefined;
+    }
+    get organization() {
+        if (this.clerkjs) return this.clerkjs.organization;
+        else return undefined;
+    }
+    get __unstable__environment() {
+        if (this.clerkjs) return this.clerkjs.__unstable__environment;
+        else return undefined;
+    }
+    __unstable__setEnvironment(...args) {
+        if (this.clerkjs && "__unstable__setEnvironment" in this.clerkjs) this.clerkjs.__unstable__setEnvironment(args);
+        else return undefined;
+    }
+}
+module.exports.default = $6f78eca7b0b72923$var$IsomorphicClerk;
+$6f78eca7b0b72923$var$_a = $6f78eca7b0b72923$var$IsomorphicClerk, $6f78eca7b0b72923$var$_IsomorphicClerk_loaded = new WeakMap(), $6f78eca7b0b72923$var$_IsomorphicClerk_domain = new WeakMap(), $6f78eca7b0b72923$var$_IsomorphicClerk_proxyUrl = new WeakMap();
+$6f78eca7b0b72923$var$_IsomorphicClerk_instance = {
+    value: void 0
+};
+
+});
+
+parcelRequire.register("k01wq", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.deriveState = void 0;
+const $e8f4fcfda0a0544e$var$deriveState = (clerkLoaded, state, initialState)=>{
+    if (!clerkLoaded && initialState) return $e8f4fcfda0a0544e$var$deriveFromSsrInitialState(initialState);
+    return $e8f4fcfda0a0544e$var$deriveFromClientSideState(state);
+};
+module.exports.deriveState = $e8f4fcfda0a0544e$var$deriveState;
+const $e8f4fcfda0a0544e$var$deriveFromSsrInitialState = (initialState)=>{
+    const userId = initialState.userId;
+    const user = initialState.user;
+    const sessionId = initialState.sessionId;
+    const session = initialState.session;
+    const organization = initialState.organization;
+    const orgId = initialState.orgId;
+    const orgRole = initialState.orgRole;
+    const orgSlug = initialState.orgSlug;
+    const actor = initialState.actor;
+    return {
+        userId: userId,
+        user: user,
+        sessionId: sessionId,
+        session: session,
+        organization: organization,
+        orgId: orgId,
+        orgRole: orgRole,
+        orgSlug: orgSlug,
+        actor: actor,
+        lastOrganizationInvitation: null,
+        lastOrganizationMember: null
+    };
+};
+const $e8f4fcfda0a0544e$var$deriveFromClientSideState = (state)=>{
+    var _a;
+    const userId = state.user ? state.user.id : state.user;
+    const user = state.user;
+    const sessionId = state.session ? state.session.id : state.session;
+    const session = state.session;
+    const actor = session === null || session === void 0 ? void 0 : session.actor;
+    const organization = state.organization;
+    const orgId = state.organization ? state.organization.id : state.organization;
+    const orgSlug = organization === null || organization === void 0 ? void 0 : organization.slug;
+    const membership = organization ? (_a = user === null || user === void 0 ? void 0 : user.organizationMemberships) === null || _a === void 0 ? void 0 : _a.find((om)=>om.organization.id === orgId) : organization;
+    const orgRole = membership ? membership.role : membership;
+    const lastOrganizationInvitation = state.lastOrganizationInvitation;
+    const lastOrganizationMember = state.lastOrganizationMember;
+    return {
+        userId: userId,
+        user: user,
+        sessionId: sessionId,
+        session: session,
+        organization: organization,
+        orgId: orgId,
+        orgRole: orgRole,
+        orgSlug: orgSlug,
+        actor: actor,
+        lastOrganizationInvitation: lastOrganizationInvitation,
+        lastOrganizationMember: lastOrganizationMember
+    };
+};
+
+});
+
+parcelRequire.register("3DzEQ", function(module, exports) {
+"use strict";
+var $2a60ac7ef818f051$var$_a;
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useAuthContext = module.exports.AuthContext = void 0;
+
+var $6aCOC = parcelRequire("6aCOC");
+$2a60ac7ef818f051$var$_a = (0, $6aCOC.createContextAndHook)("AuthContext"), module.exports.AuthContext = $2a60ac7ef818f051$var$_a[0], module.exports.useAuthContext = $2a60ac7ef818f051$var$_a[1];
+
+});
+
+parcelRequire.register("2sApG", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useClientContext = module.exports.ClientContext = void 0;
+
+var $6aCOC = parcelRequire("6aCOC");
+Object.defineProperty(module.exports, "ClientContext", {
+    enumerable: true,
+    get: function() {
+        return $6aCOC.ClientContext;
+    }
+});
+Object.defineProperty(module.exports, "useClientContext", {
+    enumerable: true,
+    get: function() {
+        return $6aCOC.useClientContext;
+    }
+});
+
+});
+
+parcelRequire.register("1g6nu", function(module, exports) {
+"use strict";
+var $0eac3b8e999e30e3$var$_a;
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useIsomorphicClerkContext = module.exports.IsomorphicClerkContext = void 0;
+
+var $6aCOC = parcelRequire("6aCOC");
+$0eac3b8e999e30e3$var$_a = [
+    $6aCOC.ClerkInstanceContext,
+    $6aCOC.useClerkInstanceContext
+], module.exports.IsomorphicClerkContext = $0eac3b8e999e30e3$var$_a[0], module.exports.useIsomorphicClerkContext = $0eac3b8e999e30e3$var$_a[1];
+
+});
+
+parcelRequire.register("i5neq", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useOrganizationContext = module.exports.OrganizationContext = void 0;
+
+var $6aCOC = parcelRequire("6aCOC");
+Object.defineProperty(module.exports, "OrganizationContext", {
+    enumerable: true,
+    get: function() {
+        return $6aCOC.OrganizationContext;
+    }
+});
+Object.defineProperty(module.exports, "useOrganizationContext", {
+    enumerable: true,
+    get: function() {
+        return $6aCOC.useOrganizationContext;
+    }
+});
+
+});
+
+parcelRequire.register("4ajRi", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useSessionContext = module.exports.SessionContext = void 0;
+
+var $6aCOC = parcelRequire("6aCOC");
+Object.defineProperty(module.exports, "SessionContext", {
+    enumerable: true,
+    get: function() {
+        return $6aCOC.SessionContext;
+    }
+});
+Object.defineProperty(module.exports, "useSessionContext", {
+    enumerable: true,
+    get: function() {
+        return $6aCOC.useSessionContext;
+    }
+});
+
+});
+
+parcelRequire.register("4uQd8", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useUserContext = module.exports.UserContext = void 0;
+
+var $6aCOC = parcelRequire("6aCOC");
+Object.defineProperty(module.exports, "UserContext", {
+    enumerable: true,
+    get: function() {
+        return $6aCOC.UserContext;
+    }
+});
+Object.defineProperty(module.exports, "useUserContext", {
+    enumerable: true,
+    get: function() {
+        return $6aCOC.useUserContext;
+    }
+});
+
+});
+
+
+parcelRequire.register("1dBnc", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.LoadedGuarantee = module.exports.StructureContext = module.exports.StructureContextStates = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $0e33fedd2c3a6d66$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+var $4zoRo = parcelRequire("4zoRo");
+module.exports.StructureContextStates = Object.freeze({
+    noGuarantees: Object.freeze({
+        guaranteedLoaded: false
+    }),
+    guaranteedLoaded: Object.freeze({
+        guaranteedLoaded: true
+    })
+});
+module.exports.StructureContext = $0e33fedd2c3a6d66$var$react_1.default.createContext(undefined);
+module.exports.StructureContext.displayName = "StructureContext";
+const $0e33fedd2c3a6d66$var$useStructureContext = ()=>{
+    const structureCtx = $0e33fedd2c3a6d66$var$react_1.default.useContext(module.exports.StructureContext);
+    (0, $4zoRo.assertWrappedByClerkProvider)(structureCtx);
+    return structureCtx;
+};
+const $0e33fedd2c3a6d66$var$LoadedGuarantee = ({ children: children  })=>{
+    const structure = $0e33fedd2c3a6d66$var$useStructureContext();
+    if (structure.guaranteedLoaded) return $0e33fedd2c3a6d66$var$react_1.default.createElement($0e33fedd2c3a6d66$var$react_1.default.Fragment, null, children);
+    return $0e33fedd2c3a6d66$var$react_1.default.createElement(module.exports.StructureContext.Provider, {
+        value: module.exports.StructureContextStates.guaranteedLoaded
+    }, children);
+};
+module.exports.LoadedGuarantee = $0e33fedd2c3a6d66$var$LoadedGuarantee;
+
+});
+parcelRequire.register("4zoRo", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.assertClerkLoadedGuarantee = module.exports.assertWrappedByClerkProvider = void 0;
+
+var $rLPvf = parcelRequire("rLPvf");
+function $353db703fa58a975$var$assertWrappedByClerkProvider(contextVal) {
+    if (!contextVal) throw new Error($rLPvf.noClerkProviderError);
+}
+module.exports.assertWrappedByClerkProvider = $353db703fa58a975$var$assertWrappedByClerkProvider;
+function $353db703fa58a975$var$assertClerkLoadedGuarantee(guarantee, hookName) {
+    if (!guarantee) throw new Error((0, $rLPvf.noGuaranteedLoadedError)(hookName));
+}
+module.exports.assertClerkLoadedGuarantee = $353db703fa58a975$var$assertClerkLoadedGuarantee;
+
+});
+
+
+
+
+parcelRequire.register("dp31I", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.RedirectToOrganizationProfile = module.exports.RedirectToCreateOrganization = module.exports.MultisessionAppSupport = module.exports.AuthenticateWithRedirectCallback = module.exports.RedirectToUserProfile = module.exports.RedirectToSignUp = module.exports.RedirectToSignIn = module.exports.SignedIn = module.exports.SignedOut = module.exports.ClerkLoading = module.exports.ClerkLoaded = module.exports.CreateOrganization = module.exports.OrganizationProfile = module.exports.OrganizationSwitcher = module.exports.UserButton = module.exports.UserProfile = module.exports.SignIn = module.exports.SignUp = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+var $u7OCS = parcelRequire("u7OCS");
+Object.defineProperty(module.exports, "SignUp", {
+    enumerable: true,
+    get: function() {
+        return $u7OCS.SignUp;
+    }
+});
+Object.defineProperty(module.exports, "SignIn", {
+    enumerable: true,
+    get: function() {
+        return $u7OCS.SignIn;
+    }
+});
+Object.defineProperty(module.exports, "UserProfile", {
+    enumerable: true,
+    get: function() {
+        return $u7OCS.UserProfile;
+    }
+});
+Object.defineProperty(module.exports, "UserButton", {
+    enumerable: true,
+    get: function() {
+        return $u7OCS.UserButton;
+    }
+});
+Object.defineProperty(module.exports, "OrganizationSwitcher", {
+    enumerable: true,
+    get: function() {
+        return $u7OCS.OrganizationSwitcher;
+    }
+});
+Object.defineProperty(module.exports, "OrganizationProfile", {
+    enumerable: true,
+    get: function() {
+        return $u7OCS.OrganizationProfile;
+    }
+});
+Object.defineProperty(module.exports, "CreateOrganization", {
+    enumerable: true,
+    get: function() {
+        return $u7OCS.CreateOrganization;
+    }
+});
+
+var $ekggE = parcelRequire("ekggE");
+Object.defineProperty(module.exports, "ClerkLoaded", {
+    enumerable: true,
+    get: function() {
+        return $ekggE.ClerkLoaded;
+    }
+});
+Object.defineProperty(module.exports, "ClerkLoading", {
+    enumerable: true,
+    get: function() {
+        return $ekggE.ClerkLoading;
+    }
+});
+Object.defineProperty(module.exports, "SignedOut", {
+    enumerable: true,
+    get: function() {
+        return $ekggE.SignedOut;
+    }
+});
+Object.defineProperty(module.exports, "SignedIn", {
+    enumerable: true,
+    get: function() {
+        return $ekggE.SignedIn;
+    }
+});
+Object.defineProperty(module.exports, "RedirectToSignIn", {
+    enumerable: true,
+    get: function() {
+        return $ekggE.RedirectToSignIn;
+    }
+});
+Object.defineProperty(module.exports, "RedirectToSignUp", {
+    enumerable: true,
+    get: function() {
+        return $ekggE.RedirectToSignUp;
+    }
+});
+Object.defineProperty(module.exports, "RedirectToUserProfile", {
+    enumerable: true,
+    get: function() {
+        return $ekggE.RedirectToUserProfile;
+    }
+});
+Object.defineProperty(module.exports, "AuthenticateWithRedirectCallback", {
+    enumerable: true,
+    get: function() {
+        return $ekggE.AuthenticateWithRedirectCallback;
+    }
+});
+Object.defineProperty(module.exports, "MultisessionAppSupport", {
+    enumerable: true,
+    get: function() {
+        return $ekggE.MultisessionAppSupport;
+    }
+});
+Object.defineProperty(module.exports, "RedirectToCreateOrganization", {
+    enumerable: true,
+    get: function() {
+        return $ekggE.RedirectToCreateOrganization;
+    }
+});
+Object.defineProperty(module.exports, "RedirectToOrganizationProfile", {
+    enumerable: true,
+    get: function() {
+        return $ekggE.RedirectToOrganizationProfile;
+    }
+});
+
+$fOt1z.__exportStar((parcelRequire("j8dDK")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("iRL1m")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("3gu9c")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("k30tb")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("7DS5w")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("22KNZ")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("1TdDM")), module.exports);
+
+});
+parcelRequire.register("u7OCS", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.OrganizationSwitcher = module.exports.CreateOrganization = module.exports.OrganizationProfile = module.exports.UserButton = module.exports.UserProfile = module.exports.SignUp = module.exports.SignIn = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $05a8dd7636f3aca2$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+var $j8dDK = parcelRequire("j8dDK");
+// README: <Portal/> should be a class pure component in order for mount and unmount
+// lifecycle props to be invoked correctly. Replacing the class component with a
+// functional component wrapped with a React.memo is not identical to the original
+// class implementation due to React intricacies such as the useEffect’s cleanup
+// seems to run AFTER unmount, while componentWillUnmount runs BEFORE.
+// More information can be found at https://clerkinc.slack.com/archives/C015S0BGH8R/p1624891993016300
+// The function Portal implementation is commented out for future reference.
+// const Portal = React.memo(({ props, mount, unmount }: MountProps) => {
+//   const portalRef = React.createRef<HTMLDivElement>();
+//   useEffect(() => {
+//     if (portalRef.current) {
+//       mount(portalRef.current, props);
+//     }
+//     return () => {
+//       if (portalRef.current) {
+//         unmount(portalRef.current);
+//       }
+//     };
+//   }, []);
+//   return <div ref={portalRef} />;
+// });
+// Portal.displayName = 'ClerkPortal';
+class $05a8dd7636f3aca2$var$Portal extends $05a8dd7636f3aca2$var$react_1.default.PureComponent {
+    constructor(){
+        super(...arguments);
+        this.portalRef = $05a8dd7636f3aca2$var$react_1.default.createRef();
+    }
+    componentDidUpdate(prevProps) {
+        if (prevProps.props.appearance !== this.props.props.appearance) this.props.updateProps({
+            node: this.portalRef.current,
+            props: this.props.props
+        });
+    }
+    componentDidMount() {
+        if (this.portalRef.current) this.props.mount(this.portalRef.current, this.props.props);
+    }
+    componentWillUnmount() {
+        if (this.portalRef.current) this.props.unmount(this.portalRef.current);
+    }
+    render() {
+        return $05a8dd7636f3aca2$var$react_1.default.createElement("div", {
+            ref: this.portalRef
+        });
+    }
+}
+module.exports.SignIn = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk"
+    ]);
+    return $05a8dd7636f3aca2$var$react_1.default.createElement($05a8dd7636f3aca2$var$Portal, {
+        mount: clerk.mountSignIn,
+        unmount: clerk.unmountSignIn,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "SignIn");
+module.exports.SignUp = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk"
+    ]);
+    return $05a8dd7636f3aca2$var$react_1.default.createElement($05a8dd7636f3aca2$var$Portal, {
+        mount: clerk.mountSignUp,
+        unmount: clerk.unmountSignUp,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "SignUp");
+module.exports.UserProfile = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk"
+    ]);
+    return $05a8dd7636f3aca2$var$react_1.default.createElement($05a8dd7636f3aca2$var$Portal, {
+        mount: clerk.mountUserProfile,
+        unmount: clerk.unmountUserProfile,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "UserProfile");
+module.exports.UserButton = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk"
+    ]);
+    return $05a8dd7636f3aca2$var$react_1.default.createElement($05a8dd7636f3aca2$var$Portal, {
+        mount: clerk.mountUserButton,
+        unmount: clerk.unmountUserButton,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "UserButton");
+module.exports.OrganizationProfile = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk"
+    ]);
+    return $05a8dd7636f3aca2$var$react_1.default.createElement($05a8dd7636f3aca2$var$Portal, {
+        mount: clerk.mountOrganizationProfile,
+        unmount: clerk.unmountOrganizationProfile,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "OrganizationProfile");
+module.exports.CreateOrganization = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk"
+    ]);
+    return $05a8dd7636f3aca2$var$react_1.default.createElement($05a8dd7636f3aca2$var$Portal, {
+        mount: clerk.mountCreateOrganization,
+        unmount: clerk.unmountCreateOrganization,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "CreateOrganization");
+module.exports.OrganizationSwitcher = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk"
+    ]);
+    return $05a8dd7636f3aca2$var$react_1.default.createElement($05a8dd7636f3aca2$var$Portal, {
+        mount: clerk.mountOrganizationSwitcher,
+        unmount: clerk.unmountOrganizationSwitcher,
+        updateProps: clerk.__unstable__updateProps,
+        props: props
+    });
+}, "OrganizationSwitcher");
+
+});
+parcelRequire.register("j8dDK", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.WithClerk = module.exports.withClerk = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $ded9584c0df8a127$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+var $1g6nu = parcelRequire("1g6nu");
+
+var $1dBnc = parcelRequire("1dBnc");
+
+var $rLPvf = parcelRequire("rLPvf");
+const $ded9584c0df8a127$var$withClerk = (Component, displayName)=>{
+    displayName = displayName || Component.displayName || Component.name || "Component";
+    Component.displayName = displayName;
+    const HOC = (props)=>{
+        const clerk = (0, $1g6nu.useIsomorphicClerkContext)();
+        if (!clerk.loaded) return null;
+        return $ded9584c0df8a127$var$react_1.default.createElement($1dBnc.LoadedGuarantee, null, $ded9584c0df8a127$var$react_1.default.createElement(Component, Object.assign({}, props, {
+            clerk: clerk
+        })));
+    };
+    HOC.displayName = `withClerk(${displayName})`;
+    return HOC;
+};
+module.exports.withClerk = $ded9584c0df8a127$var$withClerk;
+const $ded9584c0df8a127$var$WithClerk = ({ children: children  })=>{
+    const clerk = (0, $1g6nu.useIsomorphicClerkContext)();
+    if (typeof children !== "function") throw new Error($rLPvf.hocChildrenNotAFunctionError);
+    if (!clerk.loaded) return null;
+    return $ded9584c0df8a127$var$react_1.default.createElement($1dBnc.LoadedGuarantee, null, children(clerk));
+};
+module.exports.WithClerk = $ded9584c0df8a127$var$WithClerk;
+
+});
+
+
+parcelRequire.register("ekggE", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.MultisessionAppSupport = module.exports.AuthenticateWithRedirectCallback = module.exports.RedirectToCreateOrganization = module.exports.RedirectToOrganizationProfile = module.exports.RedirectToUserProfile = module.exports.RedirectToSignUp = module.exports.RedirectToSignIn = module.exports.ClerkLoading = module.exports.ClerkLoaded = module.exports.SignedOut = module.exports.SignedIn = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $a6df8d59e377955f$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+var $3DzEQ = parcelRequire("3DzEQ");
+
+var $1g6nu = parcelRequire("1g6nu");
+
+var $4ajRi = parcelRequire("4ajRi");
+
+var $1dBnc = parcelRequire("1dBnc");
+
+var $j8dDK = parcelRequire("j8dDK");
+const $a6df8d59e377955f$var$SignedIn = ({ children: children  })=>{
+    const { userId: userId  } = (0, $3DzEQ.useAuthContext)();
+    if (userId) return $a6df8d59e377955f$var$react_1.default.createElement($a6df8d59e377955f$var$react_1.default.Fragment, null, children);
+    return null;
+};
+module.exports.SignedIn = $a6df8d59e377955f$var$SignedIn;
+const $a6df8d59e377955f$var$SignedOut = ({ children: children  })=>{
+    const { userId: userId  } = (0, $3DzEQ.useAuthContext)();
+    if (userId === null) return $a6df8d59e377955f$var$react_1.default.createElement($a6df8d59e377955f$var$react_1.default.Fragment, null, children);
+    return null;
+};
+module.exports.SignedOut = $a6df8d59e377955f$var$SignedOut;
+const $a6df8d59e377955f$var$ClerkLoaded = ({ children: children  })=>{
+    const isomorphicClerk = (0, $1g6nu.useIsomorphicClerkContext)();
+    if (!isomorphicClerk.loaded) return null;
+    return $a6df8d59e377955f$var$react_1.default.createElement($1dBnc.LoadedGuarantee, null, children);
+};
+module.exports.ClerkLoaded = $a6df8d59e377955f$var$ClerkLoaded;
+const $a6df8d59e377955f$var$ClerkLoading = ({ children: children  })=>{
+    const isomorphicClerk = (0, $1g6nu.useIsomorphicClerkContext)();
+    if (isomorphicClerk.loaded) return null;
+    return $a6df8d59e377955f$var$react_1.default.createElement($a6df8d59e377955f$var$react_1.default.Fragment, null, children);
+};
+module.exports.ClerkLoading = $a6df8d59e377955f$var$ClerkLoading;
+module.exports.RedirectToSignIn = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk"
+    ]);
+    const { client: client , session: session  } = clerk;
+    // TODO: Remove temp use of __unstable__environment
+    const { __unstable__environment: __unstable__environment  } = clerk;
+    const hasActiveSessions = client.activeSessions && client.activeSessions.length > 0;
+    $a6df8d59e377955f$var$react_1.default.useEffect(()=>{
+        if (session === null && hasActiveSessions && __unstable__environment) {
+            const { afterSignOutOneUrl: afterSignOutOneUrl  } = __unstable__environment.displayConfig;
+            clerk.navigate(afterSignOutOneUrl);
+        } else clerk.redirectToSignIn(props);
+    }, []);
+    return null;
+}, "RedirectToSignIn");
+module.exports.RedirectToSignUp = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk"
+    ]);
+    $a6df8d59e377955f$var$react_1.default.useEffect(()=>{
+        clerk.redirectToSignUp(props);
+    }, []);
+    return null;
+}, "RedirectToSignUp");
+module.exports.RedirectToUserProfile = (0, $j8dDK.withClerk)(({ clerk: clerk  })=>{
+    $a6df8d59e377955f$var$react_1.default.useEffect(()=>{
+        clerk.redirectToUserProfile();
+    }, []);
+    return null;
+}, "RedirectToUserProfile");
+module.exports.RedirectToOrganizationProfile = (0, $j8dDK.withClerk)(({ clerk: clerk  })=>{
+    $a6df8d59e377955f$var$react_1.default.useEffect(()=>{
+        clerk.redirectToOrganizationProfile();
+    }, []);
+    return null;
+}, "RedirectToOrganizationProfile");
+module.exports.RedirectToCreateOrganization = (0, $j8dDK.withClerk)(({ clerk: clerk  })=>{
+    $a6df8d59e377955f$var$react_1.default.useEffect(()=>{
+        clerk.redirectToCreateOrganization();
+    }, []);
+    return null;
+}, "RedirectToCreateOrganization");
+module.exports.AuthenticateWithRedirectCallback = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk  } = _a, handleRedirectCallbackParams = $fOt1z.__rest(_a, [
+        "clerk"
+    ]);
+    $a6df8d59e377955f$var$react_1.default.useEffect(()=>{
+        clerk.handleRedirectCallback(handleRedirectCallbackParams);
+    }, []);
+    return null;
+}, "AuthenticateWithRedirectCallback");
+const $a6df8d59e377955f$var$MultisessionAppSupport = ({ children: children  })=>{
+    const session = (0, $4ajRi.useSessionContext)();
+    return $a6df8d59e377955f$var$react_1.default.createElement($a6df8d59e377955f$var$react_1.default.Fragment, {
+        key: session ? session.id : "no-users"
+    }, children);
+};
+module.exports.MultisessionAppSupport = $a6df8d59e377955f$var$MultisessionAppSupport;
+
+});
+
+parcelRequire.register("iRL1m", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.WithUser = module.exports.withUser = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $dbc1a6a322421b71$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+var $4uQd8 = parcelRequire("4uQd8");
+
+var $rLPvf = parcelRequire("rLPvf");
+const $dbc1a6a322421b71$var$withUser = (Component, displayName)=>{
+    displayName = displayName || Component.displayName || Component.name || "Component";
+    Component.displayName = displayName;
+    const HOC = (props)=>{
+        const user = (0, $4uQd8.useUserContext)();
+        if (!user) return null;
+        return $dbc1a6a322421b71$var$react_1.default.createElement(Component, Object.assign({}, props, {
+            user: user
+        }));
+    };
+    HOC.displayName = `withUser(${displayName})`;
+    return HOC;
+};
+module.exports.withUser = $dbc1a6a322421b71$var$withUser;
+const $dbc1a6a322421b71$var$WithUser = ({ children: children  })=>{
+    const user = (0, $4uQd8.useUserContext)();
+    if (typeof children !== "function") throw new Error($rLPvf.hocChildrenNotAFunctionError);
+    if (!user) return null;
+    return $dbc1a6a322421b71$var$react_1.default.createElement($dbc1a6a322421b71$var$react_1.default.Fragment, null, children(user));
+};
+module.exports.WithUser = $dbc1a6a322421b71$var$WithUser;
+
+});
+
+parcelRequire.register("3gu9c", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.WithSession = module.exports.withSession = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $260a40609186b321$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+var $4ajRi = parcelRequire("4ajRi");
+
+var $rLPvf = parcelRequire("rLPvf");
+const $260a40609186b321$var$withSession = (Component, displayName)=>{
+    displayName = displayName || Component.displayName || Component.name || "Component";
+    Component.displayName = displayName;
+    const HOC = (props)=>{
+        const session = (0, $4ajRi.useSessionContext)();
+        if (!session) return null;
+        return $260a40609186b321$var$react_1.default.createElement(Component, Object.assign({}, props, {
+            session: session
+        }));
+    };
+    HOC.displayName = `withSession(${displayName})`;
+    return HOC;
+};
+module.exports.withSession = $260a40609186b321$var$withSession;
+const $260a40609186b321$var$WithSession = ({ children: children  })=>{
+    const session = (0, $4ajRi.useSessionContext)();
+    if (typeof children !== "function") throw new Error($rLPvf.hocChildrenNotAFunctionError);
+    if (!session) return null;
+    return $260a40609186b321$var$react_1.default.createElement($260a40609186b321$var$react_1.default.Fragment, null, children(session));
+};
+module.exports.WithSession = $260a40609186b321$var$WithSession;
+
+});
+
+parcelRequire.register("k30tb", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.SignInButton = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $e98473be1216c2c5$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+var $9LdOB = parcelRequire("9LdOB");
+
+var $j8dDK = parcelRequire("j8dDK");
+module.exports.SignInButton = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk , children: children  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk",
+        "children"
+    ]);
+    const { afterSignInUrl: afterSignInUrl , afterSignUpUrl: afterSignUpUrl , redirectUrl: redirectUrl , mode: mode  } = props, rest = $fOt1z.__rest(props, [
+        "afterSignInUrl",
+        "afterSignUpUrl",
+        "redirectUrl",
+        "mode"
+    ]);
+    children = (0, $9LdOB.normalizeWithDefaultValue)(children, "Sign in");
+    const child = (0, $9LdOB.assertSingleChild)(children)("SignInButton");
+    const clickHandler = ()=>{
+        const opts = {
+            afterSignInUrl: afterSignInUrl,
+            afterSignUpUrl: afterSignUpUrl,
+            redirectUrl: redirectUrl
+        };
+        if (mode === "modal") return clerk.openSignIn(opts);
+        return clerk.redirectToSignIn(opts);
+    };
+    const wrappedChildClickHandler = async (e)=>{
+        await (0, $9LdOB.safeExecute)(child.props.onClick)(e);
+        return clickHandler();
+    };
+    const childProps = Object.assign(Object.assign({}, rest), {
+        onClick: wrappedChildClickHandler
+    });
+    return $e98473be1216c2c5$var$react_1.default.cloneElement(child, childProps);
+}, "SignInButton");
+
+});
+
+parcelRequire.register("7DS5w", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.SignUpButton = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $590621ae366f4ddf$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+var $9LdOB = parcelRequire("9LdOB");
+
+var $j8dDK = parcelRequire("j8dDK");
+module.exports.SignUpButton = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk , children: children  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk",
+        "children"
+    ]);
+    const { afterSignInUrl: afterSignInUrl , afterSignUpUrl: afterSignUpUrl , redirectUrl: redirectUrl , mode: mode  } = props, rest = $fOt1z.__rest(props, [
+        "afterSignInUrl",
+        "afterSignUpUrl",
+        "redirectUrl",
+        "mode"
+    ]);
+    children = (0, $9LdOB.normalizeWithDefaultValue)(children, "Sign up");
+    const child = (0, $9LdOB.assertSingleChild)(children)("SignUpButton");
+    const clickHandler = ()=>{
+        const opts = {
+            afterSignInUrl: afterSignInUrl,
+            afterSignUpUrl: afterSignUpUrl,
+            redirectUrl: redirectUrl
+        };
+        if (mode === "modal") return clerk.openSignUp(opts);
+        return clerk.redirectToSignUp(opts);
+    };
+    const wrappedChildClickHandler = async (e)=>{
+        await (0, $9LdOB.safeExecute)(child.props.onClick)(e);
+        return clickHandler();
+    };
+    const childProps = Object.assign(Object.assign({}, rest), {
+        onClick: wrappedChildClickHandler
+    });
+    return $590621ae366f4ddf$var$react_1.default.cloneElement(child, childProps);
+}, "SignUpButton");
+
+});
+
+parcelRequire.register("22KNZ", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.SignOutButton = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $17d01336e392ef12$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+var $9LdOB = parcelRequire("9LdOB");
+
+var $j8dDK = parcelRequire("j8dDK");
+module.exports.SignOutButton = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk , children: children  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk",
+        "children"
+    ]);
+    const { signOutCallback: signOutCallback , signOutOptions: signOutOptions  } = props, rest = $fOt1z.__rest(props, [
+        "signOutCallback",
+        "signOutOptions"
+    ]);
+    children = (0, $9LdOB.normalizeWithDefaultValue)(children, "Sign out");
+    const child = (0, $9LdOB.assertSingleChild)(children)("SignOutButton");
+    const clickHandler = ()=>{
+        return clerk.signOut(signOutCallback, signOutOptions);
+    };
+    const wrappedChildClickHandler = async (e)=>{
+        await (0, $9LdOB.safeExecute)(child.props.onClick)(e);
+        return clickHandler();
+    };
+    const childProps = Object.assign(Object.assign({}, rest), {
+        onClick: wrappedChildClickHandler
+    });
+    return $17d01336e392ef12$var$react_1.default.cloneElement(child, childProps);
+}, "SignOutButton");
+
+});
+
+parcelRequire.register("1TdDM", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.SignInWithMetamaskButton = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $160582384fa6c22b$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+
+var $9LdOB = parcelRequire("9LdOB");
+
+var $j8dDK = parcelRequire("j8dDK");
+module.exports.SignInWithMetamaskButton = (0, $j8dDK.withClerk)((_a)=>{
+    var { clerk: clerk , children: children  } = _a, props = $fOt1z.__rest(_a, [
+        "clerk",
+        "children"
+    ]);
+    const { redirectUrl: redirectUrl  } = props, rest = $fOt1z.__rest(props, [
+        "redirectUrl"
+    ]);
+    children = (0, $9LdOB.normalizeWithDefaultValue)(children, "Sign in with Metamask");
+    const child = (0, $9LdOB.assertSingleChild)(children)("SignInWithMetamaskButton");
+    const clickHandler = async ()=>{
+        async function authenticate() {
+            await clerk.authenticateWithMetamask({
+                redirectUrl: redirectUrl
+            });
+        }
+        authenticate();
+    };
+    const wrappedChildClickHandler = async (e)=>{
+        await (0, $9LdOB.safeExecute)(child.props.onClick)(e);
+        return clickHandler();
+    };
+    const childProps = Object.assign(Object.assign({}, rest), {
+        onClick: wrappedChildClickHandler
+    });
+    return $160582384fa6c22b$var$react_1.default.cloneElement(child, childProps);
+}, "SignInWithMetamask");
+
+});
+
+
+parcelRequire.register("fBe5P", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+
+var $fOt1z = parcelRequire("fOt1z");
+
+$fOt1z.__exportStar((parcelRequire("jfdYT")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("8lji1")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("bHHiQ")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("6xzNK")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("2NvNx")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("87FLM")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("aqCBE")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("5sL9C")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("5EfAd")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("5eDqV")), module.exports);
+
+$fOt1z.__exportStar((parcelRequire("bHx4m")), module.exports);
+
+});
+parcelRequire.register("jfdYT", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useUser = void 0;
+
+var $4uQd8 = parcelRequire("4uQd8");
+/**
+ * Returns the current auth state and if a user is signed in, the user object.
+ *
+ * Until Clerk loads and initializes, `isLoaded` will be set to `false`.
+ * Once Clerk loads, `isLoaded` will be set to `true`, and you can
+ * safely access `isSignedIn` state and `user`.
+ *
+ * For projects using NextJs or Remix, you can make this state available during SSR
+ * simply by using the `withServerSideAuth` helper and setting the `loadUser` flag to `true`.
+ *
+ *
+ * @example
+ * A simple example:
+ *
+ * import { useUser } from '@clerk/clerk-react'
+ *
+ * function Hello() {
+ *   const { isSignedIn, user } = useUser();
+ *   if(!isSignedIn) {
+ *     return null;
+ *   }
+ *   return <div>Hello, {user.firstName}</div>
+ * }
+ *
+ * @example
+ * Basic example in a NextJs app. This page will be fully rendered during SSR:
+ *
+ * import { useUser } from '@clerk/nextjs'
+ * import { withServerSideAuth } from '@clerk/nextjs/api'
+ *
+ * export getServerSideProps = withServerSideAuth({ loadUser: true});
+ *
+ * export HelloPage = () => {
+ *   const { isSignedIn, user } = useUser();
+ *   if(!isSignedIn) {
+ *     return null;
+ *   }
+ *   return <div>Hello, {user.firstName}</div>
+ * }
+ *
+ */ function $e02a43673131750c$var$useUser() {
+    const user = (0, $4uQd8.useUserContext)();
+    if (user === undefined) return {
+        isLoaded: false,
+        isSignedIn: undefined,
+        user: undefined
+    };
+    if (user === null) return {
+        isLoaded: true,
+        isSignedIn: false,
+        user: null
+    };
+    return {
+        isLoaded: true,
+        isSignedIn: true,
+        user: user
+    };
+}
+module.exports.useUser = $e02a43673131750c$var$useUser;
+
+});
+
+parcelRequire.register("8lji1", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useAuth = void 0;
+
+var $laauJ = parcelRequire("laauJ");
+
+var $3DzEQ = parcelRequire("3DzEQ");
+
+var $1g6nu = parcelRequire("1g6nu");
+
+var $rLPvf = parcelRequire("rLPvf");
+
+var $a9PyK = parcelRequire("a9PyK");
+/**
+ * Returns the current auth state, the user and session ids and the `getToken`
+ * that can be used to retrieve the given template or the default Clerk token.
+ *
+ * Until Clerk loads, `isLoaded` will be set to `false`.
+ * Once Clerk loads, `isLoaded` will be set to `true`, and you can
+ * safely access the `userId` and `sessionId` variables.
+ *
+ * For projects using NextJs or Remix, you can have immediate access to this data  during SSR
+ * simply by using the `withServerSideAuth` helper.
+ *
+ * @example
+ * A simple example:
+ *
+ * import { useAuth } from '@clerk/clerk-react'
+ *
+ * function Hello() {
+ *   const { isSignedIn, sessionId, userId } = useAuth();
+ *   if(isSignedIn) {
+ *     return null;
+ *   }
+ *   console.log(sessionId, userId)
+ *   return <div>...</div>
+ * }
+ *
+ * @example
+ * Basic example in a NextJs app. This page will be fully rendered during SSR:
+ *
+ * import { useAuth } from '@clerk/nextjs'
+ * import { withServerSideAuth } from '@clerk/nextjs/api'
+ *
+ * export getServerSideProps = withServerSideAuth();
+ *
+ * export HelloPage = () => {
+ *   const { isSignedIn, sessionId, userId } = useAuth();
+ *   console.log(isSignedIn, sessionId, userId)
+ *   return <div>...</div>
+ * }
+ */ const $612f3f7080a667e5$var$useAuth = ()=>{
+    const { sessionId: sessionId , userId: userId , actor: actor , orgId: orgId , orgRole: orgRole , orgSlug: orgSlug  } = (0, $3DzEQ.useAuthContext)();
+    const isomorphicClerk = (0, $1g6nu.useIsomorphicClerkContext)();
+    const getToken = (0, $laauJ.useCallback)((0, $a9PyK.createGetToken)(isomorphicClerk), [
+        isomorphicClerk
+    ]);
+    const signOut = (0, $laauJ.useCallback)((0, $a9PyK.createSignOut)(isomorphicClerk), [
+        isomorphicClerk
+    ]);
+    if (sessionId === undefined && userId === undefined) return {
+        isLoaded: false,
+        isSignedIn: undefined,
+        sessionId: sessionId,
+        userId: userId,
+        actor: undefined,
+        orgId: undefined,
+        orgRole: undefined,
+        orgSlug: undefined,
+        signOut: signOut,
+        getToken: getToken
+    };
+    if (sessionId === null && userId === null) return {
+        isLoaded: true,
+        isSignedIn: false,
+        sessionId: sessionId,
+        userId: userId,
+        actor: null,
+        orgId: null,
+        orgRole: null,
+        orgSlug: null,
+        signOut: signOut,
+        getToken: getToken
+    };
+    if (!!sessionId && !!userId && !!orgId && !!orgRole) return {
+        isLoaded: true,
+        isSignedIn: true,
+        sessionId: sessionId,
+        userId: userId,
+        actor: actor || null,
+        orgId: orgId,
+        orgRole: orgRole,
+        orgSlug: orgSlug || null,
+        signOut: signOut,
+        getToken: getToken
+    };
+    if (!!sessionId && !!userId && !orgId) return {
+        isLoaded: true,
+        isSignedIn: true,
+        sessionId: sessionId,
+        userId: userId,
+        actor: actor || null,
+        orgId: null,
+        orgRole: null,
+        orgSlug: null,
+        signOut: signOut,
+        getToken: getToken
+    };
+    throw new Error($rLPvf.invalidStateError);
+};
+module.exports.useAuth = $612f3f7080a667e5$var$useAuth;
+
+});
+parcelRequire.register("a9PyK", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.createSignOut = module.exports.createGetToken = void 0;
+/**
+ * @internal
+ */ const $7652bd4a30df8f77$var$clerkLoaded = (isomorphicClerk)=>{
+    return new Promise((resolve)=>{
+        if (isomorphicClerk.loaded) resolve();
+        isomorphicClerk.addOnLoaded(resolve);
+    });
+};
+/**
+ * @internal
+ */ const $7652bd4a30df8f77$var$createGetToken = (isomorphicClerk)=>{
+    return async (options)=>{
+        await $7652bd4a30df8f77$var$clerkLoaded(isomorphicClerk);
+        if (!isomorphicClerk.session) return null;
+        return isomorphicClerk.session.getToken(options);
+    };
+};
+module.exports.createGetToken = $7652bd4a30df8f77$var$createGetToken;
+/**
+ * @internal
+ */ const $7652bd4a30df8f77$var$createSignOut = (isomorphicClerk)=>{
+    return async (...args)=>{
+        await $7652bd4a30df8f77$var$clerkLoaded(isomorphicClerk);
+        return isomorphicClerk.signOut(...args);
+    };
+};
+module.exports.createSignOut = $7652bd4a30df8f77$var$createSignOut;
+
+});
+
+
+parcelRequire.register("bHHiQ", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useSession = void 0;
+
+var $4ajRi = parcelRequire("4ajRi");
+/**
+ * Returns the current auth state and if a session exists, the session object.
+ *
+ * Until Clerk loads and initializes, `isLoaded` will be set to `false`.
+ * Once Clerk loads, `isLoaded` will be set to `true`, and you can
+ * safely access `isSignedIn` state and `session`.
+ *
+ * For projects using NextJs or Remix, you can make this state available during SSR
+ * simply by using the `withServerSideAuth` helper and setting the `loadSession` flag to `true`.
+ *
+ * @example
+ * A simple example:
+ *
+ * import { useSession } from '@clerk/clerk-react'
+ *
+ * function Hello() {
+ *   const { isSignedIn, session } = useSession();
+ *   if(!isSignedIn) {
+ *     return null;
+ *   }
+ *   return <div>{session.updatedAt}</div>
+ * }
+ *
+ * @example
+ * Basic example in a NextJs app. This page will be fully rendered during SSR:
+ *
+ * import { useSession } from '@clerk/nextjs'
+ * import { withServerSideAuth } from '@clerk/nextjs/api'
+ *
+ * export getServerSideProps = withServerSideAuth({ loadSession: true});
+ *
+ * export HelloPage = () => {
+ *   const { isSignedIn, session } = useSession();
+ *   if(!isSignedIn) {
+ *     return null;
+ *   }
+ *  return <div>{session.updatedAt}</div>
+ * }
+ */ const $88554cea000bece6$var$useSession = ()=>{
+    const session = (0, $4ajRi.useSessionContext)();
+    if (session === undefined) return {
+        isLoaded: false,
+        isSignedIn: undefined,
+        session: undefined
+    };
+    if (session === null) return {
+        isLoaded: true,
+        isSignedIn: false,
+        session: null
+    };
+    return {
+        isLoaded: true,
+        isSignedIn: true,
+        session: session
+    };
+};
+module.exports.useSession = $88554cea000bece6$var$useSession;
+
+});
+
+parcelRequire.register("6xzNK", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useClerk = void 0;
+
+var $1g6nu = parcelRequire("1g6nu");
+const $4c3198886612ff78$var$useClerk = ()=>{
+    const isomorphicClerk = (0, $1g6nu.useIsomorphicClerkContext)();
+    // The actual value is an instance of IsomorphicClerk, not Clerk
+    // we expose is as a Clerk instance
+    return isomorphicClerk;
+};
+module.exports.useClerk = $4c3198886612ff78$var$useClerk;
+
+});
+
+parcelRequire.register("2NvNx", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useSignIn = void 0;
+
+var $2sApG = parcelRequire("2sApG");
+
+var $1g6nu = parcelRequire("1g6nu");
+const $2098d2c57d3b7521$var$useSignIn = ()=>{
+    const isomorphicClerk = (0, $1g6nu.useIsomorphicClerkContext)();
+    const client = (0, $2sApG.useClientContext)();
+    if (!client) return {
+        isLoaded: false,
+        signIn: undefined,
+        setSession: undefined,
+        setActive: undefined
+    };
+    return {
+        isLoaded: true,
+        signIn: client.signIn,
+        setSession: isomorphicClerk.setSession,
+        setActive: isomorphicClerk.setActive
+    };
+};
+module.exports.useSignIn = $2098d2c57d3b7521$var$useSignIn;
+
+});
+
+parcelRequire.register("87FLM", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useSignUp = void 0;
+
+var $2sApG = parcelRequire("2sApG");
+
+var $1g6nu = parcelRequire("1g6nu");
+const $5e9f60bd8e5deac4$var$useSignUp = ()=>{
+    const isomorphicClerk = (0, $1g6nu.useIsomorphicClerkContext)();
+    const client = (0, $2sApG.useClientContext)();
+    if (!client) return {
+        isLoaded: false,
+        signUp: undefined,
+        setSession: undefined,
+        setActive: undefined
+    };
+    return {
+        isLoaded: true,
+        signUp: client.signUp,
+        setSession: isomorphicClerk.setSession,
+        setActive: isomorphicClerk.setActive
+    };
+};
+module.exports.useSignUp = $5e9f60bd8e5deac4$var$useSignUp;
+
+});
+
+parcelRequire.register("aqCBE", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useSessionList = void 0;
+
+var $2sApG = parcelRequire("2sApG");
+
+var $1g6nu = parcelRequire("1g6nu");
+const $797a47829bd86138$var$useSessionList = ()=>{
+    const isomorphicClerk = (0, $1g6nu.useIsomorphicClerkContext)();
+    const client = (0, $2sApG.useClientContext)();
+    if (!client) return {
+        isLoaded: false,
+        sessions: undefined,
+        setSession: undefined,
+        setActive: undefined
+    };
+    return {
+        isLoaded: true,
+        sessions: client.sessions,
+        setSession: isomorphicClerk.setSession,
+        setActive: isomorphicClerk.setActive
+    };
+};
+module.exports.useSessionList = $797a47829bd86138$var$useSessionList;
+
+});
+
+parcelRequire.register("5sL9C", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useOrganization = void 0;
+
+var $6aCOC = parcelRequire("6aCOC");
+Object.defineProperty(module.exports, "useOrganization", {
+    enumerable: true,
+    get: function() {
+        return $6aCOC.useOrganization;
+    }
+});
+
+});
+
+parcelRequire.register("5EfAd", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useOrganizationList = void 0;
+
+var $6aCOC = parcelRequire("6aCOC");
+Object.defineProperty(module.exports, "useOrganizationList", {
+    enumerable: true,
+    get: function() {
+        return $6aCOC.useOrganizationList;
+    }
+});
+
+});
+
+parcelRequire.register("5eDqV", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useOrganizations = void 0;
+
+var $6aCOC = parcelRequire("6aCOC");
+Object.defineProperty(module.exports, "useOrganizations", {
+    enumerable: true,
+    get: function() {
+        return $6aCOC.useOrganizations;
+    }
+});
+
+});
+
+parcelRequire.register("bHx4m", function(module, exports) {
+"use strict";
+Object.defineProperty(module.exports, "__esModule", {
+    value: true
+});
+module.exports.useMagicLink = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+const $884d5cc4460e4e95$var$react_1 = $fOt1z.__importDefault((parcelRequire("laauJ")));
+function $884d5cc4460e4e95$var$useMagicLink(resource) {
+    const { startMagicLinkFlow: startMagicLinkFlow , cancelMagicLinkFlow: cancelMagicLinkFlow  } = $884d5cc4460e4e95$var$react_1.default.useMemo(()=>resource.createMagicLinkFlow(), [
+        resource
+    ]);
+    $884d5cc4460e4e95$var$react_1.default.useEffect(()=>{
+        return cancelMagicLinkFlow;
+    }, []);
+    return {
+        startMagicLinkFlow: startMagicLinkFlow,
+        cancelMagicLinkFlow: cancelMagicLinkFlow
+    };
+}
+module.exports.useMagicLink = $884d5cc4460e4e95$var$useMagicLink;
+
+});
+
+
 var $38d16396aea26977$exports = {};
 
-(parcelRequire("cXafQ")).register(JSON.parse('{"5VYGf":"index.a0b136fe.js","kIpIl":"web-vitals.15bf5e0f.js"}'));
+(parcelRequire("cXafQ")).register(JSON.parse('{"5VYGf":"index.88acc1b7.js","kIpIl":"web-vitals.15bf5e0f.js"}'));
 
 /* eslint-disable @typescript-eslint/no-unused-vars */ var $b6a3286edf44722b$exports = {};
 "use strict";
@@ -42221,21 +46332,62 @@ function $3f4aca45445a3e1c$export$d07f55d4c15c0440() {
 }
 
 
-/* eslint-disable @typescript-eslint/no-unused-vars */ // import { ClerkProvider } from '@clerk/clerk-react'
+
+var $f12606d6457926ba$exports = {};
+"use strict";
+Object.defineProperty($f12606d6457926ba$exports, "__esModule", {
+    value: true
+});
+$f12606d6457926ba$exports.useMagicLink = $f12606d6457926ba$exports.MagicLinkErrorCode = $f12606d6457926ba$exports.isMagicLinkError = void 0;
+
+var $fOt1z = parcelRequire("fOt1z");
+
+$fOt1z.__exportStar((parcelRequire("aImsM")), $f12606d6457926ba$exports);
+
+$fOt1z.__exportStar((parcelRequire("dp31I")), $f12606d6457926ba$exports);
+
+$fOt1z.__exportStar((parcelRequire("fBe5P")), $f12606d6457926ba$exports);
+
+var $rLPvf = parcelRequire("rLPvf");
+Object.defineProperty($f12606d6457926ba$exports, "isMagicLinkError", {
+    enumerable: true,
+    get: function() {
+        return $rLPvf.isMagicLinkError;
+    }
+});
+Object.defineProperty($f12606d6457926ba$exports, "MagicLinkErrorCode", {
+    enumerable: true,
+    get: function() {
+        return $rLPvf.MagicLinkErrorCode;
+    }
+});
+
+var $bHx4m = parcelRequire("bHx4m");
+Object.defineProperty($f12606d6457926ba$exports, "useMagicLink", {
+    enumerable: true,
+    get: function() {
+        return $bHx4m.useMagicLink;
+    }
+});
+/**
+ * Vite does not define `global` by default
+ * One workaround is to use the `define` config prop
+ * https://vitejs.dev/config/#define
+ * We are solving this in the SDK level to reduce setup steps.
+ */ if (typeof $parcel$global === "undefined" && typeof window !== "undefined" && !window.global) window.global = window;
 
 
+
+
+var $c1Pic = parcelRequire("c1Pic");
 const $f75e7a344f618f37$var$AuthProvider = ({ children: children  })=>{
     const navigate = (0, $48ba1f31742d01ea$export$9770f232ac06a008)();
-    console.error("process.env.REACT_APP_CLERK_PUBLISHABLE_KEY", "REACT_APP_CLERK_PUBLISHABLE_KEY=pk_test_ZmxlZXQtY3ViLTk0LmNsZXJrLmFjY291bnRzLmRldiQ");
-    return /*#__PURE__*/ (0, $b6a3286edf44722b$exports.jsx)((0, $b6a3286edf44722b$exports.Fragment), {
+    console.log("process.env.REACT_APP_CLERK_PUBLISHABLE_KEY", $c1Pic.env);
+    return /*#__PURE__*/ (0, $b6a3286edf44722b$exports.jsx)((0, $f12606d6457926ba$exports.ClerkProvider), {
+        publishableKey: "REACT_APP_CLERK_PUBLISHABLE_KEY=pk_test_ZmxlZXQtY3ViLTk0LmNsZXJrLmFjY291bnRzLmRldiQ" ?? "",
+        navigate: (to)=>navigate(to),
         children: children
     });
-// return (
-//   <ClerkProvider
-//     publishableKey={process.env.REACT_APP_CLERK_PUBLISHABLE_KEY ?? ''}
-//     navigate={to => navigate(to)}
-//   ></ClerkProvider>
-// )
 };
 var $f75e7a344f618f37$export$2e2bcd8739ae039 = $f75e7a344f618f37$var$AuthProvider;
 
@@ -42267,4 +46419,4 @@ $0f8050d200c0829e$var$root.render(/*#__PURE__*/ (0, $b6a3286edf44722b$exports.js
 $3f4aca45445a3e1c$export$6503ec6e8aabbaf();
 
 })();
-//# sourceMappingURL=index.a0b136fe.js.map
+//# sourceMappingURL=index.88acc1b7.js.map
